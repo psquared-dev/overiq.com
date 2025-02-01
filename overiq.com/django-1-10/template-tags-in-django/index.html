@@ -1,0 +1,1161 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/django-1-10/template-tags-in-django/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:02:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":68906,"response_size_orig":63138,"response_time_orig":626,"template_id":5,"url":"https://overiq.com/django-1-10/template-tags-in-django/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"30f4b6b062f819ae8fbe410ef14f96bd"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Template tags in Django - Django 1.10 Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="In the previous chapter, we have already introduced you to some of the basic template tags and filters. In this lesson, we will discuss some importan…"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Template tags in Django"/>
+
+    <meta property="og:description" content="In the previous chapter, we have already introduced you to some of the basic template tags and filters. In this lesson, we will discuss some importan…"/>
+
+
+<meta property="og:url" content="https://overiq.com/django-1-10/template-tags-in-django/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="In the previous chapter, we have already introduced you to some of the basic template tags and filters. In this lesson, we will discuss some importan…"/>
+
+
+<meta name="twitter:title" content="Template tags in Django"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">Django 1.10 Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">Template tags in Django</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>Template tags in Django</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on July 27, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p>In the previous chapter, we have already introduced you to some of the basic template tags and filters. In this lesson, we will discuss some important built-in template tags in detail.</p>
+<span id="if-tag" class="anchor-target"></span><h2 class="heading">if tag <a class="header-link" href="#if-tag">#</a></h2>
+
+<p>The following is the syntax of the <code>if</code> tag:</p>
+
+<p><strong>Syntax:</strong></p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">condition</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Print this line&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here is how it works:</p>
+
+<p>The <code>if</code> tag evaluates the value of the <code>condition</code> and if it is <code>True</code> (a variable in Python evaluates to <code>True</code>, if it contains a non empty value or non <code>False</code> Boolean value) then the template system will display everything between <code>{% if %}</code> and <code>{% endif %}</code>. For example:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">var</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Print this para&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>If the value of <code>var</code> is <code>10</code> then <code>&lt;p&gt;Print this para&lt;/p&gt;</code> will be printed. On the other hand, if the value of <code>p</code> is <code>[]</code> (an empty array) or <code>{}</code> (an empty dictionary) or <code>0</code> (numerical zero) or <code>False</code> (a Boolean false) then nothing will be printed.</p>
+
+<p>It is important to close each <code>{% if %}</code> with a corresponding <code>{% endif %}</code>. Otherwise, Django will throw <code>TemplateSyntaxError</code> exception.</p>
+
+<p>You can also add an optional <code>{% else %}</code> tag to the <code>if</code> tag like this:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">var</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Print this para&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Else print the other para&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here is how it works:</p>
+
+<p>First, the value of <code>var</code> is evaluated, if it is <code>True</code> then <code>&lt;p&gt;Print this para&lt;/p&gt;</code> will be printed. Otherwise, <code>&lt;p&gt;Else print the other para&lt;/p&gt;</code> will be printed.</p>
+
+<p>You can also add one or more <code>{% elif %}</code> clauses to add some more conditions. For example:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">count</span> <span class="o">&lt;</span> <span class="m">10</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Print this para&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">elif</span> <span class="nv">count</span> <span class="o">&lt;</span> <span class="m">20</span> <span class="cp">%}</span><span class="x">    </span>
+<span class="x">    &lt;p&gt;Otherwise print this&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">elif</span> <span class="nv">count</span> <span class="o">&lt;</span> <span class="m">30</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Let&#39;s try this&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Okay everything failed print this now&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here is how it works:</p>
+
+<p>Each variable or condition is evaluated one by one. When a condition or variable is evaluated to <code>True</code> then the code only in that block is executed and evaluation of all the other conditions are skipped.</p>
+<span id="comments" class="anchor-target"></span><h2 class="heading">Comments <a class="header-link" href="#comments">#</a></h2>
+
+<p>Django template uses the following syntax to write comments.</p>
+<div class="codeblock language-jinja"><div class="highlight"><pre><span></span><span class="c">{# This is a comment #}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>The comment you write using this syntax will not be rendered in the HTML source code. Further, you can&#39;t expand this comment to multiple lines.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c">{# This is</span>
+<span class="c">not a comment #}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>If you want to write comments in multiple lines using the following syntax:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">comment</span> <span class="cp">%}</span><span class="c"></span>
+<span class="c">This is a comment expanding to</span>
+<span class="c">multiple lines.</span>
+<span class="cp">{%</span> <span class="k">endcomment</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div><span id="using-logical-operators" class="anchor-target"></span><h2 class="heading">Using Logical Operators <a class="header-link" href="#using-logical-operators">#</a></h2>
+
+<p>You can also use logical <code>and</code>, <code>or</code> and <code>not</code> operators to test multiple conditions. For example:</p>
+<span id="and-operator" class="anchor-target"></span><h3 class="heading">and operator <a class="header-link" href="#and-operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">palindrome</span> <span class="k">and</span> <span class="nv">even</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Number is palindrome and even&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>This will print <code>&lt;p&gt;Number is palindrome and even&lt;/p&gt;</code> only when both variables are evaluated to <code>True</code>. Otherwise, nothing would be printed at all.</p>
+<span id="not-operator" class="anchor-target"></span><h3 class="heading">not operator <a class="header-link" href="#not-operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">post_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;There are no blog post&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The <code>not</code> operator negates the value of the condition. So the above code would print <code>&lt;p&gt;There are no blog posts&lt;/p&gt;</code> only when <code>post_list</code> is <code>False</code>. In other words, if there are no blog posts print <code>&lt;p&gt;There are no blog posts&lt;/p&gt;</code>.</p>
+<span id="or-operator" class="anchor-target"></span><h3 class="heading">or operator <a class="header-link" href="#or-operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">post_list</span> <span class="k">or</span> <span class="nv">page_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The site has some blog post or pages&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>If anyone of the two variables evaluates to <code>True</code> then <code>&lt;p&gt;The site has some blog post or pages&lt;/p&gt;</code> would be printed. Otherwise, nothing would be printed at all.</p>
+
+<p>Here are some more examples:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="k">not</span> <span class="nv">post_list</span> <span class="k">or</span> <span class="nv">page_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The site has no posts or it has some pages&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>It is important to note here that <code>not</code> negates <code>post_list</code> only not the <code>page_list</code>. So the string <code>&lt;p&gt;The site has not posts or it has some pages&lt;/p&gt;</code> will only get printed when either the site has no posts (i.e <code>post_list</code> empty) or it has some pages (<code>page_list</code> is not empty).</p>
+
+<p>You can also use <code>and</code> and <code>or</code> operator within the same tag. The important thing to remember is that the precedence of <code>and</code> is higher than that of <code>or</code> operator. For example:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">post_list</span> <span class="k">and</span> <span class="nv">page_list</span> <span class="k">or</span> <span class="nv">author_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The site has either both posts and pages or only author&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here is how it works:</p>
+
+<p>If the site either has posts and pages or authors only then the string <code>&lt;p&gt;The site has either both posts and pages or only author&lt;/p&gt;</code> would be printed.</p>
+
+<p>Another important thing I want to clarify is that, don&#39;t be tempted to use parentheses to group expression in the <code>if</code> tag. It is invalid syntax and would throw <code>TemplateSyntaxError</code> exception.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c">{######## ERROR - DON&#39;T DO IT ########}</span><span class="x"></span>
+
+<span class="cp">{%</span> <span class="k">if</span> <span class="o">(</span><span class="nv">post_list</span> <span class="k">and</span> <span class="nv">page_list</span><span class="o">)</span> <span class="k">or</span> <span class="nv">author_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The site has either both posts and pages or only author&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>You can also nest one <code>if</code> tag inside another <code>if</code> tag. For example:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">num</span> <span class="o">&lt;</span> <span class="m">10</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">num</span> <span class="o">&gt;</span> <span class="m">5</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        &lt;p&gt;The num is greater than 5 but less than 10&lt;/p&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">    </span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div><span id="using-relation-operators" class="anchor-target"></span><h2 class="heading">Using Relation Operators <a class="header-link" href="#using-relation-operators">#</a></h2>
+
+<p>You can also use relation operators <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code> , <code>==</code> with the template tags.</p>
+<span id="gt-operator" class="anchor-target"></span><h3 class="heading">&gt; operator <a class="header-link" href="#gt-operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">num</span> <span class="o">&gt;</span> <span class="m">10</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The num is greater than 10&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>It will print <code>&lt;p&gt;The num is greater than 10&lt;/p&gt;</code> if <code>num</code> is greater than <code>10</code>.</p>
+<span id="lt-operator" class="anchor-target"></span><h3 class="heading">&lt; operator <a class="header-link" href="#lt-operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">num</span> <span class="o">&lt;</span> <span class="m">10</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The num is lesser than 10&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>It will prints <code>&lt;p&gt;The num is lesser than 10&lt;/p&gt;</code> if <code>num</code> is smaller than <code>10</code>.</p>
+<span id="gt-operator" class="anchor-target"></span><h3 class="heading">&gt;= operator <a class="header-link" href="#gt-operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">num</span> <span class="o">&gt;=</span> <span class="m">10</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The num is greater than or equal to 10&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>It will print <code>&lt;p&gt;The num is greater than or equal to 10&lt;/p&gt;</code> if <code>num</code> is greater than or equal to <code>10</code>.</p>
+<span id="lt-operator" class="anchor-target"></span><h3 class="heading">&lt;= operator <a class="header-link" href="#lt-operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">num</span> <span class="o">&lt;=</span> <span class="m">10</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The num is lesser than or equal to 10&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>It will print <code>&lt;p&gt;The num is lesser than or equal to 10&lt;/p&gt;</code> if <code>num</code> is smaller than or equal to <code>10</code>.</p>
+<span id="operator" class="anchor-target"></span><h3 class="heading">== operator <a class="header-link" href="#operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">num</span> <span class="o">==</span> <span class="m">10</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The num is equal to 10&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>It will print <code>&lt;p&gt;The number is equal to 10&lt;/p&gt;</code> if <code>num</code> is equal to <code>10</code>.</p>
+<span id="operator" class="anchor-target"></span><h3 class="heading">!= operator <a class="header-link" href="#operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">num</span> <span class="o">!=</span> <span class="m">10</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The num is not equal to 10&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>It will print <code>&lt;p&gt;The num is not equal to 10&lt;/p&gt;</code> if <code>num</code> is not equal to <code>10</code>.</p>
+<span id="in-not-in-and-is-operator" class="anchor-target"></span><h2 class="heading">in, not in and is operator <a class="header-link" href="#in-not-in-and-is-operator">#</a></h2>
+<span id="in-operator" class="anchor-target"></span><h3 class="heading">in operator <a class="header-link" href="#in-operator">#</a></h3>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">number</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Yes the number is in the list&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The <code>in</code> operator will check whether the <code>number</code> is in the list or not. If it is, then the text <code>&lt;p&gt;Yes number is in the list&lt;/p&gt;</code> will be printed.</p>
+<span id="not-in-operator" class="anchor-target"></span><h2 class="heading">not in operator <a class="header-link" href="#not-in-operator">#</a></h2>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">number</span> <span class="k">not</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Yes the number is not in the list&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The <code>not in</code> operator will check whether the <code>number</code> is in the list or not. If it is not, then the text <code>&lt;p&gt;Yes the number is not in the list&lt;/p&gt;</code> will be printed.</p>
+<span id="is-operator" class="anchor-target"></span><h3 class="heading">is operator <a class="header-link" href="#is-operator">#</a></h3>
+
+<p>The <code>is</code> operator in Python is used to compare two objects. If two objects are same then the <code>is</code> operator returns <code>True</code>. Otherwise <code>False</code>.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">obj</span> <span class="k">is</span> <span class="nf">user</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;Yes obj is same as user&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>If object pointed to by variable <code>obj</code> is same as that of variable <code>user</code> then the text <code>&lt;p&gt;Yes obj is same as user&lt;/p&gt;</code> would be printed.</p>
+<span id="for-tag" class="anchor-target"></span><h2 class="heading">for tag <a class="header-link" href="#for-tag">#</a></h2>
+
+<p>A <code>for</code> tag allows us to use to loop through a sequence. We can use <code>for</code> tag to iterate over the contents of list, tuples, dictionary etc. Here is the syntax of the <code>for</code> tag:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The value of i is </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here is how it works:</p>
+
+<p>When the loop begins the first value from the <code>list</code> is assigned to the variable <code>i</code>. Then the template engine will render everything between <code>{% for %}</code> and <code>{% endfor %}</code>. This process keeps repeating until there are no more elements left to iterate in the list.</p>
+
+<p>To print a list in the reverse order add <code>reversed</code> keyword after the list as follows.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="k">reversed</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;The value of i is </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Sometimes in your Django journey, you have to work with list of list. To access the list of list unpack elements of sublist into individual variables. For example, let&#39;s say we have the following list in our context.</p>
+<div class="codeblock language-jinja"><div class="highlight"><pre><span></span><span class="x">list = [ [&#34;uno&#34;, &#34;one&#34;], [&#34;dos&#34;, &#34;two&#34;], [&#34;tres&#34;, &#34;three&#34;], [&#34;cuatro&#34;, &#34;four&#34;] ]</span>
+</pre></div>
+</div>
+<p>To loop over a list of list inside the template do this:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">x</span><span class="o">,</span> <span class="nv">y</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nv">x</span> <span class="cp">}}</span><span class="x"> : </span><span class="cp">{{</span> <span class="nv">y</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The output will be:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">uno : one</span>
+<span class="x">dos : two</span>
+<span class="x">tres : three</span>
+<span class="x">cuatro : four</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Similarly, we can access elements of a dictionary. Let&#39;s say our context variable contains a dictionary named <code>dict</code>.</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;uno&#39;</span><span class="p">:</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;dos&#39;</span><span class="p">:</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;tres&#39;</span><span class="p">:</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;cuatro&#39;</span><span class="p">:</span> <span class="s1">&#39;four&#39;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>To access this dictionary inside the template use the following code:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">k</span><span class="o">,</span> <span class="nv">v</span> <span class="k">in</span> <span class="nv">dict.items</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nv">k</span> <span class="cp">}}</span><span class="x"> : </span><span class="cp">{{</span> <span class="nv">v</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The output will be something like this:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">cuatro : four</span>
+<span class="x">uno : one</span>
+<span class="x">tres : three</span>
+<span class="x">dos : two</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The important thing to remember here is that elements in a dictionary are stored in no particular order. So the above output may differ.</p>
+<span id="for-empty-tag" class="anchor-target"></span><h2 class="heading">for empty tag <a class="header-link" href="#for-empty-tag">#</a></h2>
+
+<p>Suppose we have a context variable called <code>post_list</code> which is a list of post objects. Our job is to print a list of all blog posts. We can do so using a <code>for</code> tag as follows:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">post_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;h2&gt;</span><span class="cp">{{</span> <span class="nv">post.title</span> <span class="cp">}}</span><span class="x">&lt;/h2&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>There is one problem though we haven&#39;t checked whether any blog posts exists or not. We can easily test whether <code>post_list</code> is empty or not by using an <code>if</code> tag as follows:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">post_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">post_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        &lt;h2&gt;</span><span class="cp">{{</span> <span class="nv">post.title</span> <span class="cp">}}</span><span class="x">&lt;/h2&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    No post published yet.</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>This kind of pattern is so common that Django provides a nice shortcut to it. The <code>for</code> tag can take an additional <code>{% empty %}</code> tag. This tag let you define what to output in the case if list is empty. For example:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">post_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;h2&gt;</span><span class="cp">{{</span> <span class="nv">post.title</span> <span class="cp">}}</span><span class="x">&lt;/h2&gt;</span>
+<span class="cp">{%</span> <span class="k">empty</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    No post published yet.        </span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Just like nested <code>if</code> tags we can have nested <code>for</code> tags.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">post</span> <span class="k">in</span> <span class="nv">post_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nv">post.content</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="x">    &lt;p&gt;</span>
+<span class="x">        &lt;ul&gt;</span>
+<span class="x">            </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">tag</span> <span class="k">in</span> <span class="nv">post.tags</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">            &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">tag</span> <span class="cp">}}</span><span class="x">&lt;/li&gt;</span>
+<span class="x">            </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">            </span>
+<span class="x">        &lt;/ul&gt;</span>
+<span class="x">    &lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The <code>for</code> tag provides a special variable called <code>forloop</code>. The <code>forloop</code> variable has few attributes you can use to track the progress of the loop.</p>
+
+<p><code>forloop.counter</code> - It returns a number indicating the current iteration of the loop. It starts with <code>1</code>. For example, let&#39;s say our context contains a list named <code>list</code> defined as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+</pre></div>
+</div><div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nb">forloop</span><span class="nv">.counter</span> <span class="cp">}}</span><span class="x"> Iteration - </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Then the above for loop will print the following output:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">1 Iteration - 11</span>
+<span class="x">2 Iteration - 12</span>
+<span class="x">3 Iteration - 13</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><code>forloop.counter0</code> - Works same as <code>forloop.counter</code> but begins with <code>0</code> instead of <code>1</code>.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nb">forloop</span><span class="nv">.counter0</span> <span class="cp">}}</span><span class="x"> Iteration - </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">0 Iteration - 11</span>
+<span class="x">1 Iteration - 12</span>
+<span class="x">2 Iteration - 13</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><code>forloop.revcounter</code> - It returns the number of iteration from the end of the loop.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nb">forloop</span><span class="nv">.revcounter</span> <span class="cp">}}</span><span class="x"> Iteration - </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">3 Iteration - 11</span>
+<span class="x">2 Iteration - 12</span>
+<span class="x">1 Iteration - 13</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><code>forloop.revcounter0</code> - Same as <code>forloop.revcounter</code> but it is <code>0</code> indexed.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nb">forloop</span><span class="nv">.revcounter0</span> <span class="cp">}}</span><span class="x"> Iteration - </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">2 Iteration - 11</span>
+<span class="x">1 Iteration - 12</span>
+<span class="x">0 Iteration - 13</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><code>forloop.first</code> - It returns a Boolean <code>True</code> if the current iteration is the first iteration. Otherwise <code>False</code>.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nb">forloop</span><span class="nv">.first</span> <span class="cp">}}</span><span class="x"> Iteration - </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">True Iteration - 11</span>
+<span class="x">False Iteration - 12</span>
+<span class="x">False Iteration - 13</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><code>forloop.last</code> - It returns a Boolean <code>True</code> if the current iteration is the last iteration. Otherwise <code>False</code>.</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nb">forloop</span><span class="nv">.last</span> <span class="cp">}}</span><span class="x"> Iteration - </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="x">False Iteration - 11</span>
+<span class="x">False Iteration - 12</span>
+<span class="x">True Iteration - 13</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><code>forloop.parentloop</code> - It is used in the nested <code>for</code> loop to refer to the <code>forloop</code> variable in the parent <code>for</code> loop. For example:</p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;table&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">j</span> <span class="k">in</span> <span class="nv">i</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        &lt;tr&gt;</span>
+<span class="x">            &lt;td&gt;</span><span class="cp">{{</span> <span class="nb">forloop</span><span class="nv">.parentloop.counter</span> <span class="cp">}}</span><span class="x"> - </span><span class="cp">{{</span> <span class="nb">forloop</span><span class="nv">.counter</span> <span class="cp">}}</span><span class="x"> - </span><span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;</span>
+<span class="x">        &lt;/tr&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;/table&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../basics-of-django-templates/index.html" title="Basics of Django Templates">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            Basics of Django Templates
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../template-filters-in-django/index.html" title="Template filters in Django">
+                            Template filters in Django
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>Django 1.10 Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-django/index.html">Intro to Django</a></li>
+            
+                <li><a href="../installing-django/index.html">Installing Django</a></li>
+            
+                <li><a href="../creating-django-project/index.html">Creating Django Project</a></li>
+            
+                <li><a href="../mvc-pattern-and-django/index.html">MVC Pattern and Django</a></li>
+            
+                <li><a href="../views-and-urlconfs-in-django/index.html">Views and URLconfs in Django</a></li>
+            
+                <li><a href="../basics-of-django-templates/index.html">Basics of Django Templates</a></li>
+            
+                <li><a href="index.html">Template tags in Django</a></li>
+            
+                <li><a href="../template-filters-in-django/index.html">Template filters in Django</a></li>
+            
+                <li><a href="../loading-templates-in-django/index.html">Loading Templates in Django</a></li>
+            
+                <li><a href="../template-inheritance-in-django/index.html">Template Inheritance in Django</a></li>
+            
+                <li><a href="../basics-of-models-in-django/index.html">Basics of Models in Django</a></li>
+            
+                <li><a href="../migrations-in-django/index.html">Migrations in Django</a></li>
+            
+                <li><a href="../django-orm-basics/index.html">Django ORM Basics</a></li>
+            
+                <li><a href="../accessing-related-data-using-django-orm/index.html">Accessing Related Data Using Django ORM</a></li>
+            
+                <li><a href="../building-blog-the-first-steps/index.html">Building Blog The First Steps</a></li>
+            
+                <li><a href="../django-admin-app/index.html">Django Admin App</a></li>
+            
+                <li><a href="../creating-urls-in-django/index.html">Creating URLs in Django</a></li>
+            
+                <li><a href="../showing-404-errors-in-django/index.html">Showing 404 errors In Django</a></li>
+            
+                <li><a href="../redirecting-urls-in-django/index.html">Redirecting URLs in Django</a></li>
+            
+                <li><a href="../django-form-basics/index.html">Django Form Basics</a></li>
+            
+                <li><a href="../displaying-forms-in-django/index.html">Displaying Forms in Django</a></li>
+            
+                <li><a href="../building-contact-us-page/index.html">Building Contact Us Page</a></li>
+            
+                <li><a href="../django-rendering-fields-manually/index.html">Django Rendering Fields Manually</a></li>
+            
+                <li><a href="../handling-static-content-in-django/index.html">Handling Static Content in Django</a></li>
+            
+                <li><a href="../handling-media-files-in-django/index.html">Handling Media Files in Django</a></li>
+            
+                <li><a href="../pagination-in-django/index.html">Pagination in Django</a></li>
+            
+                <li><a href="../cookies-in-django/index.html">Cookies in Django</a></li>
+            
+                <li><a href="../sessions-in-django/index.html">Sessions in Django</a></li>
+            
+                <li><a href="../django-authentication-framework-basics/index.html">Django Authentication Framework Basics</a></li>
+            
+                <li><a href="../django-logging-users-in-and-out/index.html">Django Logging Users In and Out</a></li>
+            
+                <li><a href="../django-password_change-view/index.html">Django password_change() View</a></li>
+            
+                <li><a href="../django-creating-users-using-usercreationform/index.html">Django Creating Users using UserCreationForm</a></li>
+            
+                <li><a href="../django-extending-user-model/index.html">Django Extending User model</a></li>
+            
+                <li><a href="../flatpages-in-django/index.html">Flatpages in Django</a></li>
+            
+                <li><a href="../creating-sitemaps-in-django/index.html">Creating Sitemaps in Django</a></li>
+            
+                <li><a href="../revisiting-cadmin-app/index.html">Revisiting cadmin App</a></li>
+            
+                <li><a href="../integrating-ckeditor-in-django/index.html">Integrating CKeditor in Django</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../c-programming-101/index.html">C Tutorial</a></li>
+                    <li><a href="../../python-101/index.html">Python Tutorial</a></li>
+                    <li><a href="../../django-1-11/index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/django-1-10/template-tags-in-django/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:02:37 GMT -->
+</html>

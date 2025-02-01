@@ -1,0 +1,1086 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/django-1-11/flatpages-in-django/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:15:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":55018,"response_size_orig":49250,"response_time_orig":597,"template_id":5,"url":"https://overiq.com/django-1-11/flatpages-in-django/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"cae65f01d1ff3489bfa2fdfe418227f7"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Flatpages in Django - Django 1.11 Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="Web applications often contain pages which don&amp;#39;t change frequently. For example, About Us, EULA (End User License Agreement), Terms of Use, etc. …"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Flatpages in Django"/>
+
+    <meta property="og:description" content="Web applications often contain pages which don&amp;#39;t change frequently. For example, About Us, EULA (End User License Agreement), Terms of Use, etc. …"/>
+
+
+<meta property="og:url" content="https://overiq.com/django-1-11/flatpages-in-django/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="Web applications often contain pages which don&amp;#39;t change frequently. For example, About Us, EULA (End User License Agreement), Terms of Use, etc. …"/>
+
+
+<meta name="twitter:title" content="Flatpages in Django"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">Django 1.11 Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">Flatpages in Django</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>Flatpages in Django</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on July 27, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p>Web applications often contain pages which don&#39;t change frequently. For example, About Us, EULA (End User License Agreement), Terms of Use, etc. Such pages are known as flatpages. Django provides a built-in app named <code>django.contrib.flatpages</code> for handling flatpages.</p>
+<span id="installing-flatpages-app" class="anchor-target"></span><h2 class="heading">Installing Flatpages App <a class="header-link" href="#installing-flatpages-app">#</a></h2>
+
+<p>The flatpages app (<code>django.contrib.flatpages</code>) is not enabled by default. To install it open <code>settings.py</code> file and add <code>django.contrib.flatpages</code> to the <code>INSTALLED_APPS</code> list as follows:</p>
+
+<p><strong>djangobin/django_project/django_project/settings.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.humanize&#39;</span><span class="p">,</span>
+<span class="hll">    <span class="s1">&#39;django.contrib.flatpages&#39;</span>
+</span>    <span class="s1">&#39;djangobin&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1">#...</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The flatpages app depends upon another app called Sites framework (<code>django.contrib.sites</code>) which is also not enabled by default. To enable sites framework add <code>django.contrib.sites</code> to the <code>INSTALLED_APPS</code> setting and define a <code>SITE_ID</code> variable with the value of 1 at the end of the <code>settings.py</code> file.</p>
+
+<p><strong>djangobin/django_project/django_project/settings.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.humanize&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.flatpages&#39;</span><span class="p">,</span>
+<span class="hll">    <span class="s1">&#39;django.contrib.sites&#39;</span><span class="p">,</span>
+</span>    <span class="s1">&#39;djangobin&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1">#...</span>
+
+<span class="n">LOGIN_URL</span> <span class="o">=</span> <span class="s1">&#39;djangobin:login&#39;</span>
+
+<span class="hll"><span class="n">SITE_ID</span> <span class="o">=</span> <span class="mi">1</span>
+</span></pre></div>
+</td></tr></tbody></table></div>
+<p>Now run <code>migrate</code> command as usual to create necessary tables.</p>
+
+<pre><code>$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, djangobin, flatpages, sessions, sites
+Running migrations:
+  Applying sites.0001_initial... OK
+  Applying flatpages.0001_initial... OK
+  Applying sites.0002_alter_domain_unique... OK</code></pre>
+<span id="the-flatpage-model" class="anchor-target"></span><h2 class="heading">The Flatpage Model <a class="header-link" href="#the-flatpage-model">#</a></h2>
+
+<p>The flatpages are represented using <code>FlatPage</code> model in the database. Here is is how the <code>FlatPage</code> model looks like:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FlatPage</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">maxlength</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">maxlength</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">enable_comments</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">maxlength</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">registration_required</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">sites</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Site</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Let&#39;s examine each field one by one.</p>
+
+<ol>
+<li><p><code>url</code> (required): This field represents the URL where flatpage will appear. It can only take URL which begins and end with leading and trailing slash. For example, <code>/about/</code>, <code>/eula/</code>, <code>/about-us/</code> etc.</p></li>
+<li><p><code>title</code> (required): Title of the flatpage.</p></li>
+<li><p><code>content</code> (optional): Content of the flatpage in HTML.</p></li>
+<li><p><code>enable_comments</code> (optional): A <code>Boolean</code> field which designates whether you want to enable comments for the flatpage or not. Note that setting this field to <code>True</code> will not automatically create comment box in the flatpage. If you want to have a comment form you have to code it yourself. We only use this field as a flag in templates to check whether comments are enabled for a flatpage or not.</p></li>
+<li><p><code>template_name</code> (optional):  template to use for rendering flatpages. If not given it will fall back to default template <code>flatpages/default.html</code>.</p></li>
+<li><p><code>registration_required</code> (optional): A <code>Boolean</code> field, if set to <code>True</code> then only logged in users will be able to view the flatpage.</p></li>
+<li><p><code>sites</code> (required): This field is very important. Every flatpage is associated with a site using many-to-many relationship. In other words, a <code>FlatPage</code> object can belong to one or more <code>Site</code> object.</p></li>
+</ol>
+<span id="sites-framework" class="anchor-target"></span><h2 class="heading">Sites Framework <a class="header-link" href="#sites-framework">#</a></h2>
+
+<p>Sites framework (<code>django.contrib.sites</code>) allows us to run multiple websites from same database and Django project. Sites framework provides a model called <code>Site</code> which contains the following two fields:</p>
+
+<ol>
+<li>domain</li>
+<li>name</li>
+</ol>
+
+<p><code>domain</code> - It is used to specify the is the address of the website. For example, example.com or <code>http://example.com</code>.</p>
+
+<p><code>name</code> - This field is commonly used to specify a human-readable easy to remember the name of the site.</p>
+
+<p>While enabling sites framework we have defined <code>SITE_ID</code> variable with the value of 1 because this is our first site.</p>
+
+<p>Django automatically adds a record with <code>domain</code> and <code>name</code> field set to <code>example.com</code>, when we run <code>migrate</code> command after adding <code>django.contrib.sites</code> to <code>INSTALLED_APPS</code> in <code>settings.py</code> file.</p>
+
+<p>That&#39;s all you need to know about the sites framework.</p>
+
+<p>Having learned the anatomy of flatpages, let&#39;s create some flatpages. At this point, there are two ways to create flatpages.</p>
+
+<ol>
+<li>Django admin site.</li>
+<li>Django ORM.</li>
+</ol>
+
+<p>Let&#39;s try creating flatpages via Django admin site.</p>
+<span id="creating-flatpages-using-django-admin-site" class="anchor-target"></span><h2 class="heading">Creating flatpages using Django admin site <a class="header-link" href="#creating-flatpages-using-django-admin-site">#</a></h2>
+
+<p>Visit <code>http://127.0.0.1:8000/admin/</code> and login into the Django admin site.</p>
+
+<p>You should see <code>Flat Page</code> and <code>Sites</code> listed with all the other installed apps as follows:</p>
+
+<p><img src="../../media/uploads/2018/5/28/Selection_144-ce1480f5-edf0-472a-ba96-ac856ddccc0b.png" loading="lazy" alt=""/></p>
+
+<p>Click the &#34;Add&#34; link in front of Flat Page to create a new FlatPage. You should see Add flat page form like this:</p>
+
+<p><img src="../../media/uploads/2018/5/28/Selection_145-4913d3b1-a444-4c5b-8459-fe9e2643226c.png" loading="lazy" alt=""/></p>
+
+<p>Create an &#34;About&#34; page by entering the following details:</p>
+
+<p><img src="../../media/uploads/2018/5/28/Selection_146-1f629845-1a83-48fd-952a-988a8b7ab6e1.png" loading="lazy" alt=""/></p>
+
+<p>As discussed, the <code>url</code>, <code>title</code> and <code>sites</code> fields are required.</p>
+
+<p>Notice Advanced options section at the bottom of the form. Click on the Show link to make it visible. The Advanced section allows you to set values for the following fields:</p>
+
+<ul>
+<li><code>registration_required</code></li>
+<li><code>template_name</code></li>
+</ul>
+
+<p><img src="../../media/uploads/2017/09/11/advanced-options-in-add-flatpage-form.png" loading="lazy" alt=""/></p>
+
+<p>We don&#39;t need to enter any data into these fields for now.</p>
+
+<p>Once you are done hit Save button at the bottom of the page.</p>
+<span id="creating-flatpages-using-django-orm" class="anchor-target"></span><h2 class="heading">Creating flatpages using Django ORM <a class="header-link" href="#creating-flatpages-using-django-orm">#</a></h2>
+
+<p>Flatpages are implemented as <code>FlatPage</code> model. To use <code>FlatPage</code> model we have to first import it from <code>django.contrib.flatpages.models</code> module as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.contrib.flatpages.models</span> <span class="kn">import</span> <span class="n">FlatPage</span>
+</pre></div>
+</div>
+<p>At this point, we have a single flatpage named &#34;About&#34; in our database. To get it inside the shell, type the following code:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">au</span> <span class="o">=</span> <span class="n">FlatPage</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;About Us&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">au</span><span class="o">.</span><span class="n">url</span>
+<span class="s1">&#39;/about/&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">au</span><span class="o">.</span><span class="n">title</span>
+<span class="s1">&#39;About Us&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">au</span><span class="o">.</span><span class="n">content</span>
+<span class="s1">&#39;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur beatae cumque delectus dolorem eum ex excepturi fuga hic id laborum nulla optio quam, quasi, quidem quod totam vero voluptas?</span><span class="se">\r\n\r\n</span><span class="s1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem culpa debitis distinctio, dolore fugiat hic laboriosam molestiae, mollitia optio quisquam, voluptate. At dignissimos dolore fuga iusto mollitia quas rem!&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">au</span><span class="o">.</span><span class="n">sites</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="o">&lt;</span><span class="n">QuerySet</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">Site</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Let&#39;s create an EULA page.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">eula</span> <span class="o">=</span> <span class="n">FlatPage</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="o">...</span>     <span class="n">url</span><span class="o">=</span><span class="s1">&#39;/eula/&#39;</span><span class="p">,</span>
+<span class="o">...</span>     <span class="n">title</span> <span class="o">=</span> <span class="s2">&#34;EULA&#34;</span><span class="p">,</span>
+<span class="o">...</span>     <span class="n">content</span> <span class="o">=</span> <span class="s2">&#34;EULA for Djangobin&#34;</span>
+<span class="o">...</span> <span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">eula</span>
+<span class="o">&lt;</span><span class="n">FlatPage</span><span class="p">:</span> <span class="o">/</span><span class="n">eula</span><span class="o">/</span> <span class="o">--</span> <span class="n">EULA</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Now we have two flat pages &#34;About&#34; and &#34;EULA&#34;. Unlike <em>About</em> page, <em>EULA</em> page is not usable at this point because it is not associated with any <code>Site</code> object. Consider the following:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">au</span><span class="o">.</span><span class="n">sites</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="o">&lt;</span><span class="n">QuerySet</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">Site</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">eula</span><span class="o">.</span><span class="n">sites</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="o">&lt;</span><span class="n">QuerySet</span> <span class="p">[]</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The above code demonstrates that our &#34;About&#34; page is associated with one site (i.e example.com), However, &#34;EULA&#34; page is associated with none.</p>
+
+<p>To make EULA flatpage usable, connect it to a <code>Site</code> object as follows:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">django.contrib.sites.models</span> <span class="kn">import</span> <span class="n">Site</span>  <span class="c1"># import Site model</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">site</span> <span class="o">=</span> <span class="n">Site</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># get the site object</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">site</span>
+<span class="o">&lt;</span><span class="n">Site</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">eula</span><span class="o">.</span><span class="n">sites</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">eula</span><span class="o">.</span><span class="n">sites</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="o">&lt;</span><span class="n">QuerySet</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">Site</span><span class="p">:</span> <span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span><span class="p">]</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> 
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="creating-template-for-flatpages" class="anchor-target"></span><h2 class="heading">Creating template for flatpages <a class="header-link" href="#creating-template-for-flatpages">#</a></h2>
+
+<p>We now have two flatpages but no way of displaying them. By default, a <code>FlatPage</code> object uses <code>flatpages/default.html</code> template unless you specify a different one while creating/updating a <code>FlatPage</code> object.</p>
+
+<p>Django doesn&#39;t supply <code>flatpages/default.html</code> template, so you have to create one yourself. In the djangobin&#39;s <code>templates</code> directory, create a new directory named <code>flatpages</code>. Then inside the <code>flatpages</code> directory create a new file called <code>default.html</code> and add the following code to it.</p>
+
+<p><strong>djangobin/django_project/blog/templates/flatpages/default.html</strong></p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;djangobin/base.html&#39;</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nv">flatpage.title</span> <span class="cp">}}</span><span class="x"> - </span><span class="cp">{{</span> <span class="nb">block</span><span class="nv">.super</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">main</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">    &lt;h1&gt;</span><span class="cp">{{</span> <span class="nv">flatpage.title</span> <span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
+
+<span class="x">    &lt;p&gt;</span><span class="cp">{{</span> <span class="nv">flatpage.content</span><span class="o">|</span><span class="nf">linebreaks</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Notice the <code>flatpage</code> variable used in the template. All flatpage templates are passed a context variable named <code>flatpage</code> which is a <code>FlatPage</code> object. Once we have the <code>FlatPage</code> object we can access any relevant information by typing a (<code>.</code>) dot followed by the attribute name. In our case, we are only outputting the value of <code>title</code> and <code>content</code> attribute of the <code>FlatPage</code> object.</p>
+<span id="url-pattern" class="anchor-target"></span><h2 class="heading">URL Pattern <a class="header-link" href="#url-pattern">#</a></h2>
+
+<p>Everything is in place now. We just need some URL patterns to access the flatpages. Open djangobin&#39;s <code>urls.py</code> and add the following two URL patterns at the end of the <code>urlpatterns</code>&#39;s list.</p>
+
+<p><strong>djangobin/django_project/blog/urls.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">django.contrib.flatpages</span> <span class="kn">import</span> <span class="n">views</span> <span class="k">as</span> <span class="n">flat_views</span>
+</span><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+<span class="c1">#...</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1">#...</span>
+    <span class="n">url</span><span class="p">(</span><span class="s1">&#39;^search/$&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">search</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;search&#39;</span><span class="p">),</span>
+<span class="hll">    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^about/$&#39;</span><span class="p">,</span> <span class="n">flat_views</span><span class="o">.</span><span class="n">flatpage</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/about/&#39;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;about&#39;</span><span class="p">),</span>
+</span><span class="hll">    <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^eula/$&#39;</span><span class="p">,</span> <span class="n">flat_views</span><span class="o">.</span><span class="n">flatpage</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/eula/&#39;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;eula&#39;</span><span class="p">),</span>        
+</span><span class="p">]</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The flatpage app (<code>django.contrib.flatpages</code>) provides a <code>flatpage()</code> view whose job is to render the flatpages. It accepts a required argument called <code>url</code> which is the URL of the template we entered while creating the flatpage.</p>
+
+<p>Open djangobin&#39;s <code>base.html</code> and add links to <em>About</em> and <em>EULA</em> page as follows:</p>
+
+<p><strong>djangobin/django_project/djangobin/templates/djangobin/base.html</strong></p>
+<div class="codeblock language-jinja"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c">{# ... #}</span><span class="x"></span>
+<span class="x">        &lt;div class=&#34;collapse navbar-collapse&#34; id=&#34;bs-example-navbar-collapse-1&#34;&gt;</span>
+<span class="x">            &lt;ul class=&#34;nav navbar-nav&#34;&gt;</span>
+<span class="x">                &lt;li </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">request.path</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span> <span class="cp">%}</span><span class="x">class=&#39;active&#39;</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"> &gt;</span>
+<span class="x">                    &lt;a href=&#34;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;djangobin:index&#39;</span> <span class="cp">%}</span><span class="x">&#34;&gt;Add new&lt;/a&gt;</span>
+<span class="x">                &lt;/li&gt;</span>
+<span class="x">                &lt;li </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">request.path</span> <span class="o">==</span> <span class="s1">&#39;/trending/&#39;</span> <span class="cp">%}</span><span class="x">class=&#39;active&#39;</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">&gt;</span>
+<span class="x">                    &lt;a href=&#34;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;djangobin:trending_snippets&#39;</span> <span class="cp">%}</span><span class="x">&#34;&gt;Trending&lt;span class=&#34;sr-only&#34;&gt;(current)&lt;/span&gt;&lt;/a&gt;</span>
+<span class="x">                &lt;/li&gt;</span>
+<span class="hll"><span class="x">                &lt;li </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">request.path</span> <span class="o">==</span> <span class="s1">&#39;/about/&#39;</span> <span class="cp">%}</span><span class="x">class=&#39;active&#39;</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">&gt;</span>
+</span><span class="hll"><span class="x">                    &lt;a href=&#34;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;djangobin:about&#39;</span> <span class="cp">%}</span><span class="x">&#34;&gt;About&lt;/a&gt;</span>
+</span><span class="hll"><span class="x">                &lt;/li&gt;</span>
+</span><span class="x">                &lt;li </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">request.path</span> <span class="o">==</span> <span class="s1">&#39;/contact/&#39;</span> <span class="cp">%}</span><span class="x">class=&#39;active&#39;</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">&gt;</span>
+<span class="x">                    &lt;a href=&#34;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;djangobin:contact&#39;</span> <span class="cp">%}</span><span class="x">&#34;&gt;Contact&lt;/a&gt;</span>
+<span class="x">                &lt;/li&gt;</span>
+<span class="x">            &lt;/ul&gt;</span>
+
+<span class="c">{# ... #}</span><span class="x"></span>
+
+<span class="x">    &lt;div class=&#34;main-footer&#34;&gt;</span>
+<span class="x">        &lt;div class=&#34;container text-center&#34;&gt;</span>
+<span class="x">            &lt;ul&gt;</span>
+<span class="x">                &lt;li&gt;&lt;a href=&#34;#&#34;&gt;Source Code&lt;/a&gt;&lt;/li&gt;</span>
+<span class="x">                &lt;li&gt;&lt;a href=&#34;https://overiq.com/&#34;&gt;OverIQ&lt;/a&gt;&lt;/li&gt;</span>
+<span class="hll"><span class="x">                &lt;li&gt;&lt;a href=&#34;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;djangobin:eula&#39;</span> <span class="cp">%}</span><span class="x">&#34;&gt;EULA&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class="x">            &lt;/ul&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="x">&lt;/footer&gt;</span>
+<span class="c">{# ... #}</span><span class="x"></span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Open your browser and visit <code>http://127.0.0.1:8000/about/</code> and <code>http://127.0.0.1:8000/eula/</code>. You should see <em>About</em> and <em>EULA</em> page as follows:</p>
+
+<p><img src="../../media/uploads/2018/5/31/Selection_200-e4a49c7c-4a42-4647-a6db-603e16df652a.png" loading="lazy" alt=""/></p>
+
+<p><img src="../../media/uploads/2018/5/31/Selection_202-75305443-d1e2-4847-b482-b3f154d659a6.png" loading="lazy" alt=""/></p>
+
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../asynchronous-tasks-with-celery/index.html" title="Asynchronous Tasks with Celery">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            Asynchronous Tasks with Celery
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../creating-sitemaps-in-django/index.html" title="Creating Sitemaps in Django">
+                            Creating Sitemaps in Django
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>Django 1.11 Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-django/index.html">Intro to Django</a></li>
+            
+                <li><a href="../installing-django/index.html">Installing Django</a></li>
+            
+                <li><a href="../creating-django-project/index.html">Creating Django Project</a></li>
+            
+                <li><a href="../mvc-pattern-and-django/index.html">MVC Pattern and Django</a></li>
+            
+                <li><a href="../views-and-urlconfs-in-django/index.html">Views and URLconfs in Django</a></li>
+            
+                <li><a href="../creating-urls-and-custom-response/index.html">Creating URLs and Custom Response</a></li>
+            
+                <li><a href="../basics-of-django-templates/index.html">Basics of Django Templates</a></li>
+            
+                <li><a href="../template-tags-in-django/index.html">Template tags in Django</a></li>
+            
+                <li><a href="../template-filters-in-django/index.html">Template filters in Django</a></li>
+            
+                <li><a href="../loading-templates-in-django/index.html">Loading Templates in Django</a></li>
+            
+                <li><a href="../template-inheritance-in-django/index.html">Template Inheritance in Django</a></li>
+            
+                <li><a href="../basics-of-models-in-django/index.html">Basics of Models in Django</a></li>
+            
+                <li><a href="../migrations-in-django/index.html">Migrations in Django</a></li>
+            
+                <li><a href="../django-orm-basics-part-1/index.html">Django ORM Basics Part 1</a></li>
+            
+                <li><a href="../django-orm-basics-part-2/index.html">Django ORM Basics Part 2</a></li>
+            
+                <li><a href="../django-admin-app/index.html">Django Admin App</a></li>
+            
+                <li><a href="../django-authentication-framework-basics/index.html">Django Authentication Framework Basics</a></li>
+            
+                <li><a href="../data-migrations-in-django/index.html">Data migrations in Django</a></li>
+            
+                <li><a href="../django-form-basics/index.html">Django Form Basics</a></li>
+            
+                <li><a href="../displaying-forms-in-django/index.html">Displaying Forms in Django</a></li>
+            
+                <li><a href="../django-rendering-form-fields-manually/index.html">Django Rendering Form Fields Manually</a></li>
+            
+                <li><a href="../handling-static-content-in-django/index.html">Handling Static Content in Django</a></li>
+            
+                <li><a href="../handling-media-files-in-django/index.html">Handling Media Files in Django</a></li>
+            
+                <li><a href="../building-djangobin-the-first-steps/index.html">Building Djangobin - The First Steps</a></li>
+            
+                <li><a href="../creating-trending-snippet-page/index.html">Creating Trending Snippet Page</a></li>
+            
+                <li><a href="../building-contact-us-form/index.html">Building Contact Us Form</a></li>
+            
+                <li><a href="../django-logging-users-in-and-out/index.html">Django Logging Users In and Out</a></li>
+            
+                <li><a href="../user-registration-in-django/index.html">User Registration in Django</a></li>
+            
+                <li><a href="../building-profile-pages-for-djangobin/index.html">Building profile pages for Djangobin</a></li>
+            
+                <li><a href="../searching-snippets/index.html">Searching Snippets</a></li>
+            
+                <li><a href="../asynchronous-tasks-with-celery/index.html">Asynchronous Tasks with Celery</a></li>
+            
+                <li><a href="index.html">Flatpages in Django</a></li>
+            
+                <li><a href="../creating-sitemaps-in-django/index.html">Creating Sitemaps in Django</a></li>
+            
+                <li><a href="../settings-for-multiple-environments-in-django/index.html">Settings for Multiple Environments in Django</a></li>
+            
+                <li><a href="../deploying-django-project-to-digitalocean/index.html">Deploying Django Project to DigitalOcean</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../c-programming-101/index.html">C Tutorial</a></li>
+                    <li><a href="../../python-101/index.html">Python Tutorial</a></li>
+                    <li><a href="../index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/django-1-11/flatpages-in-django/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:15:23 GMT -->
+</html>

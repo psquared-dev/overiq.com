@@ -1,0 +1,969 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/c-programming-101/basics-of-file-handling-in-c/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:01:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":48459,"response_size_orig":42691,"response_time_orig":391,"template_id":5,"url":"https://overiq.com/c-programming-101/basics-of-file-handling-in-c/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"25f47c2d1199c1596563a6efc7bfe2f5"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Basics of File Handling in C - C Programming Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="All the programs we have created so far are severely limited in the sense that they can&amp;#39;t read and write data to and from the file. Most of the r…"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Basics of File Handling in C"/>
+
+    <meta property="og:description" content="All the programs we have created so far are severely limited in the sense that they can&amp;#39;t read and write data to and from the file. Most of the r…"/>
+
+
+<meta property="og:url" content="https://overiq.com/c-programming-101/basics-of-file-handling-in-c/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="All the programs we have created so far are severely limited in the sense that they can&amp;#39;t read and write data to and from the file. Most of the r…"/>
+
+
+<meta name="twitter:title" content="Basics of File Handling in C"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">C Programming Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">Basics of File Handling in C</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>Basics of File Handling in C</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on July 27, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p>All the programs we have created so far are severely limited in the sense that they can&#39;t read and write data to and from the file. Most of the real-world program would require to read and write data to and from the file. In this chapter, we will learn how to perform input and output operations in a file. C provides a wide range of functions in the header file stdio.h for reading and writing data to and from the file. Text and Binary Mode We can store data into files in two ways:</p>
+
+<ol>
+<li>Text mode.</li>
+<li>Binary mode.</li>
+</ol>
+
+<p>In Text mode, data is stored as a line of characters terminated by a newline character (&#39;\n&#39;) where each character occupies <code>1</code> byte. To store <code>1234</code> in a text file would take <code>4</code> bytes, <code>1</code> byte for each character. The important thing to note in the Text mode what gets stored in the memory is that binary equivalent of the ASCII number of the character. Here is how <code>123456</code> is stored in the file in text mode. </p>
+
+<p><img src="../../media/uploads/data-in-text-mode-1504607296053.png" loading="lazy" alt=""/> </p>
+
+<p>As you can see it takes 6 bytes to store <code>123456</code> in text mode. </p>
+
+<p>In binary mode, data is stored on a disk in the same way as it is represented in computer memory. As a result, storing <code>123456</code> in a binary mode would take only <code>2</code> bytes. In Linux systems, there is no difference between text mode and binary mode. Here is how 123456 is stored in the file in binary mode. </p>
+
+<p><img src="../../media/uploads/2020/07/26/data-in-binary-mode-1504607305936.png" loading="lazy" alt=""/></p>
+
+<p>Hence by using binary mode, we can save a lot of disk space. </p>
+
+<p>In the text file, each line is terminated by one or two special characters. In Windows system, each line ends with a carriage return (<code>&#39;\r&#39;</code>) immediately followed by a newline (<code>&#39;\n&#39;</code>) character. On the other hand in Unix, Linux and Mac operating systems each line ends with as single newline (<code>&#39;\n&#39;</code>) character. </p>
+
+<p>Text file as well as binary files keep track of the length of the file and also track end of the file. But in the text file, there is one more way to detect the end of the file. The text file may contain a special end of file marker having ASCII value of <code>26</code>. All input/output functions stop reading from a file when this character is encountered and return an end of file signal to the program. No input/output functions insert this character automatically. In Windows, you can insert this character into the file using Ctrl+Z. It is important to note that there is no requirement that Ctrl+Z must be present, but if it is, it is considered as the end of the file. Any characters after Ctrl+Z will not be read. On the other hand, Operating systems based upon Unix have so such special end of file character. </p>
+
+<p>Another important thing you need to remember is that text files are portable. It means you can create a text file using Windows and open it a Linux system without any problem. On the other hand, the size of the data types and byte order may vary from system to system, as a result, binary files are not portable.</p>
+<span id="buffer-memory" class="anchor-target"></span><h2 class="heading">Buffer Memory <a class="header-link" href="#buffer-memory">#</a></h2>
+
+<p>Reading and writing to and from the files stored in the disk is relatively slow process when compared to reading and writing data stored in the RAM. As a result, all standard input/output functions uses something called buffer memory to store the data temporarily. </p>
+
+<p>The buffer memory is a memory where data is temporarily stored before it is written to the file. When the buffer memory is full the data is written(flushed) to the file. Also when the file is closed the data in the buffer memory is automatically written to the file even if the buffer is full or not. This process is called flushing the buffer. </p>
+
+<p>You don&#39;t have to do any anything to create buffer memory. As soon as you open a file, a buffer memory will be created for you automatically behind the scenes. However, there are some rare occasions when you have to flush the buffer manually. If so, you call use <code>fflush()</code> function as described later.</p>
+<span id="opening-a-file" class="anchor-target"></span><h2 class="heading">Opening a File <a class="header-link" href="#opening-a-file">#</a></h2>
+
+<p>Before any I/O (short of input/output) can be performed on a file you must open the file first. <code>fopen()</code> function is used to open a file. </p>
+
+<p><strong>Syntax:</strong> <code>FILE *fopen(const char *filename, const char *mode);</code> </p>
+
+<p><code>filename:</code> string containing the name of the file. <br/>
+<code>mode:</code> It specifies what you want to do with the file i.e read, write, append. </p>
+
+<p>On Success <code>fopen()</code> function returns a pointer to the structure of type <code>FILE</code>. <code>FILE</code> structure is defined in <code>stdio.h</code> and contains information about the file like name, size, buffer size, current position, end of file etc. </p>
+
+<p>On error <code>fopen()</code> function returns <code>NULL</code>. </p>
+
+<p>The possible value of modes are:</p>
+
+<ol>
+<li><code>&#34;w&#34;</code> (write) - This mode is used to write data to the file. If the file doesn&#39;t exist this mode creates a new file. If the file already exists then this mode first clears the data inside the file before writing anything to it.</li>
+<li><code>&#34;a&#34;</code> (append) - This mode is called append mode. If the file doesn&#39;t exist this mode creates a new file. If the file already exists then this mode appends new data to end of the file.</li>
+<li><code>&#34;r&#34;</code> (read) - This mode opens the file for reading. To open a file in this mode file must already exist. This mode doesn&#39;t modify the contents of the file in anyway. Use this mode if you only want to read the contents of the file.</li>
+<li><code>&#34;w+&#34;</code> (write + read) - This mode is a same as <code>&#34;w&#34;</code> but in this mode, you can also read the data. If the file doesn&#39;t exist this mode creates a new file. If the file already exists then previous data is erased before writing new data.</li>
+<li><code>&#34;r+&#34;</code> (read + write) - This mode is same as <code>&#34;r&#34;</code> mode , but you can also modify the contents of the file. To open the file in this mode file must already exist. You can modify data in this mode but the previous contents of the file are not erased. This mode is also called update mode.</li>
+<li><code>&#34;a+&#34;</code> (append + read) - This mode is same as <code>&#34;a&#34;</code> mode but in this mode, you can also read data from the file. If the file doesn&#39;t exist then a new file is created. If the file already exists then the new data is appended to the end of the file. Note that in this mode you can append data but can&#39;t modify existing data.</li>
+</ol>
+
+<p>To open the file in binary mode you need to append <code>&#34;b&#34;</code> to the mode like this: </p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&#34;wb&#34;</code></td>
+<td>Open the file in binary mode</td>
+</tr>
+<tr>
+<td><code>&#34;a+b&#34;</code> or <code>&#34;ab+&#34;</code></td>
+<td>Open the file in append + read in binary mode</td>
+</tr>
+</tbody>
+</table></div>
+<p>To open a file in text mode you can append <code>&#34;t&#34;</code> to the mode. But since text mode is the default mode <code>&#34;t&#34;</code> is generally omitted. </p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Mode</th>
+<th>Descriptions</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&#34;w&#34;</code> or <code>&#34;wt&#34;</code></td>
+<td>Open a file for writing in text mode</td>
+</tr>
+<tr>
+<td><code>&#34;r&#34;</code> or <code>&#34;rt&#34;</code></td>
+<td>Open a file for reading in text mode.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Note:</strong> mode is a string so you must always use double quotes around it.</p>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">fopen</span><span class="p">(</span><span class="s">&#34;somefile.txt&#34;</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">);</span> <span class="c1">// Error</span>
+<span class="n">fopen</span><span class="p">(</span><span class="s">&#34;somefile.txt&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span> <span class="c1">// Ok</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>If you want to open several files at once, then they must have their own file pointer variable created using a separate call to <code>fopen()</code> function.</p>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">File</span> <span class="n">fp1</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;readme1.txt&#34;</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">);</span>
+<span class="n">File</span> <span class="n">fp2</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;readme2.txt&#34;</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">);</span>
+<span class="n">File</span> <span class="n">fp3</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;readme3.txt&#34;</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">);</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here we are creating 3 file pointers for the purpose of reading three files.</p>
+<span id="checking-for-errors" class="anchor-target"></span><h2 class="heading">Checking for Errors <a class="header-link" href="#checking-for-errors">#</a></h2>
+
+<p>As already said <code>fopen()</code> returns <code>NULL</code> when an error is encountered in opening a file. So you before doing any operation on the file you must always check for errors.</p>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// Checking for errors</span>
+
+<span class="n">File</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;somefile.txt&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">fp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// if error opening the file show error message and exit the program</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Error opening a file&#34;</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>We can also give the full path name to <code>fopen()</code> function. Suppose we want to open a file <code>list.txt</code> located in <code>/home/downloads/</code> .Here is how to specify pathname in <code>fopen()</code>.</p>
+<div class="codeblock language-c"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;/home/downloads/list.txt&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>It is important to note that Windows uses backslash character (<code>&#39;\&#39;</code>) as a directory separator but since C treats backslash as the beginning of escape sequence we can&#39;t directly use <code>&#39;\&#39;</code> character inside the string. To solve this problem use two <code>&#39;\&#39;</code> in place of one <code>&#39;\&#39;</code> .</p>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;C:\home\downloads\list.txt&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span>    <span class="c1">// Error</span>
+<span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;C:</span><span class="se">\\</span><span class="s">home</span><span class="se">\\</span><span class="s">downloads</span><span class="se">\\</span><span class="s">list.txt&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span> <span class="c1">// ok</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The other technique is to use forward slash (<code>&#39;/&#39;</code>) instead of a backward slash (<code>&#39;\&#39;</code>).</p>
+<div class="codeblock language-c"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;C:/home/downloads/list.txt&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">);</span>
+</pre></div>
+</div><span id="closing-a-file" class="anchor-target"></span><h2 class="heading">Closing a File <a class="header-link" href="#closing-a-file">#</a></h2>
+
+<p>When you are done working with a file you should close it immediately using the <code>fclose()</code> function. </p>
+
+<p><strong>Syntax:</strong> <code>int fclose(FILE *fp);</code> </p>
+
+<p>When a file is closed all the buffers associated with it are flushed i.e data in the buffer is written to file. </p>
+
+<p>Closing the file through <code>fclose()</code> is not mandatory, because as soon as the program ends all files are closed immediately. But it is good practice to close the file as soon you are finished working with it. Otherwise, in a large program, you would be wasting a lot of space to unused file pointers. </p>
+
+<p>On success <code>fclose()</code> returns <code>0</code>, on error, it returns <code>EOF</code> i.e End Of File which is a constant defined in <code>stdio.h</code> and its value is <code>-1</code>. </p>
+
+<p>If you have more than one files opened, then you have to close them separately like this:</p>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">fclose</span><span class="p">(</span><span class="n">fp1</span><span class="p">);</span>
+<span class="n">fclose</span><span class="p">(</span><span class="n">fp2</span><span class="p">);</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>You can also use <code>fcloseall()</code> function to close all opened files at once. </p>
+
+<p>On success <code>fcloseall()</code> returns the number of files closed, on error, it returns <code>EOF</code>. </p>
+
+<p>Here is how we can check whether all files are closed or not.</p>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// check whether all files are closed or not</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">fcloseall</span><span class="p">();</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="n">EOF</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Error in closing some files </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d files closed </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="end-of-file-eof" class="anchor-target"></span><h2 class="heading">End Of File - EOF <a class="header-link" href="#end-of-file-eof">#</a></h2>
+
+<p>File reading functions need to know when the end of the file is reached. So when the end of file is reached the operating system sends an end of file or <code>EOF</code> signal to the program to stop reading. When the program receives the signal the file reading functions stops reading the file and returns <code>EOF</code>. As already said <code>EOF</code> is a constant defined in stdio.h header file and has a numerical value of <code>-1</code>. It is important to understand that <code>EOF</code> is not a character present at the end of the file instead it is returned by the file reading functions when the end of the file is reached.</p>
+<span id="basic-workflow-of-a-file-program-in-c" class="anchor-target"></span><h2 class="heading">Basic workflow of a file program in C <a class="header-link" href="#basic-workflow-of-a-file-program-in-c">#</a></h2>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// Basic workflow of a file program in C</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span> <span class="c1">// declare file pointer variable</span>
+    <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;somefile.txt&#34;</span><span class="p">,</span> <span class="s">&#34;w&#34;</span><span class="p">);</span> <span class="c1">// fopen() function called</span>
+
+    <span class="cm">/*</span>
+<span class="cm">       do something here</span>
+<span class="cm">    */</span>
+
+    <span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span> <span class="c1">// close the file</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></tbody></table></div>
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../typedef-statement-in-c/index.html" title="typedef statement in C">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            typedef statement in C
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../fputc-function-in-c/index.html" title="fputc() Function in C">
+                            fputc() Function in C
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>C Programming Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-c-programming/index.html">Intro to C Programming</a></li>
+            
+                <li><a href="../installing-code-blocks/index.html">Installing Code Blocks</a></li>
+            
+                <li><a href="../creating-and-running-the-first-c-program/index.html">Creating and Running The First C Program</a></li>
+            
+                <li><a href="../basic-elements-of-a-c-program/index.html">Basic Elements of a C Program</a></li>
+            
+                <li><a href="../keywords-and-identifiers/index.html">Keywords and Identifiers</a></li>
+            
+                <li><a href="../data-types-in-c/index.html">Data Types in C</a></li>
+            
+                <li><a href="../constants-in-c/index.html">Constants in C</a></li>
+            
+                <li><a href="../variables-in-c/index.html">Variables in C</a></li>
+            
+                <li><a href="../input-and-output-in-c/index.html">Input and Output in C</a></li>
+            
+                <li><a href="../formatted-input-and-output-in-c/index.html">Formatted Input and Output in C</a></li>
+            
+                <li><a href="../arithmetic-operators-in-c/index.html">Arithmetic Operators in C</a></li>
+            
+                <li><a href="../operator-precedence-and-associativity-in-c/index.html">Operator Precedence and Associativity in C</a></li>
+            
+                <li><a href="../assignment-operator-in-c/index.html">Assignment Operator in C</a></li>
+            
+                <li><a href="../increment-and-decrement-operators-in-c/index.html">Increment and Decrement Operators in C</a></li>
+            
+                <li><a href="../relational-operators-in-c/index.html">Relational Operators in C</a></li>
+            
+                <li><a href="../logical-operators-in-c/index.html">Logical Operators in C</a></li>
+            
+                <li><a href="../conditional-operator-comma-operator-and-sizeof-operator-in-c/index.html">Conditional Operator, Comma operator and sizeof() operator in C</a></li>
+            
+                <li><a href="../implicit-type-conversion-in-c/index.html">Implicit Type Conversion in C</a></li>
+            
+                <li><a href="../explicit-type-conversion-in-c/index.html">Explicit Type Conversion in C</a></li>
+            
+                <li><a href="../if-else-statements-in-c/index.html">if-else statements in C</a></li>
+            
+                <li><a href="../the-while-loop-in-c/index.html">The while loop in C</a></li>
+            
+                <li><a href="../the-do-while-loop-in-c/index.html">The do while loop in C</a></li>
+            
+                <li><a href="../the-for-loop-in-c/index.html">The for loop in C</a></li>
+            
+                <li><a href="../the-infinite-loop-in-c/index.html">The Infinite Loop in C</a></li>
+            
+                <li><a href="../the-break-and-continue-statement-in-c/index.html">The break and continue statement in C</a></li>
+            
+                <li><a href="../the-switch-statement-in-c/index.html">The Switch statement in C</a></li>
+            
+                <li><a href="../function-basics-in-c/index.html">Function basics in C</a></li>
+            
+                <li><a href="../the-return-statement-in-c/index.html">The return statement in C</a></li>
+            
+                <li><a href="../actual-and-formal-arguments-in-c/index.html">Actual and Formal arguments in C</a></li>
+            
+                <li><a href="../local-global-and-static-variables-in-c/index.html">Local, Global and Static variables in C</a></li>
+            
+                <li><a href="../recursive-function-in-c/index.html">Recursive Function in C</a></li>
+            
+                <li><a href="../one-dimensional-array-in-c/index.html">One dimensional Array in C</a></li>
+            
+                <li><a href="../one-dimensional-array-and-function-in-c/index.html">One Dimensional Array and Function in C</a></li>
+            
+                <li><a href="../two-dimensional-array-in-c/index.html">Two Dimensional Array in C</a></li>
+            
+                <li><a href="../pointer-basics-in-c/index.html">Pointer Basics in C</a></li>
+            
+                <li><a href="../pointer-arithmetic-in-c/index.html">Pointer Arithmetic in C</a></li>
+            
+                <li><a href="../pointers-and-1-d-arrays/index.html">Pointers and 1-D arrays</a></li>
+            
+                <li><a href="../pointers-and-2-d-arrays/index.html">Pointers and 2-D arrays</a></li>
+            
+                <li><a href="../call-by-value-and-call-by-reference-in-c/index.html">Call by Value and Call by Reference in C</a></li>
+            
+                <li><a href="../returning-more-than-one-value-from-function-in-c/index.html">Returning more than one value from function in C</a></li>
+            
+                <li><a href="../returning-a-pointer-from-a-function-in-c/index.html">Returning a Pointer from a Function in C</a></li>
+            
+                <li><a href="../passing-1-d-array-to-a-function-in-c/index.html">Passing 1-D Array to a Function in C</a></li>
+            
+                <li><a href="../passing-2-d-array-to-a-function-in-c/index.html">Passing 2-D Array to a Function in C</a></li>
+            
+                <li><a href="../array-of-pointers-in-c/index.html">Array of Pointers in C</a></li>
+            
+                <li><a href="../void-pointers-in-c/index.html">Void Pointers in C</a></li>
+            
+                <li><a href="../the-malloc-function-in-c/index.html">The malloc() Function in C</a></li>
+            
+                <li><a href="../the-calloc-function-in-c/index.html">The calloc() Function in C</a></li>
+            
+                <li><a href="../the-realloc-function-in-c/index.html">The realloc() Function in C</a></li>
+            
+                <li><a href="../string-basics-in-c/index.html">String Basics in C</a></li>
+            
+                <li><a href="../the-strlen-function-in-c/index.html">The strlen() Function in C</a></li>
+            
+                <li><a href="../the-strcmp-function-in-c/index.html">The strcmp() Function in C</a></li>
+            
+                <li><a href="../the-strcpy-function-in-c/index.html">The strcpy() Function in C</a></li>
+            
+                <li><a href="../the-strcat-function-in-c/index.html">The strcat() Function in C</a></li>
+            
+                <li><a href="../character-array-and-character-pointer-in-c/index.html">Character Array and Character Pointer in C</a></li>
+            
+                <li><a href="../array-of-strings-in-c/index.html">Array of Strings in C</a></li>
+            
+                <li><a href="../array-of-pointers-to-strings-in-c/index.html">Array of Pointers to Strings in C</a></li>
+            
+                <li><a href="../the-sprintf-function-in-c/index.html">The sprintf() Function in C</a></li>
+            
+                <li><a href="../the-sscanf-function-in-c/index.html">The sscanf() Function in C</a></li>
+            
+                <li><a href="../structure-basics-in-c/index.html">Structure Basics in C</a></li>
+            
+                <li><a href="../array-of-structures-in-c/index.html">Array of Structures in C</a></li>
+            
+                <li><a href="../array-as-member-of-structure-in-c/index.html">Array as Member of Structure in C</a></li>
+            
+                <li><a href="../nested-structures-in-c/index.html">Nested Structures in C</a></li>
+            
+                <li><a href="../pointer-to-a-structure-in-c/index.html">Pointer to a Structure in C</a></li>
+            
+                <li><a href="../pointers-as-structure-member-in-c/index.html">Pointers as Structure Member in C</a></li>
+            
+                <li><a href="../structures-and-functions-in-c/index.html">Structures and Functions in C</a></li>
+            
+                <li><a href="../union-basics-in-c/index.html">Union Basics in C</a></li>
+            
+                <li><a href="../typedef-statement-in-c/index.html">typedef statement in C</a></li>
+            
+                <li><a href="index.html">Basics of File Handling in C</a></li>
+            
+                <li><a href="../fputc-function-in-c/index.html">fputc() Function in C</a></li>
+            
+                <li><a href="../fgetc-function-in-c/index.html">fgetc() Function in C</a></li>
+            
+                <li><a href="../fputs-function-in-c/index.html">fputs() Function in C</a></li>
+            
+                <li><a href="../fgets-function-in-c/index.html">fgets() Function in C</a></li>
+            
+                <li><a href="../fprintf-function-in-c/index.html">fprintf() Function in C</a></li>
+            
+                <li><a href="../fscanf-function-in-c/index.html">fscanf() Function in C</a></li>
+            
+                <li><a href="../fwrite-function-in-c/index.html">fwrite() Function in C</a></li>
+            
+                <li><a href="../fread-function-in-c/index.html">fread() Function in C</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../index.html">C Tutorial</a></li>
+                    <li><a href="../../python-101/index.html">Python Tutorial</a></li>
+                    <li><a href="../../django-1-11/index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/c-programming-101/basics-of-file-handling-in-c/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:01:48 GMT -->
+</html>

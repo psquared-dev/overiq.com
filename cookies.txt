@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+overiq.com	TRUE	/	FALSE	1999999999	csrftoken	Dwijgz2w2XGfJQhvwQFXjylJ9fKLTv0tJU7ibI577BlBQkFKWdy9V1ECPp938RKR
+overiq.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+overiq.com	TRUE	/	FALSE	1999999999	ezoictest	stable
+

@@ -1,0 +1,1016 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/python-101/idle-and-python-shell/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:06:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":46911,"response_size_orig":41143,"response_time_orig":391,"template_id":5,"url":"https://overiq.com/python-101/idle-and-python-shell/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"09b23be7edbd71fbe86e87915edb6d49"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>IDLE and Python Shell - Python Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="In this course we will be using Python 3.4, but you would be fine if you choose to use Python 3.4 or above. 
+
+In the last chapter, we have installed …"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="IDLE and Python Shell"/>
+
+    <meta property="og:description" content="In this course we will be using Python 3.4, but you would be fine if you choose to use Python 3.4 or above. 
+
+In the last chapter, we have installed …"/>
+
+
+<meta property="og:url" content="https://overiq.com/python-101/idle-and-python-shell/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="In this course we will be using Python 3.4, but you would be fine if you choose to use Python 3.4 or above. 
+
+In the last chapter, we have installed …"/>
+
+
+<meta name="twitter:title" content="IDLE and Python Shell"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">Python Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">IDLE and Python Shell</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>IDLE and Python Shell</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on September 06, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p>In this course we will be using Python 3.4, but you would be fine if you choose to use Python 3.4 or above. </p>
+
+<p>In the last chapter, we have installed Python Interpreter. An Interpreter is a program which translates your code into machine language and then executes it line by line.</p>
+
+<p>We can use Python Interpreter in two modes:</p>
+
+<ol>
+<li>Interactive Mode.</li>
+<li>Script Mode.</li>
+</ol>
+
+<p>In Interactive Mode, Python interpreter waits for you to enter command. When you type the command, Python interpreter goes ahead and executes the command, then it waits again for your next command.</p>
+
+<p>In Script mode, Python Interpreter runs a program from the source file.</p>
+<span id="interactive-mode" class="anchor-target"></span><h2 class="heading">Interactive Mode <a class="header-link" href="#interactive-mode">#</a></h2>
+
+<p>Python interpreter in interactive mode is commonly known as Python Shell. To start the Python Shell enter the following command in terminal or command prompt:</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>C:\Users\Q&gt;python
+Python 3.4.4 (v3.4.4:737efcadf5a6, Dec 20 2015, 20:20:57) [MSC v.1600 64 bit (AM
+D64)] on win32
+Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
+&gt;&gt;&gt;
+</pre></div>
+</td></tr></tbody></table></div>
+<p>If you system has Python 2 and Python 3 both, for example Ubuntu comes with Python 2 and 3 installed by default. To start the Python 3 Shell enter <code>python3</code> instead of just <code>python</code>.</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>q@vm:~$ python3
+Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
+[GCC 5.4.0 20160609] on linux
+Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
+&gt;&gt;&gt;
+</pre></div>
+</td></tr></tbody></table></div>
+<p>What you are seeing is called Python Shell. <code>&gt;&gt;&gt;</code> is known as prompt string, it simply means that Python shell is ready to accept you commands. Python shell allows you type Python code and see the result immediately. In technical jargon this is also known as REPL short for Read-Eval-Print-Loop. Whenever you hear REPL think of an environment which allows you quickly test code snippets and see results immediately, just like a Calculator. In Python shell, enter the following calculations one by one and hit enter to get the result.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">88</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="mi">92</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">45</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="mi">180</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">17</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="mf">5.666666666666667</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">78</span> <span class="o">-</span> <span class="mi">42</span>
+<span class="mi">36</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In Python, we use <code>print()</code> function to print something to the screen.</p>
+
+<p>In the Python shell type <code>print(&#34;Big Python&#34;)</code> and hit enter:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Big Python&#34;</span><span class="p">)</span>
+<span class="n">Big</span> <span class="n">Python</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/l5/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>We have just used two important programming constructs - A function and a string.</p>
+
+<ol>
+<li><p><code>print()</code> is a function - A function in programming is a chuck of code which does something very specific. In our case, the <code>print()</code> function prints the argument (i.e <code>&#34;Big Python&#34;</code>) it is given to the console.</p></li>
+<li><p>A string is just a sequence of string enclosed inside single or double quotes. For example: <code>&#34;olleh&#34;</code>, <code>&#39;print it&#39;</code> are strings but <code>1</code> and <code>3</code> are not.</p></li>
+</ol>
+
+<p>Don&#39;t worry, we are not expecting you understand these things at this point. In upcoming lessons we will discuss these concepts in great detail.</p>
+
+<p>Commands such as <code>17 / 3</code>, <code>print(&#34;Big Python&#34;)</code> are know as statements in programming. A statement is simply a instruction for the Python interpreter to execute. Statements are of different types as we will see. A program usually consists of sequence of statements.</p>
+
+<p>To quit the Python shell in Windows hit Ctrl+Z followed by the Enter Key, On Linux or Mac hit Ctrl+D followed by Enter key.</p>
+<span id="script-mode" class="anchor-target"></span><h2 class="heading">Script Mode <a class="header-link" href="#script-mode">#</a></h2>
+
+<p>Python Shell is great for testing small chunks of code but there is one problem - the statements you enter in the Python shell are not saved anywhere.</p>
+
+<p>In case, you want to execute same set of statements multiple times you would be better off to save the entire code in a file. Then, use the Python interpreter in script mode to execute the code from a file.</p>
+
+<p>Create a new directory named <code>python101</code>, you can create this directory anywhere you want, just remember the location because we will use this directory to store all our programs throughout this course. Create another directory inside <code>python101</code> named <code>Chapter-03</code> to store the source files for this chapter.</p>
+
+<p>To create programs you can use any text editor, just make sure to save your file as plain text. However, if you are desperately looking for recommendation go for Sublime Text.</p>
+
+<p>Create a new file named <code>hello.py</code> inside <code>Chapter-03</code> directory add the following code to it:</p>
+
+<p><strong>python101/Chapter-03/hello.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&#34;Woods are lovely dark and deep&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;but I have promises to keep&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;and miles to go before I sleep&#34;</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/mO/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>By convention, all Python programs have <code>.py</code> extension. The file <code>hello.py</code> is called source code or source file or script file or module. To execute the program, open terminal or command prompt and change your current working directory to <code>python101</code> using the <code>cd</code> command, then type the following command:</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Woods are lovely dark and deep
+but I have promises to keep
+and miles to go before I sleep
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Note</strong>: On Windows use <code>python hello.py</code> to execute the the program.</p>
+
+<p>This command starts the Python interpreter in script mode and executes the statements in the <code>hello.py</code> file.</p>
+
+<p>We know that in the Python Shell, if you type any expression and hit enter, the Python interpreter evaluates the expression and displays the result.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span><span class="o">+</span><span class="mi">8</span>
+<span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">75</span><span class="o">/</span><span class="mi">2</span>
+<span class="mf">37.5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">100</span><span class="o">*</span><span class="mi">2</span>
+<span class="mi">200</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">100</span><span class="o">-</span><span class="mi">24</span>
+<span class="mi">76</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>However, if you type these statements in a file and run the file, you will get no output at all. Create a new file named <code>no_output.py</code> in the <code>Chapter-03</code> directory and add the following code to it.</p>
+
+<p><strong>python101/Chapter-03/no_output.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="mi">12</span><span class="o">+</span><span class="mi">8</span>
+<span class="mi">75</span><span class="o">/</span><span class="mi">2</span>
+<span class="mi">100</span><span class="o">*</span><span class="mi">2</span>
+<span class="mi">100</span><span class="o">-</span><span class="mi">24</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/nR/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>To the run the file enter the following command.</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>q@vm:~/python101/Chapter-03$ python3 no_output.py
+q@vm:~/python101/Chapter-03$
+</pre></div>
+</td></tr></tbody></table></div>
+<p>As you can see, the program didn&#39;t output anything.</p>
+
+<p>To print values from Python script you must explicitly use the <code>print()</code> function. Create a new file named <code>no_output2.py</code> with the following code:</p>
+
+<p><strong>python101/Chapter-03/no_output2.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="mi">12</span><span class="o">+</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">75</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="mi">24</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>20
+37.5
+200
+76
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/oj/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+<span id="idle" class="anchor-target"></span><h2 class="heading">IDLE <a class="header-link" href="#idle">#</a></h2>
+
+<p>In addition to installing Python interpreter, the Python installer for Mac and Windows also installs a lightweight Integrated Development Environment or IDLE for short.</p>
+
+<p>So What is IDLE ?</p>
+
+<p>IDLE allows to create/read/edit and execute your programs under the same roof without touching the command line. You can also access Python Shell from IDLE.</p>
+
+<p>To start IDLE on Windows click the Start Menu and search &#34;IDLE&#34; or &#34;idle&#34;. Click IDLE as shows in the figure and you will see a window which looks something like this:</p>
+
+<p><img src="../../media/uploads/2017/09/19/idle_in_search_result.png" loading="lazy" alt=""/></p>
+
+<p><img src="../../media/uploads/2017/09/19/idle-in-windows.png" loading="lazy" alt=""/></p>
+
+<p>This is again Python Shell, just type the commands, hit enter and it will display the result.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Big Python&#34;</span><span class="p">)</span>
+<span class="n">Big</span> <span class="n">Python</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">+</span> <span class="mi">774</span>
+<span class="mi">786</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">89</span> <span class="o">*</span> <span class="mi">321</span>
+<span class="mi">28569</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>To start IDLE on Mac simply type <code>idle3</code> in the terminal.</p>
+
+<p><img src="../../media/uploads/2017/09/19/idle_mac_screen_shot.png" loading="lazy" alt=""/></p>
+
+<p>Ubuntu doesn&#39;t come with IDLE installed. This is true whether you are using Python which comes pre-installed with Ubuntu or you have installed it yourself by entering the commands in the lesson <a href="../installing-python/index.html#installing-python-in-ubuntu">Installing Python</a>.</p>
+
+<p>To install IDLE issue the following command in the terminal.</p>
+<div class="codeblock language-text"><div class="highlight"><pre><span></span>q@vm:~/python101/Chapter-03$ sudo apt-get install idle3
+</pre></div>
+</div>
+<p>To start IDLE, type the <code>idle3</code> and hit enter in the terminal:</p>
+<div class="codeblock language-text"><div class="highlight"><pre><span></span>q@vm:~/python101/Chapter-03$ idle3
+</pre></div>
+</div>
+<p><img src="../../media/uploads/2017/09/19/idle_in_ubuntu_1604.png" loading="lazy" alt=""/></p>
+
+<p>Let&#39;s now use IDLE to create a Python program. IDLE also has a built-in text editor to write Python programs. To create a new program go to File &gt; New File. A new Untitled window will open. This window is a text editor where you can write programs.</p>
+
+<p><img src="../../media/uploads/2017/09/19/idle_text_editor.png" loading="lazy" alt=""/></p>
+
+<p>Type the following code in the editor:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&#34;Big Python&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img src="../../media/uploads/2017/09/19/code_screenshot_inside_idle_editor.png" loading="lazy" alt=""/></p>
+
+<p>Hit Ctrl + S or Go to File &gt; Save As. Save the file as <code>from_idle.py</code> in the <code>Chapter-03</code> directory. To run the program, Go to Run &gt; Run Module or Hit F5.</p>
+
+<p><img src="../../media/uploads/2017/09/19/run_program_from_idle.png" loading="lazy" alt=""/></p>
+
+<p>You editor window will move into the background, Python Shell will become active and you will see the output of your <code>from_idle.py</code> program as follows:</p>
+
+<p><img src="../../media/uploads/2017/09/19/output_from_idle.png" loading="lazy" alt=""/></p>
+<span id="types-of-errors" class="anchor-target"></span><h2 class="heading">Types of Errors <a class="header-link" href="#types-of-errors">#</a></h2>
+
+<p>In programming errors are inescapable, sooner or later you will encounter one. Programming errors are mainly divided into three types:</p>
+
+<ol>
+<li>Syntax Errors.</li>
+<li>Runtime Errors.</li>
+<li>Logical Errors.</li>
+</ol>
+<span id="syntax-errors" class="anchor-target"></span><h3 class="heading">Syntax Errors <a class="header-link" href="#syntax-errors">#</a></h3>
+
+<p>The syntax is a set of rules to properly write a Computer language. Syntax errors happen when you don&#39;t follow the syntax rules. They commonly occur in your code due to a typo. When a syntax error is encountered in the program, the execution of the program is halted and Python interpreter displays an error message explaining the probable cause of the error. The syntax error occurs when the statement is being translated to machine language but before it is executed. A component of interpreter called parser discovers these errors.</p>
+
+<p>Here are some of the common causes of Syntax errors:</p>
+
+<ol>
+<li>Misspelled keywords.</li>
+<li>Incorrect use of an operator.</li>
+<li>Omitting parentheses in a function call.</li>
+<li>Not wrapping strings in single quotes or double quotes.</li>
+</ol>
+
+<p>and so on.</p>
+
+<p>The following Python shell sessions demonstrate some Syntax errors:</p>
+
+<p><strong>Example 1:</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="o">+</span>
+  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="mi">4</span> <span class="o">+</span>
+       <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/p2/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>In the above example, we are attempting to add two numbers, but we forgot to include the second number. That&#39;s why Python interpreter reports <code>SyntaxError</code>. Also, notice that caret symbol (<code>^</code>) points to a position where Python interpreter thinks is the cause of the problem.</p>
+
+<p><strong>Example 2:</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Big Python)</span>
+  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Big Python)</span>
+                     <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">EOL</span> <span class="k">while</span> <span class="n">scanning</span> <span class="n">string</span> <span class="n">literal</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/q2/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>In this case, we forgot to end the string with double quotes, that&#39;s why syntax error in encountered. Notice again that the caret symbol is pointing to the position where Python interpreter thinks is the cause of the problem.</p>
+
+<p>Fixing syntax errors is quite easy, you just have to train your eyes to look for the caret symbol (<code>^</code>).</p>
+<span id="runtime-errors" class="anchor-target"></span><h3 class="heading">Runtime Errors <a class="header-link" href="#runtime-errors">#</a></h3>
+
+<p>As the name says, Runtime Errors are errors which occurs while the program is running. Just like Syntax errors, when they are encountered execution of the program is halted and interpreter displays a message about the probable cause of the problem.</p>
+
+<p>They usually occurs when interpreter counters a operation that is impossible to carry out. One such operation is dividing a number by <code>0</code>. Since dividing a number by <code>0</code> is undefined. When interpreter encounters dividing by <code>0</code> operation it raises <code>ZeroDivisionError</code> as follows:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">99</span><span class="o">/</span><span class="mi">0</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here are some other common causes of runtime errors:</p>
+
+<ol>
+<li>Runtime error may occur when you try to create new variable and the system runs out of memory. </li>
+<li>Trying to use a function or variable which is not yet defined.</li>
+<li>Accessing a file which doesn&#39;t exists.</li>
+</ol>
+
+<p>and so on.</p>
+<span id="logical-errors" class="anchor-target"></span><h3 class="heading">Logical Errors <a class="header-link" href="#logical-errors">#</a></h3>
+
+<p>Logical error occurs when the program produces incorrect results. For example, let&#39;s say we are creating a simple program to convert temperature from Fahrenheit to Celsius as follows:</p>
+
+<p><strong>python101/Chapter-03/fah_to_cel.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&#34;20 degree Fahrenheit in degree Celsius is: &#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span> <span class="o">*</span> <span class="mi">20</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>20 degree Fahrenheit in degree Celsius is: 
+-20.88888888888889
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/rE/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>The above program outputs <code>-20.88888888888889</code>, which is wrong. The correct value is <code>-6.666</code>. These types of errors are called logical errors. To get the correct answer use <code>5 / 9 * (20 - 32)</code> instead of <code>5 / 9 * 20 - 32</code>. The parentheses around <code>20 - 32</code>, forces Python to perform subtraction before division and multiplication. We will learn the reason behind doing so in lesson <a href="../operators-in-python/index.html">Operators in Python</a>.</p>
+
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../installing-python/index.html" title="Installing Python">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            Installing Python
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../data-types-and-variables-in-python/index.html" title="Data Types and Variables In Python">
+                            Data Types and Variables In Python
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>Python Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-python/index.html">Intro to Python</a></li>
+            
+                <li><a href="../installing-python/index.html">Installing Python</a></li>
+            
+                <li><a href="index.html">IDLE and Python Shell</a></li>
+            
+                <li><a href="../data-types-and-variables-in-python/index.html">Data Types and Variables In Python</a></li>
+            
+                <li><a href="../numbers-in-python/index.html">Numbers in Python</a></li>
+            
+                <li><a href="../operators-in-python/index.html">Operators in Python</a></li>
+            
+                <li><a href="../strings-in-python/index.html">Strings in Python</a></li>
+            
+                <li><a href="../strings-methods-in-python/index.html">Strings Methods in Python</a></li>
+            
+                <li><a href="../if-else-statements-in-python/index.html">If-else statements in Python</a></li>
+            
+                <li><a href="../loops-in-python/index.html">Loops in Python</a></li>
+            
+                <li><a href="../break-and-continue-statement-in-python/index.html">break and continue statement in Python</a></li>
+            
+                <li><a href="../lists-in-python/index.html">Lists in Python</a></li>
+            
+                <li><a href="../functions-in-python/index.html">Functions in Python</a></li>
+            
+                <li><a href="../modules-in-python/index.html">Modules in Python</a></li>
+            
+                <li><a href="../objects-and-classes-in-python/index.html">Objects and Classes in Python</a></li>
+            
+                <li><a href="../inheritance-and-polymorphism-in-python/index.html">Inheritance and Polymorphism in Python</a></li>
+            
+                <li><a href="../operator-overloading-in-python/index.html">Operator Overloading in Python</a></li>
+            
+                <li><a href="../file-handling-in-python/index.html">File Handling in Python</a></li>
+            
+                <li><a href="../exception-handling-in-python/index.html">Exception Handling in Python</a></li>
+            
+                <li><a href="../tuples-in-python/index.html">Tuples in Python</a></li>
+            
+                <li><a href="../sets-in-python/index.html">Sets in Python</a></li>
+            
+                <li><a href="../dictionary-in-python/index.html">Dictionary in Python</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../c-programming-101/index.html">C Tutorial</a></li>
+                    <li><a href="../index.html">Python Tutorial</a></li>
+                    <li><a href="../../django-1-11/index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/python-101/idle-and-python-shell/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:06:56 GMT -->
+</html>

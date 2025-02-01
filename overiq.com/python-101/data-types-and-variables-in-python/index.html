@@ -1,0 +1,1122 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/python-101/data-types-and-variables-in-python/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:06:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":57019,"response_size_orig":51251,"response_time_orig":387,"template_id":5,"url":"https://overiq.com/python-101/data-types-and-variables-in-python/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"d7af181b1eeff4b6f8468a5f89e2f4b7"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Data Types and Variables In Python - Python Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="Data Types #
+
+Data Type is nothing but a categorization of data of different types. A data type defines set of values along with operations that can …"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Data Types and Variables In Python"/>
+
+    <meta property="og:description" content="Data Types #
+
+Data Type is nothing but a categorization of data of different types. A data type defines set of values along with operations that can …"/>
+
+
+<meta property="og:url" content="https://overiq.com/python-101/data-types-and-variables-in-python/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="Data Types #
+
+Data Type is nothing but a categorization of data of different types. A data type defines set of values along with operations that can …"/>
+
+
+<meta name="twitter:title" content="Data Types and Variables In Python"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">Python Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">Data Types and Variables In Python</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>Data Types and Variables In Python</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on September 06, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<span id="data-types" class="anchor-target"></span><h2 class="heading">Data Types <a class="header-link" href="#data-types">#</a></h2>
+
+<p>Data Type is nothing but a categorization of data of different types. A data type defines set of values along with operations that can be performed on those values. Explicit values we use in our programs is known as literal. For example, <code>10</code>, <code>88.22</code>, <code>&#39;pypi&#39;</code> are called literals. Each literal has a type associated with it. For example, <code>10</code> is of type <code>int</code>, <code>88.22</code> is of type <code>float</code> and <code>&#39;pypi&#39;</code> is of type <code>str</code> (or string). It is the type of the literal which determines which kinds of operations can be performed on it. The following table shows some base data types in Python along with examples:</p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Types of data</th>
+<th>In Python we call them</th>
+<th>Examples</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Integers</td>
+<td><code>int</code></td>
+<td><code>12</code>, <code>-999</code>, <code>0</code>, <code>900000</code>, etc</td>
+</tr>
+<tr>
+<td>Real Numbers</td>
+<td><code>float</code></td>
+<td><code>4.5</code>, <code>0.0003</code>, <code>-90.5</code>, <code>3.0</code>; etc</td>
+</tr>
+<tr>
+<td>Characters</td>
+<td><code>str</code></td>
+<td><code>&#39;hello&#39;</code>, <code>&#34;100&#34;</code>, <code>&#34;$$$&#34;</code>, <code>&#34;&#34;</code>; etc</td>
+</tr>
+</tbody>
+</table></div>
+<p>Python has an in-built function called <code>type()</code> which we can use to determine the data type of the literal.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mi">54</span><span class="p">)</span>
+<span class="go">&lt;class &#39;int&#39;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s2">&#34;a string&#34;</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mf">98.188</span><span class="p">)</span>
+<span class="go">&lt;class &#39;float&#39;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s2">&#34;3.14&#34;</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s2">&#34;99&#34;</span><span class="p">)</span>
+<span class="go">&lt;class &#39;str&#39;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/jR/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><code>&lt;class &#39;int&#39;&gt;</code> indicates that the type of <code>54</code> is <code>int</code>. Similarly, <code>&lt;class &#39;str&#39;&gt;</code> and  <code>&lt;class &#39;float&#39;&gt;</code> indicates that <code>&#34;a string&#34;</code> and <code>98.188</code> is of type <code>str</code> and <code>float</code> respectively.</p>
+
+<p>At first, you might think <code>&#34;3.14&#34;</code> is of type <code>float</code> but because <code>3.14</code> is wrapped inside double quotes, it is actually a string. For the same reason <code>&#34;99&#34;</code> is a string too.</p>
+
+<p>Python has many other data types which we will discuss later.</p>
+<span id="variables" class="anchor-target"></span><h2 class="heading">Variables <a class="header-link" href="#variables">#</a></h2>
+
+<p>Variables are used to store data in our programs. We also use variables to access data as well as manipulate data. A variable is called so because it&#39;s value can be changed.</p>
+<span id="creating-variables" class="anchor-target"></span><h2 class="heading">Creating variables <a class="header-link" href="#creating-variables">#</a></h2>
+
+<p>To create a variable in Python we use assignment statement which has the following format. </p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">variable_name</span> <span class="o">=</span> <span class="n">expression</span>
+</pre></div>
+</div>
+<p><a href="../../python-online-compiler/vm/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>The <code>variable_name</code> is the name of the variable, (<code>=</code>) is known as Assignment Operator and <code>expression</code> is just a combination of values, variables and operators. Here is an example:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">homerun</span> <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<p>This statement creates a variable named <code>homerun</code> and assigns it the value <code>6</code>. When Python Interpreter encounter statements like this it does the following things behind the scenes.</p>
+
+<ol>
+<li>Store the variable <code>6</code> somewhere in the memory.</li>
+<li>Make variable <code>homerun</code> refer to it.</li>
+</ol>
+
+<p>The important thing to understand here is that variable <code>homerun</code> itself doesn&#39;t contain any value, it only refers to a memory location which contains the actual value.</p>
+
+<p><img src="../../media/uploads/2017/09/19/the-homerun-variable-referencing-value-6.png" loading="lazy" alt=""/></p>
+
+<p>Unlike languages like C, C++, and Java, in Python, we don&#39;t declare the type of the variable ahead of time. In fact, it a Syntax error if you try to do so.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span> <span class="n">homerun</span>
+  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="nb">int</span> <span class="n">homerun</span>
+              <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>While assigning a value to the variable, always write the variable name on the left side of the assignment (<code>=</code>) operator. If you don&#39;t do this you will get a syntax error as follows:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">100</span> <span class="o">=</span> <span class="n">words</span>
+  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">can</span><span class="s1">&#39;t assign to literal</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Python automatically detects the type of the variable and operations that can be performed on it based on the type of the value it contains. In programming jargon this behavior is known as Dynamic Typing. It means that we could use the same variable to refer to a data of completely different type than it initially points to. For example:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">homerun</span> <span class="o">=</span> <span class="mi">6</span>  <span class="c1"># at this point, homerun contains an int or integer</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">homerun</span>
+<span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">homerun</span> <span class="o">=</span> <span class="s2">&#34;now&#34;</span>  <span class="c1"># now homerun contains a string </span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">homerun</span>
+<span class="s1">&#39;now&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">homerun</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">homerun</span> <span class="o">=</span>  <span class="mf">2.3</span>   <span class="c1"># now homerun contains a float</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">homerun</span>
+<span class="mf">2.3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">homerun</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/wR/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>When we assign a new value to a variable the reference to old value is lost. For example, when <code>&#34;now&#34;</code> is assigned to the <code>homerun</code>, the reference to value <code>6</code> is lost. At this point, no variable is pointing to that memory location. When this happens Python Interpreter automatically removes the value from the memory through a process known as garbage collection.</p>
+
+<p><img src="../../media/uploads/2017/10/18/variable-reassignment.png" loading="lazy" alt=""/></p>
+
+<p>If you try to access a variable before assigning any value to it. You will get <code>NameError</code> error like this:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">age</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;age&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>We can use also use <code>print()</code> function to print the value of a variable like this:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="mi">100</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="variable-names" class="anchor-target"></span><h2 class="heading">Variable Names <a class="header-link" href="#variable-names">#</a></h2>
+
+<p>In Python, we have the following rules to create a valid variable name.</p>
+
+<ol>
+<li><p>Only use letters ( <code>a-z</code>, <code>A-Z</code> ), underscore ( <code>_</code> ) and numbers ( <code>0-9</code> ) are allowed to create variable names, nothing else.</p></li>
+<li><p>It must begin with a underscore ( <code>_</code> ) or a letter.</p></li>
+<li><p>You can&#39;t use reserved keywords to create variables names.(see below).</p></li>
+<li><p>Variable name can be of any length.</p></li>
+</ol>
+
+<p>Python is case-sensitive language which means that <code>HOME</code> and <code>home</code> are two different variables.</p>
+<span id="python-keywords" class="anchor-target"></span><h2 class="heading">Python keywords <a class="header-link" href="#python-keywords">#</a></h2>
+
+<p>Python Keywords are words that denote something specific in a Python language. That&#39;s why, we are not allowed to use them as variables names. Here is the list of Python keywords:</p>
+
+<p><img src="../../media/uploads/2017/09/19/python-keywords.png" loading="lazy" alt=""/></p>
+
+<p>We will learn more about some of the keywords mentioned here as we progress through this course.</p>
+
+<p>The following are some valid and invalid variable names:</p>
+
+<p><code>home4you</code> - Valid<br/>
+<code>after_you</code> - Valid<br/>
+<code>_thatsall</code> - Valid<br/>
+<code>all10</code> - Valid<br/>
+<code>python_101</code> - Valid</p>
+
+<p><code>$money</code> - Invalid, variables can&#39;t begin with <code>$</code> character<br/>
+<code>hello pi</code> - Invalid, variables can&#39;t have spaces between them<br/>
+<code>2001</code>  - Invalid, variables can&#39;t begin with a digit<br/>
+<code>break</code> - Invalid, keyword can&#39;t be a variable name</p>
+<span id="comments" class="anchor-target"></span><h2 class="heading">Comments <a class="header-link" href="#comments">#</a></h2>
+
+<p>Comments are used to add notes to a program. In a large program, comments may describe the purpose of the program and how it works. They are solely intended for the people who are trying to understand the source code of the program. They are not programming statements so they are ignored by the Python Interpreter while executing the program.</p>
+
+<p>In Python, everything from <code>#</code> to end of the line is considered a comment. For example:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># This is a comment on a separate line</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Testing comments&#34;</span><span class="p">)</span>  <span class="c1"># This is a comment after print statement</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/x9/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+<span id="named-constants" class="anchor-target"></span><h2 class="heading">Named Constants <a class="header-link" href="#named-constants">#</a></h2>
+
+<p>Constants are variables whose values do not change during the lifetime of the program. Unlike languages like C or Java; Python doesn&#39;t have a special syntax to create constants. We create constants just like ordinary variables. However, to separate them from an ordinary variable, we use all uppercase letters.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">MY_CONST</span> <span class="o">=</span> <span class="mi">100</span>   <span class="c1"># a constant</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/y7/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>Note that <code>MY_CONST</code> is just a variable which refers to a value of type <code>int</code>. It has no other special properties.</p>
+
+<p>You are even allowed to change the value of <code>MY_CONST</code> constant by assigning new value to it as follows:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">MY_CONST</span> <span class="o">=</span> <span class="s2">&#34;new value&#34;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>We will use named constant from time to time in our programs.</p>
+<span id="displaying-multiple-items-with-the-print-function" class="anchor-target"></span><h2 class="heading">Displaying Multiple items with the print() Function <a class="header-link" href="#displaying-multiple-items-with-the-print-function">#</a></h2>
+
+<p>We can also use <code>print()</code> statement to print multiple items in a single call by separating each item by a comma (<code>,</code>). When multiple arguments are passed to <code>print()</code> function, they are printed to the console separated by spaces. For example:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">message</span> <span class="o">=</span> <span class="s2">&#34;item2&#34;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;item1&#34;</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="s2">&#34;item3&#34;</span><span class="p">)</span>
+<span class="n">item1</span> <span class="n">item2</span> <span class="n">item3</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/zY/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+<span id="simultaneous-assignment" class="anchor-target"></span><h2 class="heading">Simultaneous Assignment <a class="header-link" href="#simultaneous-assignment">#</a></h2>
+
+<p>We can assign values to multiple variables at once using simultaneous assignment which has the following syntax:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">var1</span><span class="p">,</span> <span class="n">var2</span><span class="p">,</span> <span class="n">var3</span><span class="p">,</span> <span class="o">...</span>  <span class="n">varN</span> <span class="o">=</span> <span class="n">exp1</span><span class="p">,</span> <span class="n">exp2</span><span class="p">,</span> <span class="n">exp3</span><span class="p">,</span> <span class="o">...</span> <span class="n">expN</span>
+</pre></div>
+</div>
+<p>When Python encounters simultaneous assignment statement, it first evaluates all the expression on the right hand side and then assigns their value to the corresponding variables on the left. For example:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">designation</span> <span class="o">=</span> <span class="s2">&#34;tom&#34;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;Lead Developer&#34;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">name</span>
+<span class="s1">&#39;tom&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">age</span>
+<span class="mi">25</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">designation</span>
+<span class="s1">&#39;Lead Developer&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/AO/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>Swapping values between two variables is a common programming operation. In languages like C, to perform swapping you have to create an additional variable to store the data temporarily. For example:</p>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">tmp</span><span class="p">;</span>  <span class="c1">// variable to store data temporary </span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>  <span class="c1">// now tmp contains 10</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>  <span class="c1">// now i contains 20</span>
+<span class="n">j</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>  <span class="c1">// now j contains 10</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In Python, we can use simultaneous assignment to swap values as follows:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>   
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>   
+<span class="mi">10</span> <span class="mi">20</span>   <span class="c1"># initial value</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>   <span class="c1">## swapping values</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="mi">20</span> <span class="mi">10</span>   <span class="c1"># final value</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/BX/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+<span id="functions-in-python" class="anchor-target"></span><h2 class="heading">Functions in Python <a class="header-link" href="#functions-in-python">#</a></h2>
+
+<p>A function is a piece of code which performs something very specific task. At this point, we have only discussed <code>print()</code> and <code>type()</code> function, but Python standard library has literally thousands of built-in functions that perform various kinds of operations. </p>
+
+<p>A function can&#39;t do anything by itself unless you call it. To call a function type the name of the function followed by argument list inside the parentheses i.e <code>()</code> as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">function_name</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">,</span> <span class="n">arg4</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">argN</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>So what are arguments ?</p>
+
+<p>Arguments are additional data required by the function to perform the task. Some functions require arguments while others don&#39;t. To call a function which don&#39;t accept any argument, type function name followed by empty parentheses as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">function_name</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Arguments are also commonly known as parameters.</p>
+
+<p>In the statement, <code>print(&#34;Big Python&#34;)</code>, <code>&#34;Big Python&#34;</code> is an argument.</p>
+
+<p>When a function completes it&#39;s task, it usually returns a value. Not all function returns a value, some do while other&#39;s don&#39;t. If a function do not explicitly return any value then it returns a special value called <code>None</code>, which is one of reserved keywords in Python. That&#39;s all you need to know right now. We will discuss function in great detail in lesson <a href="../functions-in-python/index.html">Functions in Python</a>.</p>
+<span id="modules-in-python" class="anchor-target"></span><h2 class="heading">Modules in Python <a class="header-link" href="#modules-in-python">#</a></h2>
+
+<p>Python uses modules to group similar function, classes, variables etc. For example, <code>math</code> module contains various Mathematical functions and constants, <code>datetime</code> module contains various classes and functions for working with date and time and so on. To use functions, constants or classes defined inside the module, we first have to import it using the <code>import</code> statement. The syntax of the <code>import</code> statement is as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">module_name</span>
+</pre></div>
+</div>
+<p>To import <code>math</code> module inside the Python Shell type the following code:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>To use a method or constant from the module type module name followed by the dot (<code>.</code>) operator, which is followed by the name of the method or variable that you want to access. For example, <code>math</code> module has <code>sqrt()</code> function whose job is to return the square root of a number. To use this function type the following code in Python shell.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">441</span><span class="p">)</span>
+<span class="mf">21.0</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The <code>math</code> module also has two commonly used Mathematical constants <code>pi</code> and <code>e</code>. To access them type the following code:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<span class="mf">3.141592653589793</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">e</span>
+<span class="mf">2.718281828459045</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/Dx/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>To view a complete list of functions and constants provided by the <code>math</code> module check the documentation for <code>math</code> module <a href="https://docs.python.org/3/library/math.html" rel="nofollow">here</a>.</p>
+
+<p>Built-in functions like <code>print()</code>, <code>type()</code>, <code>input()</code> (we discuss this function next) belongs to a special module called <code>__builtin__</code>. But Why it is special ? Because functions inside the <code>__builtin__</code> module are always available to use without explicitly importing <code>__builtin__</code> module.</p>
+<span id="reading-input-from-keyboard" class="anchor-target"></span><h2 class="heading">Reading Input from Keyboard <a class="header-link" href="#reading-input-from-keyboard">#</a></h2>
+
+<p>Python has a built-in function named <code>input()</code> to read input from the keyboard. It&#39;s syntax is as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code>prompt</code> refers to the optional string which instructs the user to enter the input. The <code>input()</code> function reads the input data from the keyboard and returns it as a string. The entered data is then assigned to a variable named <code>var</code> for further processing. </p>
+
+<p>It doesn&#39;t matter whether the entered data is of type <code>int</code>, <code>float</code> or anything else, eventually the <code>input()</code> function will convert the data to string.</p>
+
+<p>When <code>input()</code> statement is encountered, the program pauses and waits for the user to enter input. When you are done typing, hit enter key to submit the input. The <code>input()</code> function then returns the entered data as string.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter your name: &#34;</span><span class="p">)</span>
+<span class="n">Enter</span> <span class="n">your</span> <span class="n">name</span><span class="p">:</span> <span class="n">Tom</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">name</span>
+<span class="s1">&#39;Tom&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/Ev/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+<span id="getting-help-using-help-function" class="anchor-target"></span><h2 class="heading">Getting Help using help() Function <a class="header-link" href="#getting-help-using-help-function">#</a></h2>
+
+<p>Documentation is an important part of any Computer language and as a budding programmer you should know how to access Python&#39;s documentation to learn more about language and various capabilities it provides.</p>
+
+<p>We can use the <code>help()</code> command to learn more about a function, class or modules. To use <code>help()</code> function just pass the name of the function, class or module. For example, to learn about the <code>input()</code> function call <code>help()</code> function as follows:</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span>&gt;&gt;&gt;
+&gt;&gt;&gt; help(input)
+Help on built-in function input in module builtins:
+
+input(...)
+    input([prompt]) -&gt; string
+
+    Read a string from standard input.  The trailing newline is stripped.
+    If the user hits EOF (Unix: Ctl-D, Windows: Ctl-Z+Return), raise EOFError.
+    On Unix, GNU readline is used if enabled.  The prompt string, if given,
+    is printed without a trailing newline before reading.
+
+&gt;&gt;&gt;
+&gt;&gt;&gt;
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/G7/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>The line <code>input([prompt]) -&gt; string</code> is called the function signature. A function signature defines it&#39;s arguments and return value. If an argument is optional then it will be wrapped inside square brackets <code>[]</code>.</p>
+
+<p>The line <code>input([prompt]) -&gt; string</code> means that <code>input()</code> function accepts a optional argument called <code>prompt</code> and returns a value of type string.</p>
+
+<p>Note the that <code>help()</code> function does not uses Internet connection to fetch the documentation, instead it uses a offline copy of the documentation stored in the hard drive. Python documentation is also available online, to access it visit <a href="https://docs.python.org/3/" rel="nofollow">https://docs.python.org/3/</a>.</p>
+
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../idle-and-python-shell/index.html" title="IDLE and Python Shell">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            IDLE and Python Shell
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../numbers-in-python/index.html" title="Numbers in Python">
+                            Numbers in Python
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>Python Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-python/index.html">Intro to Python</a></li>
+            
+                <li><a href="../installing-python/index.html">Installing Python</a></li>
+            
+                <li><a href="../idle-and-python-shell/index.html">IDLE and Python Shell</a></li>
+            
+                <li><a href="index.html">Data Types and Variables In Python</a></li>
+            
+                <li><a href="../numbers-in-python/index.html">Numbers in Python</a></li>
+            
+                <li><a href="../operators-in-python/index.html">Operators in Python</a></li>
+            
+                <li><a href="../strings-in-python/index.html">Strings in Python</a></li>
+            
+                <li><a href="../strings-methods-in-python/index.html">Strings Methods in Python</a></li>
+            
+                <li><a href="../if-else-statements-in-python/index.html">If-else statements in Python</a></li>
+            
+                <li><a href="../loops-in-python/index.html">Loops in Python</a></li>
+            
+                <li><a href="../break-and-continue-statement-in-python/index.html">break and continue statement in Python</a></li>
+            
+                <li><a href="../lists-in-python/index.html">Lists in Python</a></li>
+            
+                <li><a href="../functions-in-python/index.html">Functions in Python</a></li>
+            
+                <li><a href="../modules-in-python/index.html">Modules in Python</a></li>
+            
+                <li><a href="../objects-and-classes-in-python/index.html">Objects and Classes in Python</a></li>
+            
+                <li><a href="../inheritance-and-polymorphism-in-python/index.html">Inheritance and Polymorphism in Python</a></li>
+            
+                <li><a href="../operator-overloading-in-python/index.html">Operator Overloading in Python</a></li>
+            
+                <li><a href="../file-handling-in-python/index.html">File Handling in Python</a></li>
+            
+                <li><a href="../exception-handling-in-python/index.html">Exception Handling in Python</a></li>
+            
+                <li><a href="../tuples-in-python/index.html">Tuples in Python</a></li>
+            
+                <li><a href="../sets-in-python/index.html">Sets in Python</a></li>
+            
+                <li><a href="../dictionary-in-python/index.html">Dictionary in Python</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../c-programming-101/index.html">C Tutorial</a></li>
+                    <li><a href="../index.html">Python Tutorial</a></li>
+                    <li><a href="../../django-1-11/index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/python-101/data-types-and-variables-in-python/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:07:02 GMT -->
+</html>

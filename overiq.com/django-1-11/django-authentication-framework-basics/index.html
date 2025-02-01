@@ -1,0 +1,1861 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/django-1-11/django-authentication-framework-basics/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:13:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":102864,"response_size_orig":97096,"response_time_orig":520,"template_id":5,"url":"https://overiq.com/django-1-11/django-authentication-framework-basics/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"c40e7c1379882a1169e3c9fe40de2946"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Django Authentication Framework Basics - Django 1.11 Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="Django authentication (or auth) app provides a wide array of tools for User management ranging from authenticating users to resetting passwords. 
+
+Th…"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Django Authentication Framework Basics"/>
+
+    <meta property="og:description" content="Django authentication (or auth) app provides a wide array of tools for User management ranging from authenticating users to resetting passwords. 
+
+Th…"/>
+
+
+<meta property="og:url" content="https://overiq.com/django-1-11/django-authentication-framework-basics/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="Django authentication (or auth) app provides a wide array of tools for User management ranging from authenticating users to resetting passwords. 
+
+Th…"/>
+
+
+<meta name="twitter:title" content="Django Authentication Framework Basics"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">Django 1.11 Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">Django Authentication Framework Basics</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>Django Authentication Framework Basics</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on July 27, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p>Django authentication (or <code>auth</code>) app provides a wide array of tools for User management ranging from authenticating users to resetting passwords. </p>
+
+<p>The <code>auth</code> app is quite big. It consists of URL patterns, views, forms, decorators, models, middlewares etc. To make things simple and easy to follow our discussion will be limited to the following topics:</p>
+
+<ol>
+<li><code>User</code> model</li>
+<li><code>AnonymousUser</code> model</li>
+<li>Password hashing system</li>
+<li>Login/Logout users</li>
+<li>Creating Users</li>
+<li>Change Password</li>
+<li>Reset Password</li>
+<li>Restricting Access</li>
+<li>Extending <code>User</code> model</li>
+</ol>
+
+<p>We will start with the basics and then move on to more complex topics in later chapters.</p>
+<span id="setting-up-authentication-framework" class="anchor-target"></span><h2 class="heading">Setting Up Authentication Framework <a class="header-link" href="#setting-up-authentication-framework">#</a></h2>
+
+<p>The authentication framework is implemented as <code>&#39;django.contrib.auth&#39;</code> app but it also depends upon on <code>&#39;django.contrib.contenttype&#39;</code> app and some middlewares to work correctly.</p>
+
+<p>Open <code>settings.py</code> file and make sure you have <code>&#39;django.contrib.auth&#39;</code> and <br/>
+<code>&#39;django.contrib.contenttype&#39;</code> in the <code>INSTALLED_APPS</code> list as follows:</p>
+
+<p><strong>djangobin/django_project/django_project/settings.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;djangobin&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="c1">#...</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>If you are adding <code>&#39;django.contrib.auth&#39;</code> and <code>&#39;django.contrib.contenttype&#39;</code> right now, run <code>./manage.py migrate</code> command. This command will create necessary tables in the database.</p>
+
+<p>So what is <code>django.contrib.contenttype</code> ?</p>
+
+<p>The <code>django.contrib.contenttype</code> app is used to keep track of different types of content in the project. This app has advanced use cases, so we won&#39;t be covering it in this beginner tutorial.</p>
+
+<p>Django <code>auth</code> app also uses sessions behind the scenes. As a result, you must have the following two middlewares in the <code>MIDDLEWARE</code> list in <code>settings.py</code>.</p>
+
+<ol>
+<li><code>django.contrib.sessions.middleware.SessionMiddleware</code></li>
+<li><code>django.contrib.auth.middleware.AuthenticationMiddleware</code></li>
+</ol>
+
+<p>The <code>django.contrib.sessions.middleware.SessionMiddleware</code> is responsible for generating unique Session IDs. And the <code>django.contrib.auth.middleware.AuthenticationMiddleware</code> adds an attribute named <code>user</code> to the <code>request</code> object. The utility of this will become clear in the upcoming sections.</p>
+
+<p>Finally, <code>MIDDLEWARE</code> list should look like this:</p>
+
+<p><strong>djangobin/django_project/django_project/settings.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+<span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.middleware.security.SecurityMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.middleware.common.CommonMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.middleware.csrf.CsrfViewMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages.middleware.MessageMiddleware&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="c1">#...</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="type-of-users" class="anchor-target"></span><h2 class="heading">Type of Users <a class="header-link" href="#type-of-users">#</a></h2>
+
+<p>Django has two types of users:</p>
+
+<ol>
+<li>AnonymousUser</li>
+<li>User</li>
+</ol>
+<span id="anonymoususer" class="anchor-target"></span><h3 class="heading">AnonymousUser <a class="header-link" href="#anonymoususer">#</a></h3>
+
+<p>A user who is not logged in to the application is called an AnonymousUser. For example, a regular user who comes to our site to consume content is an AnonymousUser. This type of users is represented using the <code>AnonymousUser</code> model.</p>
+<span id="user" class="anchor-target"></span><h3 class="heading">User <a class="header-link" href="#user">#</a></h3>
+
+<p>A user who is logged in to the application is called a User. This type of users is represented using the <code>User</code> model.</p>
+
+<p>The <code>AnonymousUser</code> model is not much used apart from the web requests but the <code>User</code> model is used in a number of places. Consequently, we will spend most of our time with the <code>User</code> mode. The following section explains everything you need to know about the <code>User</code> model.</p>
+<span id="the-user-model" class="anchor-target"></span><h2 class="heading">The User Model <a class="header-link" href="#the-user-model">#</a></h2>
+
+<p>The <code>User</code> model is considered as the heart of Django authentication framework. We use <code>User</code> model to store data of application users. To use it you must first import it from <br/>
+<code>django.contrib.auth.models</code>.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="creating-a-user-object" class="anchor-target"></span><h2 class="heading">Creating a User object <a class="header-link" href="#creating-a-user-object">#</a></h2>
+
+<p>Django provides a custom method on <code>objects</code> manager named <code>create_user()</code> to create users. It accepts at-least three parameters username, password, and email.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span>
+<span class="gp">... </span><span class="s1">&#39;noisyboy&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="s1">&#39;noisyboy@mail.com&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="s1">&#39;password&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span>
+<span class="go">&lt;User: noisyboy&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The following table lists all the fields of the <code>User</code> model.</p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>username</code></td>
+<td>A required, 30 character field to store username. It can only take alphanumeric characters i.e letters, digits and underscores.</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>A required field to store password.</td>
+</tr>
+<tr>
+<td><code>first_name</code></td>
+<td>An optional field of 30 characters to store user&#39;s <code>first_name</code>.</td>
+</tr>
+<tr>
+<td><code>last_name</code></td>
+<td>An optional field of 30 characters to store user&#39;s <code>last_name</code>.</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>An optional field to store email address.</td>
+</tr>
+<tr>
+<td><code>is_active</code></td>
+<td>A boolean field which tells whether the account can be used to login or not.</td>
+</tr>
+<tr>
+<td><code>is_superuser</code></td>
+<td>A boolean field if set to <code>True</code>, the user has full permission to perform any CRUD(create, read, update and delete) operation in the Django admin site.</td>
+</tr>
+<tr>
+<td><code>is_staff</code></td>
+<td>A boolean field if set to <code>True</code>, the user can access Django admin site but can&#39;t perform any CRUD operation until given explicit permissions. By default, for superusers (users whose <code>is_superuser</code> attribute is <code>True</code>) the <code>is_staff</code> is also <code>True</code>.</td>
+</tr>
+<tr>
+<td><code>date_joined</code></td>
+<td>A field to store date and time when the account was created. This is field is automatically filled with the current date and time when the account is created.</td>
+</tr>
+<tr>
+<td><code>last_login</code></td>
+<td>A field containing the date and time of the last login.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The <code>create_user()</code> method creates a non-superuser with <code>is_staff</code> attribute set to <code>True</code>. This means that the user can login into the Django admin site but can&#39;t perform any CRUD operation. To create a superuser use <code>create_superuser()</code> method which works exactly like <code>create_user()</code> but creates a superuser.</p>
+
+<p>To get the field values of the newly created <code>User</code> instance execute the following query:</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;noisyboy&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="go">&lt;QuerySet </span>
+<span class="go">[{</span>
+<span class="go">    &#39;username&#39;: &#39;noisyboy&#39;, </span>
+<span class="go">    &#39;password&#39;: &#39;pbkdf2_sha256$36000$JuRTV4Vec59R$ueTUvEcLH/i/eESGTIiwk7O3iEZfW+BtpnhCmtpYK48=&#39;, </span>
+<span class="go">    &#39;is_staff&#39;: False, </span>
+<span class="go">    &#39;first_name&#39;: &#39;&#39;, </span>
+<span class="go">    &#39;id&#39;: 2, </span>
+<span class="go">    &#39;email&#39;: &#39;noisyboy@mail.com&#39;, </span>
+<span class="go">    &#39;last_name&#39;: &#39;&#39;, </span>
+<span class="go">    &#39;is_active&#39;: True, </span>
+<span class="go">    &#39;is_superuser&#39;: False, </span>
+<span class="go">    &#39;last_login&#39;: None, </span>
+<span class="go">    &#39;date_joined&#39;: datetime.datetime(2018, 4, 3, 4, 51, 8, 674638, tzinfo=&lt;UTC&gt;)</span>
+<span class="go">}]&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>As you can see, currently the <code>noisyboy</code> is not a superuser.  We can easily change that by setting <code>is_superuser</code> attribute to <code>True</code> and then calling the <code>save()</code> method:</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">is_superuser</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">is_superuser</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Another thing to notice here is that the value of <code>password</code> field in the output of the preceding query. It looks something like this:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;pbkdf2_sha256$36000$JuRTV4Vec59R$ueTUvEcLH/i/eESGTIiwk7O3iEZfW+BtpnhCmtpYK48=&#39;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>Recall that while creating <code>noisyboy</code> user we have used the string <code>&#34;password&#34;</code> as account password. So how come it becomes so long?</p>
+
+<p>It is a common security measure to not to store passwords as plain text into the database. Instead, we use a mathematical function which converts our password into a long string like the one above. Such function is called a hash function and the long string it returns is called a password hash. The idea behind the hash function is this - creating password hash from a password is easy, but the reverse process is not possible.</p>
+
+<p>By default, Django uses PBKDF2 algorithm to create password hashes.</p>
+
+<p>This is the reason why we used <code>create_user()</code> method to create <code>User</code> object instead of <code>create()</code> or <code>bulk_create()</code> method. The <code>create_user()</code> method automatically converts a password to a hash. If we had used <code>create()</code> or <code>bulk_create()</code> method, it would have saved the password as plain text into the database. We can verify this by creating a new user using the <code>create()</code> method as follows:</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">username</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">email</span><span class="o">=</span><span class="s1">&#39;test@mail.com&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">password</span><span class="o">=</span><span class="s1">&#39;pass&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_user</span><span class="o">.</span><span class="n">password</span>
+<span class="go">&#39;pass&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Django stores the user data in the <code>auth_user</code> table. After executing the above code the <code>auth_user</code> table should look like this:</p>
+
+<p><img src="../../media/uploads/2018/5/21/Selection_141-5decdbe0-8589-4754-924d-b2f0337feab9.png" loading="lazy" alt=""/></p>
+
+<p>Here are some of the methods supplied by the <code>User</code> model:</p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>get_username()</code></td>
+<td>returns <code>username</code> of the user. To get the username you should use this property instead of directly referencing the <code>username</code> attribute.</td>
+</tr>
+<tr>
+<td><code>get_full_name()</code></td>
+<td>returns the value of <code>first_name</code> and <code>last_name</code> attribute with a space in between</td>
+</tr>
+<tr>
+<td><code>check_password(pass)</code></td>
+<td>It returns <code>True</code> if string passed is the correct password, otherwise <code>False</code>. It first converts the password to password hash then compares it to the one saved in the database.</td>
+</tr>
+<tr>
+<td><code>set_password(passwd)</code></td>
+<td>It is used to change the password of the user. It takes care of password hashing. Note that <code>set_password()</code> doesn&#39;t save the <code>User</code> object, you have to call <code>save()</code> method to commit the changes to the database.</td>
+</tr>
+<tr>
+<td><code>is_authenticated()</code></td>
+<td>return <code>True</code> if user is authenticated (logged in), otherwise <code>False</code>.</td>
+</tr>
+<tr>
+<td><code>is_anonymous()</code></td>
+<td>returns <code>True</code> if the user is anonymous, otherwise <code>False</code>.</td>
+</tr>
+</tbody>
+</table></div><span id="get_username" class="anchor-target"></span><h3 class="heading">get_username() <a class="header-link" href="#get_username">#</a></h3>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">get_username</span><span class="p">()</span>
+<span class="go">&#39;noisyboy&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">get_full_name</span><span class="p">()</span>
+<span class="go">&#39;&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="check_password" class="anchor-target"></span><h3 class="heading">check_password() <a class="header-link" href="#check_password">#</a></h3>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">check_password</span><span class="p">(</span><span class="s2">&#34;mypass&#34;</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">check_password</span><span class="p">(</span><span class="s2">&#34;password&#34;</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="set_password" class="anchor-target"></span><h3 class="heading">set_password() <a class="header-link" href="#set_password">#</a></h3>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="s2">&#34;pass&#34;</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>To commit the changes call the <code>save()</code> method.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="is_authenticated" class="anchor-target"></span><h3 class="heading">is_authenticated() <a class="header-link" href="#is_authenticated">#</a></h3>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here, the <code>is_authenticated()</code> method returns <code>True</code>. It doesn&#39;t mean that the <code>noisyboy</code> is currently logged in to the Django admin site. In fact, inside the Django shell, <code>is_authenticated()</code> when used on <code>User</code> instances always returns <code>True</code>. We can verify this fact by creating a new user and then checking the return value of <code>is_authenticated()</code> method.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span>
+<span class="gp">... </span><span class="s1">&#39;newtestuser&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="s1">&#39;newtestuser@mail.com&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="s1">&#39;pass&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Inside Django Shell <code>is_authenticated()</code> is useless. Its real utility comes into play in views and templates, as we will see in the subsequent lessons.</p>
+<span id="is_anonymous" class="anchor-target"></span><h3 class="heading">is_anonymous() <a class="header-link" href="#is_anonymous">#</a></h3>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">is_anonymous</span><span class="p">()</span>
+<span class="go">False</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The object <code>u</code> is an instance of <code>User</code> class that&#39;s why <code>is_anonymous()</code> returns <code>False</code>.Had it belong to the <code>AnonymousUser</code> class, it would have returned <code>True</code>.</p>
+<span id="anonymoususer-model" class="anchor-target"></span><h2 class="heading">AnonymousUser Model <a class="header-link" href="#anonymoususer-model">#</a></h2>
+
+<p>Django has another model called <code>AnonymousUser</code> which represents users which are not logged in. In other words, the regular users which come to our site to consume content are AnonymousUser. The <code>AnonymousUser</code> model has almost the same methods and fields as that of <code>User</code> model with the following difference.</p>
+
+<ul>
+<li><code>id</code> or <code>pk</code> attribute always contains <code>None</code>.</li>
+<li><code>username</code> attribute will always be an empty string i.e <code>&#39;&#39;</code>.</li>
+<li><code>is_anonymous()</code> is <code>True</code> instead of <code>False</code>.</li>
+<li><code>is_authenticated()</code> is <code>False</code> instead of <code>True</code>.</li>
+<li><code>is_staff</code> and <code>is_superuser</code> attributes will be always be <code>False</code>.</li>
+<li><code>is_active</code> will always be <code>False</code>.</li>
+<li>Calling <code>save()</code> or <code>delete()</code> on <code>AnonymousUser</code> object will raise 
+<code>NotImplementedError</code> exception.</li>
+</ul>
+
+<p>It is important to note that <code>AnonymousUser</code> model doesn&#39;t have any kind of relationship with <code>User</code> model. It is a separate class with its own methods and fields. The only similarity between <code>User</code> and <code>AnonymousUser</code> model is that most of the fields and methods are same. It is not a design flaw, It is done on purpose to make things easier.</p>
+
+<p>Earlier in this chapter, we have discussed that <br/>
+<code>django.contrib.auth.middleware.AuthenticationMiddleware</code> middleware adds a <code>user</code> attribute to the <code>request</code> object. The <code>request.user</code> returns either an instance of <code>AnonymousUser</code> or <code>User</code> model. Because both <code>User</code> and <code>AnonymousUser</code> class implement the same interface, we can use the same fields and methods to get the relevant information without worrying about the actual  type of object.</p>
+
+<p>The following example perfectly describes how we can use this behavior to our advantage. The <code>test_logged_on_or_not()</code> view tests whether the user is logged in or not using the <code>is_authenticated()</code> method. We are able to write this code because <code>is_authenticated()</code> is implemented in the <code>AnonymousUser</code> model as well as in the <code>User</code> model.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_logged_on_or_not</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;You are logged in.&#34;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s2">&#34;login&#34;</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>This is how the above code works:</p>
+
+<p>If <code>is_authenticated()</code> method returns <code>True</code> then the user will be greeted with <code>&#34;You are logged in.&#34;</code> response. Otherwise, the user will be redirected to the login page.</p>
+
+<p>In practice, you would probably never need to create an object of type <code>AnonymousUser</code>. Just in case, you are curious, the following code shows you how to do so.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">AnonymousUser</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">au</span> <span class="o">=</span> <span class="n">AnonymousUser</span><span class="p">()</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Once we have access to <code>AnonymousUser</code> instance we can use any fields or methods to get any relevant information.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">au</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="go">None</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">au</span><span class="o">.</span><span class="n">pk</span><span class="p">)</span>
+<span class="go">None</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">au</span><span class="o">.</span><span class="n">username</span>
+<span class="go">&#39;&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">au</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">()</span>
+<span class="go">False</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">au</span><span class="o">.</span><span class="n">is_anonymous</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">au</span><span class="o">.</span><span class="n">is_active</span>
+<span class="go">False</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">au</span><span class="o">.</span><span class="n">is_superuser</span>
+<span class="go">False</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">au</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="gp">... </span> 
+<span class="go">NotImplementedError: Django doesn&#39;t provide a DB representation for AnonymousUser.</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">au</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">NotImplementedError</span>: <span class="n">Django doesn&#39;t provide a DB representation for AnonymousUser.</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>As described earlier, calling <code>save()</code> or <code>delete()</code> on <code>AnonymousUser</code> object raises <code>NotImplementedError</code> exception.</p>
+<span id="extending-user-model" class="anchor-target"></span><h2 class="heading">Extending User Model <a class="header-link" href="#extending-user-model">#</a></h2>
+
+<p>Django only provides bare minimum fields in the <code>User</code> model to get you started, but it also gives you full power to extend the <code>User</code> model to suit your application needs.</p>
+
+<p>Recall that by default the <code>User</code> model contains the following fields:</p>
+
+<ol>
+<li>username</li>
+<li>first_name</li>
+<li>last_name</li>
+<li>email</li>
+<li>password</li>
+<li>last_login</li>
+<li>is_active</li>
+<li>is_staff</li>
+<li>is_superuser</li>
+<li>date_joined</li>
+</ol>
+
+<p>At this point, you might be wondering if <code>User</code> model is used to store user information then what the point of defining the <code>Author</code> model.</p>
+
+<p>If that&#39;s what you thought. You are right.</p>
+
+<p>All the fields of the <code>Author</code> model also exist in the <code>User</code> model. That means we don&#39;t really need <code>Author</code> model at all.</p>
+
+<p>But what if we want to store some additional data about the user? like date of birth, favorite car, maiden name, etc;</p>
+
+<p>To store additional data about user we have to extend our <code>User</code> model. </p>
+
+<p>The first step in extending the <code>User</code> model is to create a new model with all the additional fields you want to store. Next, to associate our new model with the <code>User</code> model define a <code>OneToOneField</code> field containing a reference to the <code>User</code> model in our new model.</p>
+
+<p>In our case, we want to store the following information about the user:</p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>default_language</code></td>
+<td>Default Language for creating a snippet</td>
+</tr>
+<tr>
+<td><code>default_exposure</code></td>
+<td>Default exposure (i.e public, private and unlisted)</td>
+</tr>
+<tr>
+<td><code>default_expiration</code></td>
+<td>Default expiration time (i.e never, 1 week, 1 month, 6 month, 1 year)</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>A boolean field which denotes whether other users can view this profile or not</td>
+</tr>
+<tr>
+<td><code>views</code></td>
+<td>An integer field to store the number of visits to the profile page.</td>
+</tr>
+</tbody>
+</table></div>
+<p>In anticipation of the changes we are going to make on the <code>Author</code> model, let&#39;s perform some database clean up. Right now, there are some users in the <code>djangobin_author</code> table which are independent of the <code>User</code> model. To avoid conflicts, it would be best to delete all the <code>Author</code> objects from the database. Note that deleting authors will also delete all the snippets associated with them.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">djangobin.models</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Author</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="go">(17, {&#39;djangobin.Author&#39;: 4, &#39;djangobin.Snippet&#39;: 7, &#39;djangobin.Snippet_tags&#39;: 6})</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Note:</strong> It is not always possible to delete data from the tables. That&#39;s why you should plan your database properly before you start writing the application.</p>
+
+<p>We can now make changes to the <code>Author</code> model. Open <code>models.py</code> and delete the <code>Author</code> model. Below the <code>Language</code> model re-define the new <code>Author</code> model as follows:</p>
+
+<p><strong>djangobin/django_project/djangobin/models.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span><span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">Preference</span> <span class="k">as</span> <span class="n">Pref</span>
+
+
+<span class="k">class</span> <span class="nc">Language</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1">#...</span>
+
+
+<span class="hll"><span class="k">def</span> <span class="nf">get_default_language</span><span class="p">():</span>
+</span><span class="hll">    <span class="n">lang</span> <span class="o">=</span> <span class="n">Language</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span>
+</span><span class="hll">        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Plain Text&#39;</span><span class="p">,</span>
+</span><span class="hll">        <span class="n">lang_code</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+</span><span class="hll">        <span class="n">slug</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+</span><span class="hll">        <span class="n">mime</span><span class="o">=</span><span class="s1">&#39;text/plain&#39;</span><span class="p">,</span>
+</span><span class="hll">        <span class="n">file_extension</span><span class="o">=</span><span class="s1">&#39;.txt&#39;</span><span class="p">,</span>
+</span><span class="hll">    <span class="p">)</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="k">return</span> <span class="n">lang</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll"><span class="k">class</span> <span class="nc">Author</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span class="hll">    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">OneToOneField</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;profile&#39;</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">default_language</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Language</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+</span><span class="hll">                                         <span class="n">default</span><span class="o">=</span><span class="n">get_default_language</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">default_exposure</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">Pref</span><span class="o">.</span><span class="n">exposure_choices</span><span class="p">,</span>
+</span><span class="hll">                                        <span class="n">default</span><span class="o">=</span><span class="n">Pref</span><span class="o">.</span><span class="n">SNIPPET_EXPOSURE_PUBLIC</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">default_expiration</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">Pref</span><span class="o">.</span><span class="n">expiration_choices</span><span class="p">,</span>
+</span><span class="hll">                                        <span class="n">default</span><span class="o">=</span><span class="n">Pref</span><span class="o">.</span><span class="n">SNIPPET_EXPIRE_NEVER</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">private</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">views</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="k">def</span> <span class="nf">get_absolute_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">&#39;djangobin:profile&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">])</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="k">def</span> <span class="nf">get_snippet_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class="hll">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">snippet_set</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</span>
+
+<span class="k">class</span> <span class="nc">Snippet</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1">#...</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>There is nothing new here, except how we are setting the default value of the <code>default_language</code> field. For the first time, we are using a callable to set the default value. The callable is called every time a new <code>Author</code> instance is created.</p>
+
+<p>The callable uses a new method of <code>objects</code> manager called <code>get_or_create()</code>. The <code>get_or_create()</code> method is an amalgamation of <code>get()</code> and <code>create()</code> method. It first checks whether a matching object exists in the database or not, if it doesn&#39;t it creates one.</p>
+
+<p>The <code>get_or_create()</code> method returns a tuple of the form <code>(object, created)</code>, where <code>object</code> refers to the retrieved or created instance and <code>created</code> is a boolean value specifying whether a new object is created or not.</p>
+
+<p>The callable returns the primary key of the language whose name is <code>Plain Text</code>. The <code>Plain Text</code> will be used to create snippet without any highlighting.</p>
+
+<p>The default values and choices for <code>default_language</code> and <code>default_expiration</code> fields is coming from the <code>Preference</code> class we defined in lesson <a href="../basics-of-models-in-django/index.html">Basics of Models in Django</a></p>
+
+<p>Next, create a new migration file using <code>./manage.py makemigrations</code> command and you will get a prompt like this:</p>
+<div class="codeblock language-bash"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ ./manage.py makemigrations
+Did you rename author.active to author.private <span class="o">(</span>a BooleanField<span class="o">)</span>? <span class="o">[</span>y/N<span class="o">]</span> n
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Enter <code>N</code> or <code>n</code>, to proceed. After that you will receive another prompt:</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>You are trying to add a non-nullable field &#39;user&#39; to author without a default; we can&#39;t do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option:
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The issue is that we are trying to add a foreign key with UNIQUE and NOT NULL constraint to the <code>djangobin_author</code> table. Django thinks that there might be some rows in <code>djangobin_author</code> table and needs to know what to fill in the foreign key(user) column of these rows. Although, there are no actual authors in the <code>djangobin_author</code> table but Django is completely unaware of this.</p>
+
+<p>Let&#39;s select option 1 and provide a one-off default value of <code>None</code>:</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type &#39;exit&#39; to exit this prompt
+&gt;&gt;&gt; None
+Migrations for &#39;djangobin&#39;:
+  djangobin/migrations/0013_auto_20180403_1059.py
+    - Change Meta options on tag
+    - Remove field active from author
+    - Remove field created_on from author
+    - Remove field email from author
+    - Remove field last_logged_in from author
+    - Remove field name from author
+    - Add field default_expiration to author
+    - Add field default_exposure to author
+    - Add field default_language to author
+    - Add field private to author
+    - Add field user to author
+    - Add field views to author
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Finally, commit the migration using the <code>migrate</code> command:</p>
+<div class="codeblock language-bash"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ ./manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, djangobin, sessions
+Running migrations:
+  Applying djangobin.0013_auto_20180404_0457... OK
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Keep in mind that extending the <code>User</code> model doesn&#39;t mean that the associated <code>Author</code> instance will be created automatically every time a new <code>User</code> instance is created. You can create the <code>Author</code> instance either using Django ORM or from the Django admin site. </p>
+
+<p>To automatically trigger the creation of <code>Author</code> instance whenever a <code>User</code> instance is created, we can use Signals. We will discuss how to do that later in this chapter.</p>
+
+<p>Furthermore, the <code>User</code> instances which already exists in the database doesn&#39;t have the associated <code>Author</code> instance. This will result in an error if you try to login with these accounts in the finished version of the application. We can easily fix this issue by creating <code>Author</code> for each <code>User</code> instance using the following code:</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">djangobin.models</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ul</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ul</span>
+<span class="go">&lt;QuerySet [&lt;User: admin&gt;, &lt;User: noisyboy&gt;, &lt;User: test&gt;, &lt;User: newtestuser&gt;]&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">ul</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">Author</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="go">(&lt;Author: admin&gt;, True)</span>
+<span class="go">(&lt;Author: noisyboy&gt;, True)</span>
+<span class="go">(&lt;Author: test&gt;, True)</span>
+<span class="go">(&lt;Author: newtestuser&gt;, True)</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>After executing the preceding code, <code>djangobin_author</code> table will look like this:</p>
+
+<p><img src="../../media/uploads/2018/5/21/Selection_143-c2db918c-9e18-4634-adfa-fc4e46f93055.png" loading="lazy" alt=""/></p>
+
+<p>Before we move on to the next section, let&#39;s replace the foreign key <code>author</code> of the <code>Snippet</code> model with the foreign key to the <code>User</code> model, as follows:</p>
+
+<p><strong>djangobin/django_project/djangobin/models.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+
+<span class="k">class</span> <span class="nc">Snippet</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">original_code</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+    <span class="n">highlighted_code</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">help_text</span><span class="o">=</span><span class="s2">&#34;Read only field. Will contain the&#34;</span>
+                                    <span class="s2">&#34; syntax-highlited version of the original code.&#34;</span><span class="p">)</span>
+    <span class="n">expiration</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">Pref</span><span class="o">.</span><span class="n">expiration_choices</span><span class="p">)</span>
+    <span class="n">exposure</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">Pref</span><span class="o">.</span><span class="n">exposure_choices</span><span class="p">)</span>
+    <span class="n">hits</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">help_text</span><span class="o">=</span><span class="s1">&#39;Read only field. &#39;</span>
+                                                    <span class="s1">&#39;Will be updated after every visit to snippet.&#39;</span><span class="p">)</span>
+    <span class="n">slug</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">SlugField</span><span class="p">(</span><span class="n">help_text</span><span class="o">=</span><span class="s1">&#39;Read only field. Will be filled automatically.&#39;</span><span class="p">)</span>
+    <span class="n">created_on</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">language</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Language</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+<span class="hll">    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+</span>    <span class="n">tags</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="s1">&#39;Tag&#39;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-created_on&#39;</span><span class="p">]</span>
+
+<span class="c1">#...</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Next, update <code>SnippetAdmin</code> class in <code>admin.py</code> to use the <code>user</code> field as follows:</p>
+
+<p><strong>djangobin/django_project/djangobin/admin.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+
+<span class="k">class</span> <span class="nc">SnippetAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+<span class="hll">    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;language&#39;</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;expiration&#39;</span><span class="p">,</span> <span class="s1">&#39;exposure&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">]</span>
+</span>    <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-created_on&#39;</span><span class="p">]</span>
+    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;created_on&#39;</span><span class="p">]</span>
+    <span class="n">date_hierarchy</span> <span class="o">=</span> <span class="s1">&#39;created_on&#39;</span>
+    <span class="c1"># filter_horizontal = (&#39;tags&#39;,)</span>
+    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,)</span>
+    <span class="n">readonly_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;highlighted_code&#39;</span><span class="p">,</span> <span class="s1">&#39;hits&#39;</span><span class="p">,</span> <span class="s1">&#39;slug&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="hll">    <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;original_code&#39;</span><span class="p">,</span> <span class="s1">&#39;highlighted_code&#39;</span><span class="p">,</span> <span class="s1">&#39;expiration&#39;</span><span class="p">,</span> <span class="s1">&#39;exposure&#39;</span><span class="p">,</span>
+</span><span class="hll">              <span class="s1">&#39;hits&#39;</span><span class="p">,</span> <span class="s1">&#39;slug&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;tags&#39;</span><span class="p">)</span>
+</span>
+
+<span class="c1">#...</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>To create a new a migration run <code>./manage.py makemigrations djangobin</code> command and provide a one-off value of <code>None</code>.</p>
+<div class="codeblock language-bash"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ ./manage.py makemigrations djangobin
+You are trying to add a non-nullable field <span class="s1">&#39;user&#39;</span> to snippet without a default<span class="p">;</span> we can<span class="s1">&#39;t do that (the database needs something to populate existing rows).</span>
+<span class="s1">Please select a fix:</span>
+<span class="s1"> 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)</span>
+<span class="s1"> 2) Quit, and let me add a default in models.py</span>
+<span class="s1">Select an option: 1</span>
+<span class="s1">Please enter the default value now, as valid Python</span>
+<span class="s1">The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now</span>
+<span class="s1">Type &#39;</span>exit<span class="s1">&#39; to exit this prompt</span>
+<span class="s1">&gt;&gt;&gt; None</span>
+<span class="s1">Migrations for &#39;</span>djangobin<span class="err">&#39;</span>:
+  djangobin/migrations/0006_auto_20180616_0826.py
+    - Remove field author from snippet
+    - Add field user to snippet
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Finally, commit the migration by typing:</p>
+<div class="codeblock language-bash"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ ./manage.py migrate djangobin
+Operations to perform:
+  Apply all migrations: djangobin
+Running migrations:
+  Applying djangobin.0006_auto_20180616_0826... OK
+</pre></div>
+</td></tr></tbody></table></div><span id="displaying-author-model-with-the-user-model" class="anchor-target"></span><h2 class="heading">Displaying Author model with the User model <a class="header-link" href="#displaying-author-model-with-the-user-model">#</a></h2>
+
+<p>If you visit Django admin site, you will find that the <code>User</code> and <code>Author</code> models are being displayed on their own separate page. Since <code>Author</code> model is just an extension of the <code>User</code> model, it would be much better if we display the data from the <code>Author</code> model alongside the <code>User</code> model. To do so, we have to make some changes in the <code>admin.py</code> file of the djangobin app.</p>
+
+<p>There are two ways to represent models in the Django admin site:</p>
+
+<ol>
+<li>ModelAdmin </li>
+<li>InlineModelAdmin </li>
+</ol>
+
+<p>We have already seen how <code>ModelAdmin</code> works in the <a href="../django-admin-app/index.html">Django admin app</a> chapter. The <code>InlineModelAdmin</code> allows us to edit parent and child model on the same page. There are two subclasses of <code>InlineModelAdmin</code>:</p>
+
+<ol>
+<li>TabularInline</li>
+<li>StackedInline</li>
+</ol>
+
+<p>These classes control the layout of the model fields in the Django admin site. The former displays the fields in tabular form whereas the latter displays the fields in the stacked form (one field per line).</p>
+
+<p>To display fields of <code>Author</code> model along with the fields of <code>User</code> model, define an <code>InlineModelAdmin</code> (either using <code>TabularInline</code> or <code>StackedInline</code>) in app&#39;s <code>admin.py</code> file and add it to <code>UserAdmin</code> class which register the <code>User</code> class in the Django admin. Finally, unregister the old <code>User</code> model and register it again with the changes.</p>
+
+<p><strong>djangobin/django_project/djangobin/admin.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">django.contrib.auth.admin</span> <span class="kn">import</span> <span class="n">UserAdmin</span>
+</span><span class="hll"><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="c1">#...</span>
+
+<span class="k">class</span> <span class="nc">TagAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;slug&#39;</span><span class="p">,)</span>
+    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,)</span>
+    <span class="c1"># prepopulated_fields = {&#39;slug&#39;: (&#39;name&#39;,)}</span>
+    <span class="n">readonly_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;slug&#39;</span><span class="p">,)</span>
+
+
+<span class="hll"><span class="k">class</span> <span class="nc">AuthorInline</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">StackedInline</span><span class="p">):</span>
+</span><span class="hll">    <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Author</span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll"><span class="k">class</span> <span class="nc">CustomUserAdmin</span><span class="p">(</span><span class="n">UserAdmin</span><span class="p">):</span>
+</span><span class="hll">    <span class="n">inlines</span> <span class="o">=</span> <span class="p">(</span><span class="n">AuthorInline</span><span class="p">,</span> <span class="p">)</span>    
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll"><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">unregister</span><span class="p">(</span><span class="n">User</span><span class="p">)</span> <span class="c1"># unregister User model</span>
+</span><span class="hll"><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">CustomUserAdmin</span><span class="p">)</span> <span class="c1"># register User model with changes</span>
+</span><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Language</span><span class="p">,</span> <span class="n">LanguageAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Snippet</span><span class="p">,</span> <span class="n">SnippetAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Tag</span><span class="p">,</span> <span class="n">TagAdmin</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Note that we have removed the line (<code>admin.site.register(models.Author)</code>) which registers the <code>Author</code> model in the Django admin site.</p>
+
+<p>Save the file and visit Change user page. You should see a page like this:</p>
+
+<p><img src="../../media/uploads/2018/5/27/fd42cc68-7c83-4ce0-bbd2-3abe0cff7faa-e71275b4-e499-4679-abba-fd3d4d3cc308.png" loading="lazy" alt=""/></p>
+
+<p>In the next, section we will learn how we can use signals to automatically trigger the creation of <code>Author</code> object whenever a <code>User</code> is created.</p>
+<span id="django-signals" class="anchor-target"></span><h2 class="heading">Django Signals <a class="header-link" href="#django-signals">#</a></h2>
+
+<p>Think of Signals as events in JavaScript which allows us to listen for actions and do something about it.</p>
+
+<p>The following table lists some commonly used signals:</p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Signal</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>django.db.models.signals.pre_save</code></td>
+<td>sent before a model&#39;s <code>save()</code> method is called</td>
+</tr>
+<tr>
+<td><code>django.db.models.signals.post_save</code></td>
+<td>sent after a model&#39;s <code>save()</code> method is called</td>
+</tr>
+<tr>
+<td><code>django.db.models.signals.pre_delete</code></td>
+<td>sent before a model&#39;s <code>delete()</code> method or <code>QuerySet</code>&#39;s <code>delete()</code> method is called</td>
+</tr>
+<tr>
+<td><code>django.db.models.signals.post_delete</code></td>
+<td>sent after a model&#39;s <code>delete()</code> method or <code>QuerySet</code>&#39;s <code>delete()</code> method is called</td>
+</tr>
+<tr>
+<td><code>django.core.signals.request_started</code></td>
+<td>sent when Django starts processing an HTTP request.</td>
+</tr>
+<tr>
+<td><code>django.core.signals.request_finished</code></td>
+<td>sent when Django finishes processing an HTTP request.</td>
+</tr>
+</tbody>
+</table></div>
+<p>For our purpose, we are want to get notified whenever a <code>User</code> instance is saved so that we can create the associated <code>Author</code> object. This means we are interested in listening to the <code>post_save</code> signal from the <code>User</code> model.</p>
+
+<p>Once we know the signal we want to listen to, the next step is to define a receiver. A receiver can be a Python function or method which gets called whenever the signal is sent. The receiver function contains the logic we want to execute. Every receiver function must accept two arguments, <code>sender</code> and <code>**kwargs</code>.</p>
+
+<p>The <code>sender</code> parameter contains the sender of the signal and <code>**kwargs</code> contains some relevant information pertaining to the signal sender. Two common pieces of information sent by the <code>post_save</code> signal are: </p>
+
+<ol>
+<li><code>instance</code> - a copy of the saved instance.</li>
+<li><code>created</code> - A boolean, designating whether the object was created or updated.</li>
+</ol>
+
+<p>The <code>post_save</code> signal send out many other arguments, but for our purpose, these two will suffice. Open <code>models.py</code> and add receiver function just below the <code>Author</code> class as follows:</p>
+
+<p><strong>djangobin/django_project/djangobin/models.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+
+<span class="k">class</span> <span class="nc">Author</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1">#...</span>
+
+    <span class="k">def</span> <span class="nf">get_snippet_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">snippet_set</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+
+<span class="hll"><span class="k">def</span> <span class="nf">create_author</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class="hll">    <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;created&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">Author</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;instance&#39;</span><span class="p">))</span>
+</span></pre></div>
+</td></tr></tbody></table></div>
+<p>With the receiver function in place. The next step is to connect the receiver to a signal. We do this, with the help of <code>receiver</code>  decorator. The <code>receiver</code> decorator accepts a signal or a list of signals to connect to and optional keyword arguments to popular <code>kwargs</code> parameter in the receiver function. Update <code>models.py</code> to use <code>receiver</code> decorator as follows:</p>
+
+<p><strong>djangobin/django_project/djangobin/models.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#...</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">django.dispatch</span> <span class="kn">import</span> <span class="n">receiver</span>
+</span><span class="hll"><span class="kn">from</span> <span class="nn">django.db.models.signals</span> <span class="kn">import</span> <span class="n">post_save</span>
+</span><span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">Preference</span> <span class="k">as</span> <span class="n">Pref</span>
+
+<span class="c1"># Create your models here.</span>
+
+<span class="c1">#...</span>
+
+
+<span class="hll"><span class="nd">@receiver</span><span class="p">(</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">User</span><span class="p">)</span>
+</span><span class="k">def</span> <span class="nf">create_author</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>    
+    <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;created&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">):</span>
+        <span class="n">Author</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;instance&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The <code>create_author()</code> function will only be called when a <code>User</code> instance is saved.</p>
+
+<p>If you now create a new <code>User</code> instance, the associated <code>Author</code> instance will be created automatically.</p>
+<div class="codeblock language-pycon"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+<span class="gp">... </span>  <span class="n">username</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">email</span><span class="o">=</span><span class="s1">&#39;foo@mail.com&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span>
+<span class="go">&lt;User: foo&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">profile</span>   <span class="c1">## access Author instance</span>
+<span class="go">&lt;Author: foo&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">default_language</span>
+<span class="go">&lt;Language: Plain Text&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">private</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../django-admin-app/index.html" title="Django Admin App">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            Django Admin App
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../data-migrations-in-django/index.html" title="Data migrations in Django">
+                            Data migrations in Django
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>Django 1.11 Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-django/index.html">Intro to Django</a></li>
+            
+                <li><a href="../installing-django/index.html">Installing Django</a></li>
+            
+                <li><a href="../creating-django-project/index.html">Creating Django Project</a></li>
+            
+                <li><a href="../mvc-pattern-and-django/index.html">MVC Pattern and Django</a></li>
+            
+                <li><a href="../views-and-urlconfs-in-django/index.html">Views and URLconfs in Django</a></li>
+            
+                <li><a href="../creating-urls-and-custom-response/index.html">Creating URLs and Custom Response</a></li>
+            
+                <li><a href="../basics-of-django-templates/index.html">Basics of Django Templates</a></li>
+            
+                <li><a href="../template-tags-in-django/index.html">Template tags in Django</a></li>
+            
+                <li><a href="../template-filters-in-django/index.html">Template filters in Django</a></li>
+            
+                <li><a href="../loading-templates-in-django/index.html">Loading Templates in Django</a></li>
+            
+                <li><a href="../template-inheritance-in-django/index.html">Template Inheritance in Django</a></li>
+            
+                <li><a href="../basics-of-models-in-django/index.html">Basics of Models in Django</a></li>
+            
+                <li><a href="../migrations-in-django/index.html">Migrations in Django</a></li>
+            
+                <li><a href="../django-orm-basics-part-1/index.html">Django ORM Basics Part 1</a></li>
+            
+                <li><a href="../django-orm-basics-part-2/index.html">Django ORM Basics Part 2</a></li>
+            
+                <li><a href="../django-admin-app/index.html">Django Admin App</a></li>
+            
+                <li><a href="index.html">Django Authentication Framework Basics</a></li>
+            
+                <li><a href="../data-migrations-in-django/index.html">Data migrations in Django</a></li>
+            
+                <li><a href="../django-form-basics/index.html">Django Form Basics</a></li>
+            
+                <li><a href="../displaying-forms-in-django/index.html">Displaying Forms in Django</a></li>
+            
+                <li><a href="../django-rendering-form-fields-manually/index.html">Django Rendering Form Fields Manually</a></li>
+            
+                <li><a href="../handling-static-content-in-django/index.html">Handling Static Content in Django</a></li>
+            
+                <li><a href="../handling-media-files-in-django/index.html">Handling Media Files in Django</a></li>
+            
+                <li><a href="../building-djangobin-the-first-steps/index.html">Building Djangobin - The First Steps</a></li>
+            
+                <li><a href="../creating-trending-snippet-page/index.html">Creating Trending Snippet Page</a></li>
+            
+                <li><a href="../building-contact-us-form/index.html">Building Contact Us Form</a></li>
+            
+                <li><a href="../django-logging-users-in-and-out/index.html">Django Logging Users In and Out</a></li>
+            
+                <li><a href="../user-registration-in-django/index.html">User Registration in Django</a></li>
+            
+                <li><a href="../building-profile-pages-for-djangobin/index.html">Building profile pages for Djangobin</a></li>
+            
+                <li><a href="../searching-snippets/index.html">Searching Snippets</a></li>
+            
+                <li><a href="../asynchronous-tasks-with-celery/index.html">Asynchronous Tasks with Celery</a></li>
+            
+                <li><a href="../flatpages-in-django/index.html">Flatpages in Django</a></li>
+            
+                <li><a href="../creating-sitemaps-in-django/index.html">Creating Sitemaps in Django</a></li>
+            
+                <li><a href="../settings-for-multiple-environments-in-django/index.html">Settings for Multiple Environments in Django</a></li>
+            
+                <li><a href="../deploying-django-project-to-digitalocean/index.html">Deploying Django Project to DigitalOcean</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../c-programming-101/index.html">C Tutorial</a></li>
+                    <li><a href="../../python-101/index.html">Python Tutorial</a></li>
+                    <li><a href="../index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/django-1-11/django-authentication-framework-basics/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:13:34 GMT -->
+</html>

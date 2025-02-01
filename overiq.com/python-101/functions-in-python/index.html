@@ -1,0 +1,1718 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/python-101/functions-in-python/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:08:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":102113,"response_size_orig":96345,"response_time_orig":744,"template_id":5,"url":"https://overiq.com/python-101/functions-in-python/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"d65a76277536f77ab76fe0360a704ad7"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Functions in Python - Python Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="So far in this course, we have been using built-in functions that comes with Python. In this lesson we will learn how we can create our own functions…"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Functions in Python"/>
+
+    <meta property="og:description" content="So far in this course, we have been using built-in functions that comes with Python. In this lesson we will learn how we can create our own functions…"/>
+
+
+<meta property="og:url" content="https://overiq.com/python-101/functions-in-python/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="So far in this course, we have been using built-in functions that comes with Python. In this lesson we will learn how we can create our own functions…"/>
+
+
+<meta name="twitter:title" content="Functions in Python"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">Python Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">Functions in Python</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>Functions in Python</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on September 22, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p>So far in this course, we have been using built-in functions that comes with Python. In this lesson we will learn how we can create our own functions. But before we do that, let&#39;s spend some time learning why we even need them in the first place.</p>
+
+<p>Suppose you want to create a program which allows users to calculate sum between two numbers. At this point, you shouldn&#39;t have any problem writing such programs; anyway, your code might look look this:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">start</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">end</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">+=</span> <span class="n">i</span>    
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Sum is&#34;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/2xv/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>This program calculates the sum of all numbers from <code>10</code> to <code>30</code>. If we want to calculate sum of numbers from <code>100</code> to <code>200</code>, we would need to update the program as follows:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">start</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">end</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">+=</span> <span class="n">i</span>    
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Sum is&#34;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>As you can see both versions of the program is nearly identical, the only difference is in the values of the <code>start</code> and <code>end</code> variables. So everytime we want to calculate sum of two numbers, we would need to update source of the program. It would be good if we somehow just reuse the entire code without doing any modification. We can do that using functions.</p>
+<span id="what-is-a-function" class="anchor-target"></span><h2 class="heading">What is a Function <a class="header-link" href="#what-is-a-function">#</a></h2>
+
+<p>A function is named group of statements, which perform a specific task. The syntax of defining a function is as follows:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span> <span class="o">...</span> <span class="n">argN</span><span class="p">):</span>
+    <span class="c1"># function body</span>
+    <span class="o">&lt;</span><span class="n">indented</span> <span class="n">statement</span> <span class="mi">1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">non</span><span class="o">-</span><span class="n">indented</span> <span class="n">statement</span> <span class="mi">2</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="o">&lt;</span><span class="n">indented</span> <span class="n">statement</span> <span class="n">n</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="k">return</span> <span class="n">statement</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>A function consists of two parts: header and body. The function header starts with the <code>def</code> keyword, followed by name of the function, followed by arguments and ends with a colon (<code>:</code>). </p>
+
+<p>The <code>def</code> is a reserved keyword, so you shouldn&#39;t use it as a variable or function name in your programs. <code>function_name</code> can be be any valid identifier. After the function name we have a list of arguments inside parentheses separated by comma (<code>,</code>). We use these arguments to pass necessary data to the function. A function can take any number of arguments or none at all. If function doesn&#39;t accept any argument then the parentheses is left empty.</p>
+
+<p>In the next line, we have a block of statements or function body. The function body contains statements which defines what the function does. As usual, Python uses indentation of statements to determine when block starts and ends. All the statements in the body of the function function must be equally indented otherwise you will get a syntax error.</p>
+
+<p>Pay special attention to the last statement in the function body i.e <code>&lt;return statement&gt;</code>. The <code>return</code> statement is used to return a value from the function. The <code>return</code> statement is not mandatory, some function return values while other don&#39;t. If a function doesn&#39;t have <code>return</code> statement in the body then a reserved keyword <code>None</code> is returned automatically. <code>None</code> is actually an object of a built-in type <code>NoneType</code>. Don&#39;t worry if you find <code>return</code> statement confusing; they are not, we will discuss <code>return</code> statement in detail in the upcoming section.</p>
+
+<p>Here is small function which prints current date and time along with a greeting:</p>
+
+<p><strong>python101/Chapter-13/first_function.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Hello !&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Today is&#34;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/3QQ/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>The <code>greet()</code> function doesn&#39;t accept any arguments, that&#39;s why parentheses is left empty. The function body contains two <code>print()</code> statements. These two statement will be executed when we call <code>greet()</code> function. The <code>greet()</code> function doesn&#39;t return any value.</p>
+<span id="function-call" class="anchor-target"></span><h2 class="heading">Function Call <a class="header-link" href="#function-call">#</a></h2>
+
+<p>A function definition does nothing by itself. To use a function we must call it. The syntax of calling a function is as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">function_name</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">,</span> <span class="o">...</span> <span class="n">argN</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If function doesn&#39;t accept any arguments then use the following syntax:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">function_name</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The following code calls <code>greet()</code> function:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">()</span>  <span class="c1"># calling greet() function</span>
+</pre></div>
+</div>
+<p><strong>python101/Chapter-13/calling_first_function.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Hello !&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Today is&#34;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+
+<span class="n">greet</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/4Q6/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Hello !
+Today is 2017-06-20 13:20:45.281651
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The function call must appear after the function is defined otherwise, you will encounter <code>NameError</code> exception. For example:</p>
+
+<p><strong>python101/Chapter-13/call_before_definition.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">greet</span><span class="p">()</span> <span class="c1">## ERROR: trying to call greet() before its defined</span>
+
+<span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Hello !&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Today is&#34;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/5QR/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>q@vm:~/python101/Chapter-13$ python call_before_definition.py 
+Traceback (most recent call last):
+  File &#34;call_before_definition.py&#34;, line 3, in &lt;module&gt;
+    greet() ## ERROR: trying to call greet() before its defined
+NameError: name &#39;greet&#39; is not defined
+</pre></div>
+</td></tr></tbody></table></div>
+<p>When a function is called the program control jumps to that function definition and executes the statements inside the function body. After executing the body of the function, the program control jumps back to the part of the program which called the function, and resumes execution at that point.</p>
+
+<p>The following example demonstrates what happens when a function is called.</p>
+
+<p><strong>python101/Chapter-13/transfer_of_control.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Hello !&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Today is&#34;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Before calling greet()&#34;</span><span class="p">)</span>
+<span class="n">greet</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;After calling greet()&#34;</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/6X9/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Before calling greet()
+Hello !
+Today is 2017-06-20 13:20:45.281651
+After calling greet()
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In lines 3-5, we have defined a <code>greet()</code> statement. The <code>print()</code> statement in line 7, prints string <code>&#34;Before calling greet()&#34;</code> to the console. In line 8, we are calling <code>greet()</code> function. At this point, the execution of statements following the call to <code>greet()</code> halts and program control jumps to the definition of the <code>greet()</code> function. After executing the body of the <code>greet()</code> function program control again jumps back to the point where it left off and resumes the execution from there.</p>
+
+<p><img src="../../media/uploads/2017/09/19/transfer-of-control.png" loading="lazy" alt=""/></p>
+
+<p>Our previous program has only function. It is not unusual for programs to have hundreds or even thousands of functions. In python, it a common convention to define a function called <code>main()</code> which gets called when the program start. This <code>main()</code> function then goes on to call other function as needed. The following program demonstrates flow of program control when we have two functions in a program.</p>
+
+<p><strong>python101/Chapter-13/two_func_program_control.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Hello&#34;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&#34;!&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Today is&#34;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;main() function called&#34;</span><span class="p">)</span>
+    <span class="n">greet</span><span class="p">(</span><span class="s2">&#34;Jon&#34;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;main() function finished&#34;</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/71A/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>In lines 3-5, and 8-11, we have defined two functions <code>greet()</code> and <code>main()</code>. The <code>greet()</code> function is now updated to accept an argument called <code>name</code>, which it then uses in the next line to greet the user.</p>
+
+<p>The <code>main()</code> function doesn&#39;t accept any arguments and has three statements inside the body. </p>
+
+<p>The statement in line 13, calls the <code>main()</code> function. The program control jumps to the body of the <code>main()</code> function. The first statement inside the <code>main()</code> prints string <code>&#34;main() function called&#34;</code> to the console. The statement in line 10, calls the <code>greet()</code> function with an argument <code>&#34;Jon&#34;</code> which will be assigned to the variable <code>name</code> in the function header. At this point, execution of statements following call to <code>greet()</code> halts and program control jumps to the body of the <code>greet()</code> function. After executing the body of the <code>greet()</code> function, program control jumps back to where it left off and executes the <code>print()</code> statement in line 11. As there are no more statements left to execute in the <code>main()</code> function and program control jumps again back to where it left off to execute statements after the function call (line 13).</p>
+<span id="local-variables-global-variables-and-scope" class="anchor-target"></span><h2 class="heading">Local Variables, Global Variables and Scope <a class="header-link" href="#local-variables-global-variables-and-scope">#</a></h2>
+
+<p><strong>Variable Scope:</strong> The scope of a variable refers to the part of the program where it can be accessed.</p>
+
+<p>The variable we create inside the function are called local variables. Local variables can only be accessed inside the body of the function in which it is defined. In other words, the scope of local variable starts from the point they are defined and continues on until the end of the function. Local variables are subject to garbage collection as soon as the function ends. As a result, trying to access a local variable outside it&#39;s scope will result in an error.</p>
+
+<p>On the other end of the spectrum, we have Global variables. The Global variable are variables that are defined outside of any functions. The scope of global variable starts from the point they are defined and continues on until the program ends.</p>
+
+<p>Now consider the following examples:</p>
+
+<p><strong>Example 1</strong>: </p>
+
+<p><strong>python101/Chapter-13/variable_scope.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">global_var</span> <span class="o">=</span> <span class="mi">200</span>  <span class="c1"># a global variable</span>
+
+<span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+
+    <span class="c1"># local_var is a local variable</span>
+    <span class="c1"># and is only available inside func() </span>
+    <span class="n">local_var</span> <span class="o">=</span> <span class="mi">100</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Inside func() - local_var =&#34;</span><span class="p">,</span> <span class="n">local_var</span><span class="p">)</span>
+
+    <span class="c1"># accessing a global variable inside a function</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Inside func() - global_var =&#34;</span><span class="p">,</span> <span class="n">global_var</span><span class="p">)</span>
+
+
+<span class="n">func</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Outside func() - global_var =&#34;</span><span class="p">,</span> <span class="n">global_var</span><span class="p">)</span>
+
+<span class="c1"># print(&#34;Outside func() - local_var =&#34;, local_var)  # ERROR: local_var is not available here</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/81o/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Inside func() - local_var = 100
+Inside func() - global_var = 200
+Outside func() - global_var = 200
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In line 1, we have created a global variable named <code>global_var</code>. It is then accessed in line 12, inside the <code>func()</code> function and in line 17, outside the function. We have also declared a local variable named <code>local_var</code> inside the function <code>func()</code>. It is then accessed inside the function in line 9.</p>
+
+<p>Let&#39;s see what happens, if we try to access a local variable outside the function. To do so, uncomment the code in line 19 and run program again.</p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Inside func() - local_var = 100
+Inside func() - global_var = 200
+Outside func() - global_var = 200
+Traceback (most recent call last):
+  File &#34;variable_scope.py&#34;, line 37, in &lt;module&gt;
+    print(&#34;Outside func() - local_var =&#34;, local_var)
+NameError: name &#39;local_var&#39; is not defined
+</pre></div>
+</td></tr></tbody></table></div>
+<p><code>NameError: name &#39;local_var&#39; is not defined</code> tells us that there is no variable named <code>local_var</code> exists in this scope.</p>
+
+<p>What if we have local and global variables of same name ? Consider the following program.</p>
+
+<p><strong>Example 2:</strong> </p>
+
+<p><strong>python101/Chapter-13/same_global_and_local.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="s2">&#34;global&#34;</span>  <span class="c1"># global num variable</span>
+
+<span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="s2">&#34;local&#34;</span>   <span class="c1"># local num variable is entirely different from global num variable</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+<span class="n">func</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/913/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>local
+global
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here we have a global variable <code>num</code> in line 1 and a local variable of the same name inside the function in line 4. Whenever there is a conflict between a local and global variable inside the function, the local variable gets the precedence. This is the reason why <code>print()</code> function (line 5) prints the value of the local <code>num</code> variable. However, outside the function <code>num</code> refers to the global <code>num</code> variable.</p>
+
+<p>We can also use the same variable names in different functions without conflicting with each other.</p>
+
+<p><strong>python101/Chapter-13/same_variable_names_in_different_functions.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func_1</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># this x is only visible inside func_1()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;func_1(): x =&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">200</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;func_1(): x =&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">func_2</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s2">&#34;str&#34;</span> <span class="c1"># this x is only visible inside func_2() and it entirely different from func1()&#39;s variable x</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;func_2(): x =&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s2">&#34;complex&#34;</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;func_2(): x =&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># x is not visible in here</span>
+
+<span class="n">func_1</span><span class="p">()</span>
+<span class="n">func_2</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/0YX/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>func_1(): x = 100
+func_1(): x = 200
+func_2(): x = str
+func_2(): x = complex
+</pre></div>
+</td></tr></tbody></table></div><span id="passing-arguments" class="anchor-target"></span><h2 class="heading">Passing Arguments <a class="header-link" href="#passing-arguments">#</a></h2>
+
+<p>An argument is nothing but a piece of data passed to the function, when it is called. As said before, a function can take any number of arguments or none at all. For example, <code>print()</code> function accepts one or more arguments but <code>random.random()</code> function accepts none.</p>
+
+<p>If you want a function to receive arguments, when it is called, we must first define one or more parameters. A parameter or parameter variable is simply a variable in the function header which receives an argument when the function is called. Just like local variables, the scope of parameter variables is only limited to the body of the function. Here is an example of a function which accepts a single argument:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_100</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Result =&#34;</span><span class="p">,</span> <span class="n">num</span><span class="o">+</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>When function <code>add_100()</code> is called with an argument, the value of the argument is assigned to the variable <code>num</code> and the <code>print()</code> statement prints the value of <code>num</code> after adding <code>100</code> to it.</p>
+
+<p>The following program demonstrates how to call a function with argument.</p>
+
+<p><strong>python101/Chapter-13/function_argument.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_100</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>  <span class="c1"># num is a parameter</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Result =&#34;</span><span class="p">,</span> <span class="n">num</span><span class="o">+</span><span class="mi">100</span><span class="p">)</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">add_100</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/gZ6/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><div class="highlight"><pre><span></span>Result = 200
+</pre></div>
+</div>
+<p>In line 6, function <code>add_100()</code> is called with an argument <code>100</code>. The value of the argument is then assigned to the parameter variable <code>num</code>.</p>
+
+<p><strong>Example 2:</strong>  Function to calculate the factorial of a number.</p>
+
+<p><strong>python101/Chapter-13/factorial.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">f</span> <span class="o">*=</span> <span class="n">n</span>
+        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter a number: &#34;</span><span class="p">)</span>
+<span class="n">factorial</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/jZ5/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Enter a number: 4
+24
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The factorial of a number <code>n</code> is defined as the multiplication of all digits from <code>1</code> to <code>n</code>.</p>
+<div class="codeblock language-text"><div class="highlight"><pre><span></span>n! = 1 * 2 * 3 * ... * (n-1) * n
+</pre></div>
+</div>
+<p>where <code>n!</code> denotes factorial of <code>n</code>. Here are some examples:</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>6! = 1 * 2 * 3 * 4 * 5 * 6
+4! = 1 * 2 * 3 * 4
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Now, let&#39;s see how the for loop works when the value of <code>n</code> is <code>4</code>:</p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Before for loop starts</th>
+<th><code>i</code> not defined</th>
+<th><code>f = 1</code></th>
+<th><code>n = 4</code></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>After 1st iteration</td>
+<td><code>i = 4</code></td>
+<td><code>f = n * f = 4 * 1 = 4</code></td>
+<td><code>n = 3</code></td>
+</tr>
+<tr>
+<td>After 2nd iteration</td>
+<td><code>i = 3</code></td>
+<td><code>f = n * f = 3 * 4 = 12</code></td>
+<td><code>n = 2</code></td>
+</tr>
+<tr>
+<td>After 3rd iteration</td>
+<td><code>i = 2</code></td>
+<td><code>f = n * f = 2 * 12 = 24</code></td>
+<td><code>n = 1</code></td>
+</tr>
+<tr>
+<td>After 4th iteration</td>
+<td><code>i = 1</code></td>
+<td><code>f = n * f = 1 * 24 = 24</code></td>
+<td><code>n = 0</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>After the 4th iteration loop terminates and <code>print()</code> function prints the factorial of the number.</p>
+
+<p><strong>Example 3</strong>: Passing multiple arguments to the function</p>
+
+<p><strong>python101/Chapter-13/multiple_arguments.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Sum =&#34;</span><span class="p">,</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Difference =&#34;</span><span class="p">,</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Multiplication =&#34;</span><span class="p">,</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Division =&#34;</span><span class="p">,</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>  <span class="c1"># prints a blank line</span>
+
+<span class="n">calc</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/k8X/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Sum = 30
+Difference = -10
+Multiplication = 200
+Division = 0.5
+</pre></div>
+</td></tr></tbody></table></div>
+<p>When <code>calc()</code> function is called in line 8, the argument <code>10</code> is passed to parameter variable <code>num1</code> and <code>20</code> is passed to parameter variable <code>num2</code>. </p>
+
+<p>The order of arguments passed while calling the function must match order of parameters in the function header, otherwise, you may get unexpected results.</p>
+<span id="pass-by-value" class="anchor-target"></span><h2 class="heading">Pass by Value <a class="header-link" href="#pass-by-value">#</a></h2>
+
+<p>Recall that everything in Python is object. So a variable for an object, is actually a reference to the object. In other words, a variable stores the address where an object is stored in the memory. It doesn&#39;t contain the actual object itself.</p>
+
+<p>When a function is called with arguments, it is the address of the object stored in the argument is passed to the parameter variable. However, just for the sake of simplicity, we say the value of argument is passed the to the parameter while invoking the function. This mechanism is known as Pass By Value. Consider the following example:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">para1</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Address of para1:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">para1</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">para1</span><span class="p">)</span>
+
+<span class="n">arg1</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Address of arg1:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">arg1</span><span class="p">))</span>
+<span class="n">func</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/lx6/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Address of arg1: 1536218288
+Address of para1: 1536218288
+100
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Notice that the <code>id</code> values are same. This means that variable <code>arg1</code> and <code>para1</code> references the same object. In other words, both <code>arg1</code> and <code>para1</code> points to the same memory location where <code>int</code> object (<code>100</code>) is stored.</p>
+
+<p><img src="../../media/uploads/2017/09/19/arg1_and_para1_references_same_object.png" loading="lazy" alt=""/></p>
+
+<p>This behavior has two important consequences:</p>
+
+<ol>
+<li><p>If arguments passed to function is immutable, then the changes made to the parameter variable will not affect the argument. </p></li>
+<li><p>However, if the argument passed to the function is mutable, then the changes made to the parameter variable will affect the argument.</p></li>
+</ol>
+
+<p>Let&#39;s examine this behavior by taking some examples:</p>
+
+<p><strong>Example 1</strong>: Passing immutable objects to function.</p>
+
+<p><strong>python101/Chapter-13/passing_immutable_objects.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">para1</span><span class="p">):</span>
+    <span class="n">para1</span> <span class="o">+=</span> <span class="mi">100</span>  <span class="c1"># increment para1 by 100</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Inside function call, para1 =&#34;</span><span class="p">,</span> <span class="n">para1</span><span class="p">)</span>
+
+<span class="n">arg1</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Before function call, arg1 =&#34;</span><span class="p">,</span> <span class="n">arg1</span><span class="p">)</span>
+<span class="n">func</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;After function call, arg1 =&#34;</span><span class="p">,</span> <span class="n">arg1</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/mO0/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">Before</span> <span class="n">function</span> <span class="n">call</span><span class="p">,</span> <span class="n">arg1</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">Inside</span> <span class="n">function</span> <span class="n">call</span><span class="p">,</span> <span class="n">para1</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">After</span> <span class="n">function</span> <span class="n">call</span><span class="p">,</span> <span class="n">arg1</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In line 7, <code>func()</code> is called with an argument <code>arg1</code> (which points to an immutable object <code>int</code>). The value of <code>arg1</code> is passed to the parameter <code>para1</code>. Inside the function value of <code>para1</code> is incremented by <code>100</code> (line 3). When the function ends, the print statement in line 8 is executed and the string <code>&#34;After function call, arg1 = 100&#34;</code> is printed to the console. This proves the point that no matter what function does to <code>para1</code>, the value of <code>arg1</code> remains the same. </p>
+
+<p>If you think about it this behavior makes perfect sense. Recall that the contents of immutable objects can&#39;t be changed. So whenever we assign a new integer value to a variable we are essentially creating a complete new <code>int</code> object and at the same time assigning reference of the new object to the variable. This is exactly what&#39;s happening inside the <code>func()</code> function.</p>
+
+<p><strong>Example 2</strong>: Passing mutable objects to function</p>
+
+<p><strong>python101/Chapter-13/passing_mutable_objects.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">para1</span><span class="p">):</span>
+    <span class="n">para1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Inside function call, para1 =&#34;</span><span class="p">,</span> <span class="n">para1</span><span class="p">)</span>
+
+<span class="n">arg1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Before function call, arg1 =&#34;</span><span class="p">,</span> <span class="n">arg1</span><span class="p">)</span>
+<span class="n">func</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;After function call, arg1 =&#34;</span><span class="p">,</span> <span class="n">arg1</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/nxl/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Before function call, arg1 = [1, 2, 3]
+Inside function call, para1 = [1, 2, 3, 4]
+After function call, arg1 = [1, 2, 3, 4]
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The code is almost the same, but here we are passing a list to the function instead of an integer. As list is a mutable object, consequently changes made by the <code>func()</code> function in line 2, affects the object pointed to by variable <code>arg1</code>.</p>
+<span id="positional-and-keyword-arguments" class="anchor-target"></span><h2 class="heading">Positional and Keyword Arguments <a class="header-link" href="#positional-and-keyword-arguments">#</a></h2>
+
+<p>Arguments to a function can be passed in two ways:</p>
+
+<ol>
+<li>Positional argument.</li>
+<li>Keyword argument.</li>
+</ol>
+
+<p>In the first method, we pass arguments to a function in the same order as their respective parameters in the function header. We have been using this method to pass arguments to our functions. For example:</p>
+
+<p><strong>python101/Chapter-13/pythagorean_triplets.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_pythagorean_triplet</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">perpendicular</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">base</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">height</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">==</span>  <span class="n">perpendicular</span> <span class="o">**</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Numbers passed are Pythagorean Triplets&#34;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Numbers passed are not Pythagorean Triplets&#34;</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/oVK/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>The statement <code>is_pythagorean_triplet(3, 4, 5)</code> passes <code>3</code> to <code>base</code>, <code>4</code> to <code>height</code> and <code>5</code> to <code>perpendicular</code>, and prints <code>&#34;Numbers passed are Pythagorean Triplets&#34;</code>. However, the statement <code>is_pythagorean_triplet(3, 5, 4)</code>, passes <code>3</code> to base, <code>5</code> to <code>height</code> and <code>4</code> to <code>perpendicular</code> and prints <code>&#34;Numbers passed are not Pythagorean Triplets&#34;</code>, which is wrong. So when using positional arguments always make sure that order of arguments in function call and order of parameters in function header matches. Otherwise, you may get expected results.</p>
+
+<p>The other way to pass arguments to a function is to use Keyword arguments. In this method we pass each argument in the following form:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">parameter_name</span> <span class="o">=</span> <span class="n">val</span>
+</pre></div>
+</div>
+<p>where <code>parameter_name</code> is the name of the parameter variable in the function header and <code>val</code> refers to the value you want to pass to the parameter variable. Because, we are associating parameter name with values, the order of arguments in the function call doesn&#39;t matter.</p>
+
+<p>Here are some different ways in which we can call <code>is_pythagorean_triplet()</code> function using keyword arguments:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">is_pythagorean_triplet</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">perpendicular</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> 
+
+<span class="n">is_pythagorean_triplet</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">perpendicular</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">is_pythagorean_triplet</span><span class="p">(</span><span class="n">perpendicular</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/p86/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>Keyword arguments are little bit flexible because we don&#39;t have to remember the order of parameters in the function header.</p>
+<span id="mixing-positional-and-keyword-arguments" class="anchor-target"></span><h2 class="heading">Mixing Positional and Keyword arguments <a class="header-link" href="#mixing-positional-and-keyword-arguments">#</a></h2>
+
+<p>We can also mix positional arguments and keyword arguments in a function call. In doing so, the only requirement is that positional arguments must appear before any keyword arguments. It means that the following two calls are perfectly valid because in both calls positional arguments are appearing before keyword arguments.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">## valid </span>
+
+<span class="n">is_pythagorean_triplet</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">perpendicular</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">is_pythagorean_triplet</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">perpendicular</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/q7r/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>However, we can&#39;t do this:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># not valid</span>
+
+<span class="n">is_pythagorean_triplet</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/q7r/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>The problem here is that the positional argument (<code>5</code>) is appearing after the keyword argument (<code>height=4</code>). Trying to call <code>is_pythagorean_triplet()</code> in this way results in the following error:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">File</span> <span class="s2">&#34;pythagorean_triplets.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span>
+    <span class="n">is_pythagorean_triplet</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+                                       <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">positional</span> <span class="n">argument</span> <span class="n">follows</span> <span class="n">keyword</span> <span class="n">argument</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="returning-values" class="anchor-target"></span><h2 class="heading">Returning Values <a class="header-link" href="#returning-values">#</a></h2>
+
+<p>Up to this point, we have been creating functions that don&#39;t return any values, such functions are also known as void functions.</p>
+
+<p>To return value from a function we use the <code>return</code> statement. It&#39;s syntax is:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">[</span><span class="n">expression</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The square brackets (<code>[]</code>) around the <code>expression</code> indicates that it is optional. If omitted a special value <code>None</code> is returned.</p>
+
+<p>When <code>return</code> statement is encountered inside a function, the function terminates and the value of the <code>expression</code> followed by the <code>return</code> keyword is sent back to the part of the program that called the function. The <code>return</code> statement can appear anywhere in the body of the function. The functions which returns values are known as value-returning functions.</p>
+
+<p>Here is an example:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>A function can be called in two ways, depending upon whether they return value or not.</p>
+
+<p>If a function returns a value then a call to such a function can be used as an operand in any expression in the program. For example:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a href="../../python-online-compiler/r86/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>In the above expression, we are first calling the <code>add()</code> function, and then assigning the return value of the function to the <code>result</code> variable. Had we not used the <code>return</code> statement in the <code>add()</code> function, we wouldn&#39;t be able to write this code. Here are some other ways in which we can call <code>add()</code> function.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>  <span class="c1"># return value of add() is multiplied by 10 and then assigned to result</span>
+
+<span class="k">if</span> <span class="n">add</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">100</span><span class="p">:</span>   <span class="c1">#  return value of add() is compared with 100 in the if statement</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;It is True&#34;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1"># return value of add() is printed</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/vlr/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p>We are not bound to use the return value from the function. If we don&#39;t want to use the return value, just call the function as a statement. For example:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">add</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this case, the return value of <code>add()</code> is simply discarded.</p>
+
+<p>Let&#39;s rewrite our factorial program to return the factorial instead of printing it.</p>
+
+<p><strong>python101/Chapter-13/return_factorial.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">f</span> <span class="o">*=</span> <span class="n">n</span>
+        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">f</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Factorial of 4 is&#34;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Factorial of 4 is&#34;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/wVw/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Factorial of 4 is 24
+Factorial of 4 is 720
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In the above example, we are returning an integer value from the function, but we can use any type of data <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>; you name it. The following program demonstrates how to return <code>bool</code> type from the function:</p>
+
+<p><strong>python101/Chapter-13/is_even_or_odd.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter a number: &#34;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">is_even</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s2">&#34;is even&#34;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s2">&#34;is odd&#34;</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/gZ9/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>1st run Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Enter a number: 13
+13 is odd
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>2nd run Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Enter a number: 456
+456 is even
+</pre></div>
+</td></tr></tbody></table></div>
+<p>If expression followed by the <code>return</code> keyword is omitted then a special value <code>None</code> is returned.</p>
+
+<p><strong>python101/Chapter-13/returning_none.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="k">return</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">foo</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/jZW/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><div class="highlight"><pre><span></span>None
+</pre></div>
+</div>
+<p>We can also use the <code>return</code> statement multiple times inside the function but as soon as the first <code>return</code> statement is encountered the function terminates and all the statements following it are not executed. For example:</p>
+
+<p><strong>python101/Chapter-13/grade_calculator.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_grade</span><span class="p">(</span><span class="n">marks</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">marks</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;A&#39;</span>
+    <span class="k">elif</span> <span class="n">marks</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;B&#39;</span>
+    <span class="k">elif</span> <span class="n">marks</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;C&#39;</span>
+    <span class="k">elif</span> <span class="n">marks</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;D&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;F&#39;</span>
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&#34;Enter your marks: &#34;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Your grade is&#34;</span><span class="p">,</span> <span class="n">calculate_grade</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/k8x/index-2.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>First run output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Enter your marks: 68
+Your grade is D
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Second run output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Enter your marks: 91
+Your grade is A
+</pre></div>
+</td></tr></tbody></table></div><span id="void-function-returns-none" class="anchor-target"></span><h2 class="heading">Void Function returns None. <a class="header-link" href="#void-function-returns-none">#</a></h2>
+
+<p>In Python, void functions are slightly different than functions found in C, C++ or Java. If the function body doesn&#39;t have any <code>return</code> statement then a special value <code>None</code> is returned when the function terminates. In Python, <code>None</code> is a literal of type <code>NoneType</code> which used to denote absence of a value. It is commonly assigned to a variable to indicate that the variable does not points to any object. </p>
+
+<p>The following program demonstrates that the void functions return <code>None</code>.</p>
+
+<p><strong>python101/Chapter-13/void_function.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Sum is&#34;</span><span class="p">,</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)</span>
+
+<span class="n">return_val</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">return_val</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/lxl/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Sum is 300
+None
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Sure enough! <code>add()</code> function indeed returns <code>None</code>. So we can say that in Python, all functions return value whether you use <code>return</code> statement or not. However, this doesn&#39;t mean that you can use void functions just like a value-returning function. Consider the following example:</p>
+
+<p><strong>python101/Chapter-13/using_void_function_as_non_void_function.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Sum is&#34;</span><span class="p">,</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="o">+</span> <span class="mi">100</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/mOp/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Sum is 210
+Traceback (most recent call last):
+  File &#34;using_void_function_as_non_void_function.py&#34;, line 5, in &lt;module&gt;
+    result = add(10, 200) + 100
+TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In line 5, we are trying to add value returned from <code>add()</code> i.e <code>None</code> to the integer <code>100</code>, but the operation failed because the <code>+</code> operation can&#39;t add <code>NoneType</code> to <code>int</code>.</p>
+
+<p>That&#39;s why a void function is generally invoked as a statement like this:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">add</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div><span id="returning-multiple-values" class="anchor-target"></span><h2 class="heading">Returning Multiple Values <a class="header-link" href="#returning-multiple-values">#</a></h2>
+
+<p>To return multiple values from a function just specify each value separated by comma (<code>,</code>) after the <code>return</code> keyword. </p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">,</span> <span class="n">val3</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">valN</span>
+</pre></div>
+</div>
+<p>When calling a function returning multiple values, the number of variables on the left side of <code>=</code> operator must be equal to the number of values returned by the <code>return</code> statement. So if a function returns two values then you must use 2 variables on the left side of <code>=</code> operator. Here is an example:</p>
+
+<p><strong>python101/Chapter-13/returning_multiple_values.py</strong> </p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sort_two_num</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num1</span> <span class="o">&lt;</span> <span class="n">num2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num1</span>
+
+
+<span class="n">number1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">sort_two_num</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;number1 is&#34;</span><span class="p">,</span> <span class="n">number1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;number2 is&#34;</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/nx4/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>number1 is 15
+number2 is 100
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Notice how values are assigned while calling the function. The statement:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">sort_two_num</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>assigns smaller number to variable <code>number1</code> and greater number to variable <code>number2</code>.</p>
+<span id="default-arguments" class="anchor-target"></span><h2 class="heading">Default Arguments <a class="header-link" href="#default-arguments">#</a></h2>
+
+<p>In Python, we can define a function with default parameter values, this default value will be used when a function is invoked without any argument. To specify the default value for the parameter just specify the value using the assignment operator followed by the parameter name. Consider the following example:</p>
+
+<p><strong>python101/Chapter-13/setting_default_values.py</strong> </p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_area</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;length=&#34;</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span>  <span class="s2">&#34;, width = &#34;</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Area of rectangle is&#34;</span><span class="p">,</span> <span class="n">width</span> <span class="o">*</span> <span class="n">length</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+
+
+<span class="n">calc_area</span><span class="p">()</span>
+<span class="n">calc_area</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">calc_area</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">23</span><span class="p">)</span>
+<span class="n">calc_area</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><a href="../../python-online-compiler/oVz/index.html" class="btn btn-primary" target="_blank">Try it now</a></p>
+
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span>length= 2 , width =  3
+Area of rectangle is 6
+
+length= 4 , width =  6
+Area of rectangle is 24
+
+length= 23 , width =  100
+Area of rectangle is 2300
+
+length= 12 , width =  3
+Area of rectangle is 36
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In line 7, we are calling function <code>calc_area()</code> without any arguments, so default values <code>2</code> and <code>3</code> will be assigned to <code>length</code> and <code>width</code> parameters respectively.</p>
+
+<p>In line 8, we are calling <code>calc_area()</code> by passing <code>4</code> to <code>length</code> and <code>6</code> to <code>width</code>. As values to both the parameters are provided while calling the function, the default value will not be used in this case. The same is true for <code>calc_area()</code> call in line 9, except here we are using keyword arguments.</p>
+
+<p>In line 10, we are only providing value to <code>length</code> parameter using keyword argument, as a result, default value for <code>width</code> parameter will be used.</p>
+
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../lists-in-python/index.html" title="Lists in Python">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            Lists in Python
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../modules-in-python/index.html" title="Modules in Python">
+                            Modules in Python
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>Python Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-python/index.html">Intro to Python</a></li>
+            
+                <li><a href="../installing-python/index.html">Installing Python</a></li>
+            
+                <li><a href="../idle-and-python-shell/index.html">IDLE and Python Shell</a></li>
+            
+                <li><a href="../data-types-and-variables-in-python/index.html">Data Types and Variables In Python</a></li>
+            
+                <li><a href="../numbers-in-python/index.html">Numbers in Python</a></li>
+            
+                <li><a href="../operators-in-python/index.html">Operators in Python</a></li>
+            
+                <li><a href="../strings-in-python/index.html">Strings in Python</a></li>
+            
+                <li><a href="../strings-methods-in-python/index.html">Strings Methods in Python</a></li>
+            
+                <li><a href="../if-else-statements-in-python/index.html">If-else statements in Python</a></li>
+            
+                <li><a href="../loops-in-python/index.html">Loops in Python</a></li>
+            
+                <li><a href="../break-and-continue-statement-in-python/index.html">break and continue statement in Python</a></li>
+            
+                <li><a href="../lists-in-python/index.html">Lists in Python</a></li>
+            
+                <li><a href="index.html">Functions in Python</a></li>
+            
+                <li><a href="../modules-in-python/index.html">Modules in Python</a></li>
+            
+                <li><a href="../objects-and-classes-in-python/index.html">Objects and Classes in Python</a></li>
+            
+                <li><a href="../inheritance-and-polymorphism-in-python/index.html">Inheritance and Polymorphism in Python</a></li>
+            
+                <li><a href="../operator-overloading-in-python/index.html">Operator Overloading in Python</a></li>
+            
+                <li><a href="../file-handling-in-python/index.html">File Handling in Python</a></li>
+            
+                <li><a href="../exception-handling-in-python/index.html">Exception Handling in Python</a></li>
+            
+                <li><a href="../tuples-in-python/index.html">Tuples in Python</a></li>
+            
+                <li><a href="../sets-in-python/index.html">Sets in Python</a></li>
+            
+                <li><a href="../dictionary-in-python/index.html">Dictionary in Python</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../c-programming-101/index.html">C Tutorial</a></li>
+                    <li><a href="../index.html">Python Tutorial</a></li>
+                    <li><a href="../../django-1-11/index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/python-101/functions-in-python/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:08:15 GMT -->
+</html>

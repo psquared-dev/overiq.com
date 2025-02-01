@@ -1,0 +1,959 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/c-programming-101/operator-precedence-and-associativity-in-c/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 10:58:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([{name:"ezopvc_92771",value:"1; Path=/; Domain=overiq.com; Expires=Sat, 01 Feb 2025 08:32:11 UTC",tcfCategory:"understand_audiences",isEzoic:"true",},{name:"ezoab_92771",value:"mod120-c; Path=/; Domain=overiq.com; Max-Age=7200",tcfCategory:"store_info",isEzoic:"true",},{name:"active_template::92771",value:"pub_site.1738407229; Path=/; Domain=overiq.com; Expires=Mon, 03 Feb 2025 10:53:49 UTC",tcfCategory:"store_info",isEzoic:"true",},{name:"ezoadgid_92771",value:"-1; Path=/; Domain=overiq.com; Max-Age=1800",tcfCategory:"understand_audiences",isEzoic:"true",},{name:"ezosuibasgeneris-1",value:"4242c354-9238-464b-63f9-75c351f3ead4; Path=/; Domain=overiq.com; Expires=Sun, 01 Feb 2026 10:53:49 UTC; Secure; SameSite=None",tcfCategory:"understand_audiences",isEzoic:"true",}]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script><script type="text/javascript" data-ezscrex='false' data-cfasync='false'>window._ezaq = Object.assign({"edge_cache_status":14,"edge_response_time":2,"url":"https://overiq.com/c-programming-101/operator-precedence-and-associativity-in-c/"}, typeof window._ezaq !== "undefined" ? window._ezaq : {});</script><script type="text/javascript" data-ezscrex='false' data-cfasync='false'>window._ezaq = Object.assign({"ezcache_level":2}, typeof window._ezaq !== "undefined" ? window._ezaq : {});</script><script type="text/javascript" data-ezscrex='false' data-cfasync='false'>window._ezaq = Object.assign({"ab_test_id":"mod120-c"}, typeof window._ezaq !== "undefined" ? window._ezaq : {});window.__ez=window.__ez||{};window.__ez.tf={};</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":2,"adpicker_placement_cnt":9,"ai_placeholder_cache_level":3,"ai_placeholder_placement_cnt":1,"domain_id":92771,"ezcache_level":2,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":39202,"response_size_orig":31315,"response_time_orig":1,"template_id":134,"url":"https://overiq.com/c-programming-101/operator-precedence-and-associativity-in-c/","word_count":1269,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<link rel='preload' as='script' href='../../../securepubads.g.doubleclick.net/tag/js/f.txt'>
+<link rel='preload' as='script' href='../../../go.ezodn.com/hb/dall8750.js?cb=195-3-113'>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[3,1,6],"aop":{"14":0,"4":134,"7":0},"omd5":"15537b49a9e76d1986c0f5e88ec09df4"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><script type="text/javascript" data-ezscrex="false" data-cfasync="false" async="">
+function productEzoicAds() {
+if(window.ezDisableAds === true) {
+	return;
+}
+window.google_reactive_ads_global_state = {
+                adCount: {},
+                floatingAdsStacking: { maxZIndexListeners: [], maxZIndexRestrictions: {}, nextRestrictionId: 0 },
+                messageValidationEnabled: false,
+                reactiveTypeDisabledByPublisher: {},
+                reactiveTypeEnabledInAsfe: {},
+                sideRailAvailableSpace: [],
+                sideRailOverlappableElements: [],
+                stateForType: {},
+                tagSpecificState: {},
+                wasPlaTagProcessed: true,
+                wasReactiveAdConfigReceived: { 1: true, 2: true, 8: true },
+                wasReactiveAdVisible: {},
+                wasReactiveTagRequestSent: true,
+                description: "Can't disable auto ads programmatically on the page, so here we are!"
+            };
+var d = {"ab":"","km":{},"pv":"","vu":"79933f68-4784-42f3-50ed-1a2a767b20ee","r":{"r":[{"p":" ezoic_pub_ad_placeholder-901-under_page_title-728x90-901-nonexxxnonexxxxxxezmaxscaleval100 ","s":901,"h":280,"w":728,"r":true},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-250x250-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-300x250-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-320x100-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-300x50v2-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-320x50-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-336x280-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-320x100v2-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-468x60-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-580x400-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-250x250x2-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-149-under_first_paragraph-728x90-149-nonexxxnonexxxxxxezmaxscaleval100 ","s":149},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-250x250-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-300x250-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-320x100-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-300x50v2-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-320x50-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-336x280-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-320x100v2-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-468x60-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-580x400-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-250x250x2-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-135-under_first_paragraph-728x90-135-nonexxxnonexxxxxxezmaxscaleval100 ","s":135},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-250x250-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-300x250-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-320x100-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-300x50v2-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-320x50-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-336x280-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909,"h":400,"w":728},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-320x100v2-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-468x60-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-580x400-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-250x250x2-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-909-under_first_paragraph-728x90-909-nonexxxnonexxxxxxezmaxscaleval100 ","s":909},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-250x250-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-300x250-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910,"h":400,"w":728},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-320x100-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-300x50v2-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-320x50-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-336x280-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-320x100v2-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-468x60-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-580x400-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-250x250x2-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-910-under_second_paragraph-728x90-910-nonexxxnonexxxxxxezmaxscaleval100 ","s":910},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-250x250-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-300x250-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-320x100-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-300x50v2-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-320x50-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-336x280-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-320x100v2-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-468x60-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-580x400-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-250x250x2-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-136-under_second_paragraph-728x90-136-nonexxxnonexxxxxxezmaxscaleval100 ","s":136},{"p":" ezoic_pub_ad_placeholder-911-mid_content-250x250-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-300x250-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911,"h":400,"w":728},{"p":" ezoic_pub_ad_placeholder-911-mid_content-320x100-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-300x50v2-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-320x50-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-336x280-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-320x100v2-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-468x60-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-580x400-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-250x250x2-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-911-mid_content-728x90-911-nonexxxnonexxxxxxezmaxscaleval100 ","s":911},{"p":" ezoic_pub_ad_placeholder-912-long_content-250x250-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-300x250-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912,"h":400,"w":728},{"p":" ezoic_pub_ad_placeholder-912-long_content-320x100-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-300x50v2-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-320x50-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-336x280-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-320x100v2-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-468x60-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-580x400-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-250x250x2-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-912-long_content-728x90-912-nonexxxnonexxxxxxezmaxscaleval100 ","s":912},{"p":" ezoic_pub_ad_placeholder-137-mid_content-250x250-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-300x250-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-320x100-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-300x50v2-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-320x50-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-336x280-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-320x100v2-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-468x60-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-580x400-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-250x250x2-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-137-mid_content-728x90-137-nonexxxnonexxxxxxezmaxscaleval100 ","s":137},{"p":" ezoic_pub_ad_placeholder-913-longer_content-250x250-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-300x250-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913,"h":400,"w":728},{"p":" ezoic_pub_ad_placeholder-913-longer_content-320x100-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-300x50v2-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-320x50-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-336x280-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-320x100v2-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-468x60-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-580x400-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-250x250x2-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-913-longer_content-728x90-913-nonexxxnonexxxxxxezmaxscaleval100 ","s":913},{"p":" ezoic_pub_ad_placeholder-914-longest_content-250x250-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-300x250-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-320x100-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-300x50v2-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-320x50-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-336x280-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-320x100v2-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-468x60-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-580x400-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-914-longest_content-250x250x2-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914,"h":400,"w":728},{"p":" ezoic_pub_ad_placeholder-914-longest_content-728x90-914-nonexxxnonexxxxxxezmaxscaleval100 ","s":914},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-250x250-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-300x250-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-320x100-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-300x50v2-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-320x50-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-336x280-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-320x100v2-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-468x60-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-580x400-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-250x250x2-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-146-bottom_of_page-728x90-146-nonexxxnonexxxxxxezmaxscaleval100 ","s":146},{"p":" ezoic_pub_ad_placeholder-143-sidebar-300x250-143-nonexxxnonexxxxxxezmaxscaleval100 ","s":143,"h":250,"w":320,"r":true},{"p":" ezoic_pub_ad_placeholder-144-sidebar_middle-250x250-144-nonexxxnonexxxxxxezmaxscaleval100 ","s":144},{"p":" ezoic_pub_ad_placeholder-144-sidebar_middle-300x250-144-nonexxxnonexxxxxxezmaxscaleval100 ","s":144,"h":280,"w":336},{"p":" ezoic_pub_ad_placeholder-144-sidebar_middle-320x100-144-nonexxxnonexxxxxxezmaxscaleval100 ","s":144},{"p":" ezoic_pub_ad_placeholder-144-sidebar_middle-300x50v2-144-nonexxxnonexxxxxxezmaxscaleval100 ","s":144},{"p":" ezoic_pub_ad_placeholder-144-sidebar_middle-320x50-144-nonexxxnonexxxxxxezmaxscaleval100 ","s":144},{"p":" ezoic_pub_ad_placeholder-144-sidebar_middle-336x280-144-nonexxxnonexxxxxxezmaxscaleval100 ","s":144},{"p":" ezoic_pub_ad_placeholder-144-sidebar_middle-320x100v2-144-nonexxxnonexxxxxxezmaxscaleval100 ","s":144},{"p":" ezoic_pub_ad_placeholder-145-sidebar_bottom-300x250v4-145-nonexxxnonexxxxxxezmaxscaleval100 ","s":145,"h":1050,"w":336,"r":true},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-250x250-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-300x250-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-320x100-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-300x50v2-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-320x50-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-336x280-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-320x100v2-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-468x60-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-580x400-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-250x250x2-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147,"h":400,"w":970},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-728x90-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-970x250-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-300x250x3-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-147-bottom_of_page-970x90-147-nonexxxnonexxxxxxezmaxscaleval100 ","s":147},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-250x250-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-300x250-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-320x100-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-300x50v2-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-320x50-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-336x280-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-320x100v2-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-468x60-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-728x90-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-970x250-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-300x250x3-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-702-bottom_of_page-970x90-702-nonexxxnonexxxxxxezmaxscaleval100 ","s":702},{"p":" ezoic_pub_ad_placeholder-100-bottom_floating-728x90-100-nonexxxnonexxxxxxezmaxscaleval100 ","s":100,"h":90,"w":970},{"p":" ezoic_pub_ad_placeholder-100-bottom_floating-970x90-100-nonexxxnonexxxxxxezmaxscaleval100 ","s":100},{"p":" ezoic_pub_ad_placeholder-975-edge-160x600-975-nonexxxnonexxxxxxezmaxscaleval100 ","s":975,"h":600,"w":160,"r":true}],"a":{"100":true,"135":true,"136":true,"137":true,"143":true,"144":true,"145":true,"146":true,"147":true,"149":true,"6":true,"702":true,"901":true,"909":true,"910":true,"911":true,"912":true,"913":true,"914":true,"975":true},"g":-1,"l":{"0":11,"1":3,"2":2,"3":1,"4":-1,"5":-1},"m":{"0":10,"1":3,"2":2,"3":1,"4":-1,"5":-1},"v":0,"ve":false,"hr":false,"sa":false},"cr":"","tid":134,"tn":"pub_site","url":"","wc":1269,"ff":1,"dhh":""};
+d.ab = _ezaq.ab_test_id;
+d.pv = _ezaq.page_view_id;
+d.vu = _ezaq.visit_uuid;
+d.url = window.location.href;
+var dynamicAddScript = function(script) {
+	if(window.ezFinishedStatic === true) {
+		console.error("attempted to load dynamic script again");
+		return;
+	}
+	var errorMessages = [];
+	function errorHandler(event) {
+	  var errorObj = event.error;
+	  if (errorObj && errorObj.stack && errorObj.stack.indexOf('dynamicAddScript') !== -1) {
+		var errorMessage = {
+		  Message: event.message,
+		  LineNo: event.lineno,
+		  ColumnNo: event.colno,
+		  Stack: errorObj.stack
+		};
+		errorMessages.push(errorMessage);
+	  }
+
+	  if (typeof window.onerror === 'function') {
+		window.onerror.apply(this, arguments);
+	  }
+	}
+ 	window.addEventListener('error', errorHandler);
+
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+
+	window.removeEventListener('error', errorHandler);
+	if (window.ezFinishedStatic !== true || typeof window.ezstaticerrors !== 'undefined') {
+		d.Script = script;
+		d.ErrorMessages = JSON.stringify(errorMessages);
+		d.ErrorStaticMessages = window.ezstaticerrors || '';
+		var dataTxt = JSON.stringify(d);
+		if (dataTxt.length > 0) {
+			var logXHR = new XMLHttpRequest();
+			logXHR.open('POST/index.html','/ezais/log?cb=1', true);
+			logXHR.setRequestHeader('Content-Type','application/json');
+			logXHR.send(dataTxt);
+		}
+	}
+};
+var dataText = JSON.stringify(d);
+if (dataText.length > 0) {
+	var startTime = Date.now() - __ez.stms;
+
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/dynamic?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            dynamicAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            dynamicAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+}
+
+function callDynamicAfterConsent() {
+	if (window.__tcfapi) {
+		window.__tcfapi("addEventListener", 2, function (tcdata, success) {
+			if (success) {
+				if(tcdata.gdprApplies == true) {
+					if(tcdata.eventStatus === "useractioncomplete" || tcdata.eventStatus === "tcloaded") {
+						__ez.queue.addFunc("productEzoicAds", "productEzoicAds", null, true, ['ezaqReady'], false, false, false, true);
+					}
+				} else {
+					__ez.queue.addFunc("productEzoicAds", "productEzoicAds", null, true, ['ezaqReady'], false, false, false, true);
+				}
+			}
+		});
+	} else {
+		__ez.queue.addFunc("productEzoicAds", "productEzoicAds", null, true, ['ezaqReady'], false, false, false, true);
+	}
+}
+
+
+if (window.__tcfapi) {
+	callDynamicAfterConsent();
+} else {
+	if (typeof window.ezCMPQueue !== "undefined") {
+		window.ezCMPQueue.push(callDynamicAfterConsent);
+	} else {
+		__ez.queue.addFunc("productEzoicAds", "productEzoicAds", null, true, ['ezaqReady'], false, false, false, true);
+	}
+}
+</script><base />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Operator Precedence and Associativity in C - C Programming Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="Operator precedence: It dictates the order of evaluation of operators in an expression. 
+
+Associativity: It defines the order in which operators of t…"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Operator Precedence and Associativity in C"/>
+
+    <meta property="og:description" content="Operator precedence: It dictates the order of evaluation of operators in an expression. 
+
+Associativity: It defines the order in which operators of t…"/>
+
+
+<meta property="og:url" content="https://overiq.com/c-programming-101/operator-precedence-and-associativity-in-c/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="Operator precedence: It dictates the order of evaluation of operators in an expression. 
+
+Associativity: It defines the order in which operators of t…"/>
+
+
+<meta name="twitter:title" content="Operator Precedence and Associativity in C"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script>
+<script async data-ezscrex="false" data-cfasync="false" src="../../../www.humix.com/video.js"></script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">C Programming Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">Operator Precedence and Associativity in C</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>Operator Precedence and Associativity in C</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on July 27, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p><strong>Operator precedence:</strong> It dictates the order of evaluation of operators in an expression. </p><!-- End Ezoic - gen_under_page_title - under_page_title --><span id="ezoic-pub-ad-placeholder-901" data-method="placement-service"></span><span data-ez-ph-id="901" style="box-sizing:content-box;min-height:90px;min-width:728px;max-width:100% !important;padding:0;margin-top:15px !important;margin-left:auto !important;line-height:0px;margin-right:auto !important;display:block !important;text-align:center !important;float:none !important;margin-bottom:15px !important;"></span><!-- Ezoic - gen_under_page_title - under_page_title -->
+
+<p><strong>Associativity:</strong> It defines the order in which operators of the same precedence are evaluated in an expression. Associativity can be either from left to right or right to left. <span id="ezoic-pub-ad-placeholder-149" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="149"></span></p>
+
+<p>Consider the following example:</p>
+<div class="codeblock language-c"><div class="highlight"><pre><span></span><span class="mi">24</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<p>Here we have two operators <code>+</code> and <code>*</code>, Which operation do you think will be evaluated first, addition or multiplication? If the addition is applied first then answer will be <code>116</code> and if the multiplication is applied first answer will be <code>44</code>. To answer such question we need to consult the operator precedence table. <span id="ezoic-pub-ad-placeholder-135" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="135"></span></p><!-- End Ezoic - gen_under_first_paragraph - under_first_paragraph --><span id="ezoic-pub-ad-placeholder-909" data-method="placement-service"></span><span data-ez-ph-id="909"></span><!-- Ezoic - gen_under_first_paragraph - under_first_paragraph -->
+
+<p>In C, each operator has a fixed priority or precedence in relation to other operators. As a result, the operator with higher precedence is evaluated before the operator with lower precedence. Operators that appear in the same group have the same precedence. The following table lists operator precedence and associativity. </p>
+
+<p><img src="../../media/uploads/operator-precedence-and-associativity.png" loading="lazy" alt=""/>   </p>
+
+<p>Operators in the top have higher precedence and it decreases as we move towards the bottom. </p><!-- End Ezoic - gen_under_second_paragraph - under_second_paragraph --><span id="ezoic-pub-ad-placeholder-910" data-method="placement-service"></span><span data-ez-ph-id="910"></span><!-- Ezoic - gen_under_second_paragraph - under_second_paragraph -->
+
+<p>From the precedence table, we can conclude that the <code>*</code> operator is above the <code>+</code> operator, so the <code>*</code> operator has higher precedence than the <code>+</code> operator, therefore in the expression <code>24 + 5 * 4</code>, subexpression <code>5 * 4</code> will be evaluated first. </p>
+
+<p><img src="../../media/uploads/operator-precedence-example-1-1504587695699.png" loading="lazy" alt=""/> Here are some more examples: </p>
+
+<p><strong>Example 1:</strong></p>
+<div class="codeblock language-c"><div class="highlight"><pre><span></span><span class="mi">34</span> <span class="o">+</span> <span class="mi">12</span><span class="o">/</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">45</span>
+</pre></div>
+</div>
+<p><img src="../../media/uploads/operator-precedence-example-2-1504587709810.png" loading="lazy" alt=""/> </p>
+
+<p>Here the <code>/</code> operator has higher precedence hence <code>12/4</code> is evaluated first. The operators <code>+</code> and <code>-</code> have the same precedence because they are in the same group. So which one of them will be evaluated first? To solve this problem you need to consult the associativity of the operator. As you can see in the table, the operators <code>+</code> and <code>-</code> have the same precedence and associates from left to right therefore in our expression <code>34 + 12/4 - 45</code> after division, addition (<code>+</code>) will be performed before subtraction (<code>-</code>). <span id="ezoic-pub-ad-placeholder-136" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="136"></span></p><!-- End Ezoic - gen_mid_content - mid_content --><span id="ezoic-pub-ad-placeholder-911" data-method="placement-service"></span><span data-ez-ph-id="911"></span><!-- Ezoic - gen_mid_content - mid_content -->
+
+<p><strong>Example 2</strong>:</p>
+<div class="codeblock language-c"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p><img src="../../media/uploads/operator-precedence-example-3-1504587722913.png" loading="lazy" alt=""/> </p>
+
+<p>Here the <code>/</code> operator has higher precedence hence <code>4/2</code> is evaluated first. The <code>+</code> and <code>-</code> operators have the same precedence and associates from left to right, therefore in our expression <code>12 + 3 - 4 / 2 &lt; 3 + 1</code> after division, the <code>+</code> operator will be evaluated followed by the <code>-</code> operator. From the precedence table, you can see that precedence of the <code>&lt;</code> operator is lower than that of <code>/</code>, <code>+</code> and <code>-</code>. Hence, it will be evaluated at last.</p>
+<span id="using-parentheses" class="anchor-target"></span><h2 class="heading">Using Parentheses <a class="header-link" href="#using-parentheses">#</a></h2>
+
+<p>If you look at the precedence table you will find that the precedence of parentheses (<code>()</code>) operator is the highest. Consequently, just as we did in school, we can use parentheses to change the sequence of operations. Consider the following example:</p>
+<div class="codeblock language-c"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Here, the <code>*</code> operator will be evaluated first followed by the <code>+</code> operator. </p><!-- End Ezoic - gen_long_content - long_content --><span id="ezoic-pub-ad-placeholder-912" data-method="placement-service"></span><span data-ez-ph-id="912"></span><!-- Ezoic - gen_long_content - long_content -->
+
+<p>What if you want the addition to take place first followed by multiplication? <span id="ezoic-pub-ad-placeholder-137" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="137"></span></p>
+
+<p>We can do this using parentheses, as follows:</p>
+<div class="codeblock language-c"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Whatever you have wrapped inside the parentheses will be evaluated first. As a result, in this expression the addition will take place first followed by multiplication. </p>
+
+<p>You can also nest parentheses like this:</p>
+<div class="codeblock language-c"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>In such cases expression inside the innermost parentheses is evaluated first, then the next innermost parentheses and so on. </p><!-- End Ezoic - gen_longer_content - longer_content --><span id="ezoic-pub-ad-placeholder-913" data-method="placement-service"></span><span data-ez-ph-id="913"></span><!-- Ezoic - gen_longer_content - longer_content -->
+
+<p>We can also use parentheses to make complex expressions a little more readable. For example:</p>
+<div class="codeblock language-c"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span> <span class="o">&amp;&amp;</span> <span class="n">height</span> <span class="o">&lt;</span> <span class="mi">48</span> <span class="o">||</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">60</span> <span class="o">&amp;&amp;</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">72</span>
+<span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span> <span class="o">&amp;&amp;</span> <span class="n">height</span> <span class="o">&lt;</span> <span class="mi">48</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">60</span> <span class="o">&amp;&amp;</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">72</span><span class="p">)</span> <span class="c1">// much better than the above</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Both expressions give the same result, but adding parentheses makes our intent much clear. </p>
+
+<p>We haven&#39;t yet discussed relational and logical operators. So the above expression might not make perfect sense. Relational and Logical operators are discussed in detail in <a href="../relational-operators-in-c/index.html">Relational Operators in C</a> and <a href="../logical-operators-in-c/index.html">Logical Operators in C</a>, respectively. In the next chapter, we will learn about the if else statement in C.</p><!-- End Ezoic - gen_longest_content - longest_content --><span id="ezoic-pub-ad-placeholder-914" data-method="placement-service"></span><span data-ez-ph-id="914"></span><!-- Ezoic - gen_longest_content - longest_content -->
+
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../arithmetic-operators-in-c/index.html" title="Arithmetic Operators in C">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            Arithmetic Operators in C
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../assignment-operator-in-c/index.html" title="Assignment Operator in C">
+                            Assignment Operator in C
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            <span id="ezoic-pub-ad-placeholder-146" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="146"></span></div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well"><span id="ezoic-pub-ad-placeholder-143" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="143" style="text-align:center !important;align-items:center;min-width:320px;flex-direction:column !important;max-width:100% !important;float:none !important;box-sizing:content-box;margin-top:15px !important;margin-right:auto !important;margin-left:auto !important;display:flex !important;line-height:0px;margin-bottom:15px !important;min-height:250px;padding:0;"></span>
+        <h4>C Programming Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-c-programming/index.html">Intro to C Programming</a></li>
+            
+                <li><a href="../installing-code-blocks/index.html">Installing Code Blocks</a></li>
+            
+                <li><a href="../creating-and-running-the-first-c-program/index.html">Creating and Running The First C Program</a></li>
+            
+                <li><a href="../basic-elements-of-a-c-program/index.html">Basic Elements of a C Program</a></li>
+            
+                <li><a href="../keywords-and-identifiers/index.html">Keywords and Identifiers</a></li>
+            
+                <li><a href="../data-types-in-c/index.html">Data Types in C</a></li>
+            
+                <li><a href="../constants-in-c/index.html">Constants in C</a></li>
+            
+                <li><a href="../variables-in-c/index.html">Variables in C</a></li>
+            
+                <li><a href="../input-and-output-in-c/index.html">Input and Output in C</a></li>
+            
+                <li><a href="../formatted-input-and-output-in-c/index.html">Formatted Input and Output in C</a></li>
+            
+                <li><a href="../arithmetic-operators-in-c/index.html">Arithmetic Operators in C</a></li>
+            
+                <li><a href="index.html">Operator Precedence and Associativity in C</a></li>
+            
+                <li><a href="../assignment-operator-in-c/index.html">Assignment Operator in C</a></li>
+            
+                <li><a href="../increment-and-decrement-operators-in-c/index.html">Increment and Decrement Operators in C</a></li>
+            
+                <li><a href="../relational-operators-in-c/index.html">Relational Operators in C</a></li>
+            
+                <li><a href="../logical-operators-in-c/index.html">Logical Operators in C</a></li>
+            
+                <li><a href="../conditional-operator-comma-operator-and-sizeof-operator-in-c/index.html">Conditional Operator, Comma operator and sizeof() operator in C</a></li>
+            
+                <li><a href="../implicit-type-conversion-in-c/index.html">Implicit Type Conversion in C</a></li>
+            
+                <li><a href="../explicit-type-conversion-in-c/index.html">Explicit Type Conversion in C</a></li>
+            
+                <li><a href="../if-else-statements-in-c/index.html">if-else statements in C</a></li>
+            
+                <li><a href="../the-while-loop-in-c/index.html">The while loop in C</a></li>
+            
+                <li><a href="../the-do-while-loop-in-c/index.html">The do while loop in C</a></li>
+            
+                <li><a href="../the-for-loop-in-c/index.html">The for loop in C</a></li>
+            
+                <li><a href="../the-infinite-loop-in-c/index.html">The Infinite Loop in C</a></li>
+            
+                <li><a href="../the-break-and-continue-statement-in-c/index.html">The break and continue statement in C</a></li>
+            
+                <li><a href="../the-switch-statement-in-c/index.html">The Switch statement in C</a></li>
+            
+                <li><a href="../function-basics-in-c/index.html">Function basics in C</a></li>
+            
+                <li><a href="../the-return-statement-in-c/index.html">The return statement in C</a></li>
+            
+                <li><a href="../actual-and-formal-arguments-in-c/index.html">Actual and Formal arguments in C</a></li>
+            
+                <li><a href="../local-global-and-static-variables-in-c/index.html">Local, Global and Static variables in C</a></li>
+            
+                <li><a href="../recursive-function-in-c/index.html">Recursive Function in C</a></li>
+            
+                <li><a href="../one-dimensional-array-in-c/index.html">One dimensional Array in C</a></li>
+            
+                <li><a href="../one-dimensional-array-and-function-in-c/index.html">One Dimensional Array and Function in C</a></li>
+            
+                <li><a href="../two-dimensional-array-in-c/index.html">Two Dimensional Array in C</a></li>
+            
+                <li><a href="../pointer-basics-in-c/index.html">Pointer Basics in C</a></li>
+            
+                <li><a href="../pointer-arithmetic-in-c/index.html">Pointer Arithmetic in C</a></li>
+            
+                <li><a href="../pointers-and-1-d-arrays/index.html">Pointers and 1-D arrays</a></li>
+            
+                <li><a href="../pointers-and-2-d-arrays/index.html">Pointers and 2-D arrays</a></li>
+            
+                <li><a href="../call-by-value-and-call-by-reference-in-c/index.html">Call by Value and Call by Reference in C</a></li>
+            
+                <li><a href="../returning-more-than-one-value-from-function-in-c/index.html">Returning more than one value from function in C</a></li>
+            
+                <li><a href="../returning-a-pointer-from-a-function-in-c/index.html">Returning a Pointer from a Function in C</a></li>
+            
+                <li><a href="../passing-1-d-array-to-a-function-in-c/index.html">Passing 1-D Array to a Function in C</a></li>
+            
+                <li><a href="../passing-2-d-array-to-a-function-in-c/index.html">Passing 2-D Array to a Function in C</a></li>
+            
+                <li><a href="../array-of-pointers-in-c/index.html">Array of Pointers in C</a></li>
+            
+                <li><a href="../void-pointers-in-c/index.html">Void Pointers in C</a></li>
+            
+                <li><a href="../the-malloc-function-in-c/index.html">The malloc() Function in C</a></li>
+            
+                <li><a href="../the-calloc-function-in-c/index.html">The calloc() Function in C</a></li>
+            
+                <li><a href="../the-realloc-function-in-c/index.html">The realloc() Function in C</a></li>
+            
+                <li><a href="../string-basics-in-c/index.html">String Basics in C</a></li>
+            
+                <li><a href="../the-strlen-function-in-c/index.html">The strlen() Function in C</a></li>
+            
+                <li><a href="../the-strcmp-function-in-c/index.html">The strcmp() Function in C</a></li>
+            
+                <li><a href="../the-strcpy-function-in-c/index.html">The strcpy() Function in C</a></li>
+            
+                <li><a href="../the-strcat-function-in-c/index.html">The strcat() Function in C</a></li>
+            
+                <li><a href="../character-array-and-character-pointer-in-c/index.html">Character Array and Character Pointer in C</a></li>
+            
+                <li><a href="../array-of-strings-in-c/index.html">Array of Strings in C</a></li>
+            
+                <li><a href="../array-of-pointers-to-strings-in-c/index.html">Array of Pointers to Strings in C</a></li>
+            
+                <li><a href="../the-sprintf-function-in-c/index.html">The sprintf() Function in C</a></li>
+            
+                <li><a href="../the-sscanf-function-in-c/index.html">The sscanf() Function in C</a></li>
+            
+                <li><a href="../structure-basics-in-c/index.html">Structure Basics in C</a></li>
+            
+                <li><a href="../array-of-structures-in-c/index.html">Array of Structures in C</a></li>
+            
+                <li><a href="../array-as-member-of-structure-in-c/index.html">Array as Member of Structure in C</a></li>
+            
+                <li><a href="../nested-structures-in-c/index.html">Nested Structures in C</a></li>
+            
+                <li><a href="../pointer-to-a-structure-in-c/index.html">Pointer to a Structure in C</a></li>
+            
+                <li><a href="../pointers-as-structure-member-in-c/index.html">Pointers as Structure Member in C</a></li>
+            
+                <li><a href="../structures-and-functions-in-c/index.html">Structures and Functions in C</a></li>
+            
+                <li><a href="../union-basics-in-c/index.html">Union Basics in C</a></li>
+            
+                <li><a href="../typedef-statement-in-c/index.html">typedef statement in C</a></li>
+            
+                <li><a href="../basics-of-file-handling-in-c/index.html">Basics of File Handling in C</a></li>
+            
+                <li><a href="../fputc-function-in-c/index.html">fputc() Function in C</a></li>
+            
+                <li><a href="../fgetc-function-in-c/index.html">fgetc() Function in C</a></li>
+            
+                <li><a href="../fputs-function-in-c/index.html">fputs() Function in C</a></li>
+            
+                <li><a href="../fgets-function-in-c/index.html">fgets() Function in C</a></li>
+            
+                <li><a href="../fprintf-function-in-c/index.html">fprintf() Function in C</a></li>
+            
+                <li><a href="../fscanf-function-in-c/index.html">fscanf() Function in C</a></li>
+            
+                <li><a href="../fwrite-function-in-c/index.html">fwrite() Function in C</a></li>
+            
+                <li><a href="../fread-function-in-c/index.html">fread() Function in C</a></li>
+            
+        </ul>
+    <span id="ezoic-pub-ad-placeholder-144" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="144"></span></div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+<span id="ezoic-pub-ad-placeholder-145" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="145" style="flex-direction:column !important;background:0 0 !important;margin-top:0px !important;margin-left:auto !important;display:block !important;text-align:center !important;float:none !important;align-items:center;padding:0;margin-right:auto !important;min-width:300px;line-height:0px;max-width:100% !important;width:300px;box-sizing:content-box;margin-bottom:0px !important;min-height:1050px !important;"></span></div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer"><span id="ezoic-pub-ad-placeholder-147" class="ezoic-adpicker-ad"></span><span data-ez-ph-id="147"></span>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../index.html">C Tutorial</a></li>
+                    <li><a href="../../python-101/index.html">Python Tutorial</a></li>
+                    <li><a href="../../django-1-11/index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <span id="ezoic-pub-ad-placeholder-702" data-method="ai-placeholders" class="ezoic-autoinsert-ad"></span><span data-ez-ph-id="702"></span><div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<span id="ezoic-pub-ad-placeholder-100"></span><span data-ez-ph-id="100"></span><div id="ez-sidebar-wall-left" class="ez-sidebar-wall" style="left: 0px;">
+	<div class="ez-sidebar-wall-ad">
+		<span id="ezoic-pub-ad-placeholder-975"></span><span data-ez-ph-id="975" style="min-height:600px;line-height:0px;margin-right:0px !important;margin-left:0px !important;min-width:160px;margin-bottom:0px !important;display:inline-block;max-width:100% !important;padding:0;float:none !important;box-sizing:content-box;margin-top:0px !important;"></span>
+		<span class="ez-rail-close" id="ez-rail-close-left" style="top: -21px; left: 0; display: none;" onclick="__ez_close_rail(this.parentElement.parentElement.id)">x</span>
+	</div>
+</div><script>!function(){function t(t,e){(null==e||e>t.length)&&(e=t.length);for(var r=0,n=new Array(e);r<e;r++)n[r]=t[r];return n}!function(){function e(){return document.querySelector('ins[data-anchor-shown="true"][data-anchor-status="displayed"]')}function r(t){var e=t.querySelector("iframe");e&&requestAnimationFrame((function(){var r=parseFloat(getComputedStyle(e).height);isNaN(r)||t.style.setProperty("height","".concat(r+5,"px"),"important")}))}function n(t){t.style.setProperty("width","100%","important"),t.style.maxWidth="none"}function o(t){var e=t.querySelector("iframe");e&&(e.style.setProperty("display","block","important"),e.style.setProperty("margin","0 auto","important"))}function a(e){if(e){var a=new WeakSet;a.has(e)||(a.add(e),new MutationObserver((function(a){var i,u=function(e,r){var n="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(!n){if(Array.isArray(e)||(n=function(e,r){if(e){if("string"==typeof e)return t(e,r);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?t(e,r):void 0}}(e))||r&&e&&"number"==typeof e.length){n&&(e=n);var o=0,a=function(){};return{s:a,n:function(){return o>=e.length?{done:!0}:{done:!1,value:e[o++]}},e:function(t){throw t},f:a}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var i,u=!0,c=!1;return{s:function(){n=n.call(e)},n:function(){var t=n.next();return u=t.done,t},e:function(t){c=!0,i=t},f:function(){try{u||null==n.return||n.return()}finally{if(c)throw i}}}}(a);try{for(u.s();!(i=u.n()).done;)"style"===i.value.attributeName&&(r(e),n(e),o(e))}catch(t){u.e(t)}finally{u.f()}})).observe(e,{attributes:!0,attributeFilter:["style"]}))}}!function(){var t=e();if(t)return r(t),n(t),o(t),void a(t);var i=new MutationObserver((function(){var t=e();t&&(r(t),n(t),o(t),a(t),i.disconnect())}));i.observe(document.body,{attributes:!0,subtree:!0,childList:!0})}()}()}();</script>
+<script data-ezscrex="false" data-cfasync="false">
+		window.humixPlayers = window.humixPlayers || [];
+		window.humixPlayers.push({ target: 'autoinsert', isGenerated: true });
+	</script>
+<script type='text/javascript' style='display:none;' async>if (typeof window.__ez !== 'undefined' && window.__ez?.queue?.addFileOnce) {window.__ez.queue.addFileOnce('identity', '../../../go.ezodn.com/detroitchicago/indy8c39.js?cb=24&amp;gcb=0', true, [], true, false, false, true);} </script><script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/c-programming-101/operator-precedence-and-associativity-in-c/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 10:59:06 GMT -->
+</html>

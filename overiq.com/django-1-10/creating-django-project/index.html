@@ -1,0 +1,992 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/django-1-10/creating-django-project/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:02:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":47795,"response_size_orig":42027,"response_time_orig":560,"template_id":5,"url":"https://overiq.com/django-1-10/creating-django-project/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"d67965ca541a2c7be84cb04f4fa1ddca"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Creating Django Project - Django 1.10 Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="To create a new Django project enter the following command inside your virtual environment.
+1
+2(env) C:\Users\Q\TGDB&amp;gt;django-admin startproject dja…"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Creating Django Project"/>
+
+    <meta property="og:description" content="To create a new Django project enter the following command inside your virtual environment.
+1
+2(env) C:\Users\Q\TGDB&amp;gt;django-admin startproject dja…"/>
+
+
+<meta property="og:url" content="https://overiq.com/django-1-10/creating-django-project/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="To create a new Django project enter the following command inside your virtual environment.
+1
+2(env) C:\Users\Q\TGDB&amp;gt;django-admin startproject dja…"/>
+
+
+<meta name="twitter:title" content="Creating Django Project"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">Django 1.10 Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">Creating Django Project</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>Creating Django Project</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on July 27, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p>To create a new Django project enter the following command inside your virtual environment.</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>(env) C:\Users\Q\TGDB&gt;django-admin startproject django_project
+(env) C:\Users\Q\TGDB&gt;
+</pre></div>
+</td></tr></tbody></table></div>
+<p>This command will create a new directory named <code>django_project</code> inside <code>TGDB</code> directory. The <code>django_project</code> directory is also known as <strong>Django Project Root Directory</strong> or simply <strong>Project Root Directory</strong>. Within this newly created directory, you should see two items.</p>
+
+<ol>
+<li>A directory with the same name as your project root directory i.e <code>django_project</code>.</li>
+<li>A Python script called <code>manage.py</code>.</li>
+</ol>
+
+<p>The directory <code>django_project</code> (i.e <code>TGDB/django_project/django_project</code>) is called Project Configuration directory within this directory you will the find the following four python files.</p>
+
+<ul>
+<li><code>__init__.py</code> - A special empty file that tells Python that the current directory should be treated as a Python package.</li>
+<li><code>settings.py</code> - This file contains all the settings and configuration of this Django project.</li>
+<li><code>urls.py</code> - A Python script to store the URL patterns of the Django project.</li>
+<li><code>wsgi.py</code> - A Python script to run development server and also deploy the project to the production environment.</li>
+</ul>
+
+<hr/>
+
+<p><code>manage.py</code> - This file inside provides a list of commands which you can use to interact or maintain your Django project. We will be using <code>manage.py</code> many times throughout this tutorial. One commonly used command provided by <code>manage.py</code> is to run Django built-in development server. Let&#39;s see how it&#39;s done.</p>
+
+<p>First, change your current working directory to project root directory i.e <code>TGDB/django_project</code> (where <code>manage.py</code> is located) using the <code>cd</code> command.</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>(env) C:\Users\Q\TGDB&gt;cd django_project
+
+(env) C:\Users\Q\TGDB\django_project&gt;
+</pre></div>
+</td></tr></tbody></table></div>
+<p>To run Django development server issue the following command.</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span>(env) C:\Users\Q\TGDB\django_project&gt;python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you
+ apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run &#39;python manage.py migrate&#39; to apply them.
+January 22, 2017 - 20:23:48
+Django version 1.10.5, using settings &#39;django_project.settings&#39;
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+</pre></div>
+</td></tr></tbody></table></div>
+<p>There are few things to notice here. First the line:</p>
+<div class="codeblock language-text"><div class="highlight"><pre><span></span>System check identified no issues (0 silenced).
+</pre></div>
+</div>
+<p>Indicates that no errors were found in your Django project. If there had been errors then <code>python manage.py runserver</code> would have failed to start the server. The second important thing to note here is the following line:</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run &#39;python manage.py migrate&#39; to apply them.
+</pre></div>
+</td></tr></tbody></table></div>
+<p>This line tells us there are some unapplied migrations. In Django, we use migrations to create/update/delete/ tables or columns in the database. Don&#39;t worry too much about what migrations are, we will discuss them in depth in later chapters.</p>
+
+<p>The third and the most important thing, for now, is the address of the Django development server i.e <code>http://127.0.0.1:8000/</code>. Open your favorite browser and visit <code>http://127.0.0.1:8000/</code>. You should see a page like this:</p>
+
+<p><img src="../../media/uploads/django-development-server-1504620459629.png" loading="lazy" alt=""/></p>
+
+<p>It means everything is working as expected.</p>
+
+<p>To stop the development server hit CTRL+C. By default <code>manage.py</code> always starts the development server at port 8000 but you can change it to some other port using the following command.</p>
+<div class="codeblock language-bash"><div class="highlight"><pre><span></span>python manage.py runserver &lt;port&gt;
+</pre></div>
+</div>
+<p>For example, <code>python manage.py runserver 3000</code> will start the Django development at port 3000. In case you want to open port at a specific IP address, you can easily do that using the following command:</p>
+<div class="codeblock language-bash"><div class="highlight"><pre><span></span>python manage.py runserver &lt;ip-address&gt;:&lt;port&gt;
+</pre></div>
+</div>
+<p>For example, to run Django development server at localhost on port 4444 issue the following command.</p>
+<div class="codeblock language-bash"><div class="highlight"><pre><span></span>python manage.py runserver <span class="m">127</span>.0.0.1:4444
+</pre></div>
+</div>
+<p>After every modification to Python code, Django development server automatically reloads itself. So you don&#39;t need to restart the server every time for the changes to take effect. However, there are some actions like adding files don&#39;t trigger a restart. In such cases, you will have to restart the server manually.</p>
+<span id="setting-up-a-database" class="anchor-target"></span><h2 class="heading">Setting up a Database <a class="header-link" href="#setting-up-a-database">#</a></h2>
+
+<p>Django can be used with almost all popular databases like MySQL, Oracle, PostgreSQL (which is the preferred choice among Django developers), SQLite etc. As this is a beginner tutorial, we will use SQLite database. But why SQLite? Because there are no additional steps involved to install and configure SQLite database. Django already comes bundled with SQLite database. So you don&#39;t have to configure anything to use it.</p>
+
+<p>Django will automatically create an SQLite database named <code>db.sqlite3</code> in the project root directory ( i.e <code>TGDB/django_project</code>), the first time you execute the <code>runserver</code> command. We have already executed the <code>runserver</code> command once, so at this point, you should have SQLite database file named <br/>
+<code>db.sqlite3</code> in your project root directory.</p>
+
+<p><img src="../../media/uploads/location_of_sqlite_database-1504620478832.png" loading="lazy" alt=""/></p>
+<span id="django-application" class="anchor-target"></span><h2 class="heading">Django application <a class="header-link" href="#django-application">#</a></h2>
+
+<p>In Django, project, and application means different things. According to Django nomenclature - a Django project is a collection of configurations and applications, these configurations and application together make up the whole web application or simply a web application or website. In other words, a project is a complete web application and an app is just one feature. For example, an app may be a blog, a comment system, a forum, a chatbox or even a contact form. All of these small apps and configurations together constitute a Django project.</p>
+<span id="django-built-in-application" class="anchor-target"></span><h2 class="heading">Django Built-in Application <a class="header-link" href="#django-built-in-application">#</a></h2>
+
+<p>Django already comes bundled with several built-in apps. To view these applications open <code>settings.py</code> file located in Project configuration directory i.e <code>TGDB/django_project/django_project</code>. We use <br/>
+<code>settings.py</code> file to modify various settings of our Django project. For example, you can change the default timezone from UTC to your local timezone by specifying a new value to <code>TIME_ZONE</code> variable as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">TIME_ZONE</span> <span class="o">=</span> <span class="s1">&#39;Asia/Istanbul&#39;</span>
+</pre></div>
+</div>
+<p>This will change the default timezone to Asia/Istanbul. To view a full list of values you can specify click <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" rel="nofollow">here</a>.</p>
+
+<p>To view all the built-in apps installed by default, take a look at the <code>INSTALLED_APPS</code> variable at the top of the <code>settings.py</code> file.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>As you can see there are 6 apps installed by default, all of which ships with Django. Here is a rundown of each application.</p>
+
+<ol>
+<li><code>django.contrib.admin</code> – An admin site.</li>
+<li><code>django.contrib.auth</code> – An authentication system.</li>
+<li><code>django.contrib.contenttypes</code> – A framework for content types.</li>
+<li><code>django.contrib.sessions</code> – A session framework.</li>
+<li><code>django.contrib.messages</code> – A messaging framework.</li>
+<li><code>django.contrib.staticfiles</code> – A framework for managing static files.</li>
+</ol>
+
+<p>Some of these apps require database table while others don&#39;t. Recall that when we tried to run Django development server we got the following warning.</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run &#39;python manage.py migrate&#39; to apply them.
+</pre></div>
+</td></tr></tbody></table></div>
+<p>This warning tells us about &#34;unapplied migrations&#34;. Unapplied migration means that there are some changes need to be committed so that all the applications can run successfully. Before we use these apps, we have to create necessary tables in the database. To create tables we use the <code>migrate</code> command.</p>
+
+<p>In the terminal or command prompt enter the following command to create necessary tables.</p>
+<div class="codeblock language-bash"><div class="highlight"><pre><span></span><span class="o">(</span>env<span class="o">)</span> C:<span class="se">\U</span>sers<span class="se">\Q\T</span>GDB<span class="se">\d</span>jango_project&gt;python manage.py migrate
+</pre></div>
+</div>
+<p>The output should look something like this:</p>
+<div class="codeblock language-bash"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">(</span>env<span class="o">)</span> C:<span class="se">\U</span>sers<span class="se">\Q\T</span>GDB<span class="se">\d</span>jango_project&gt;python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying sessions.0001_initial... OK
+
+<span class="o">(</span>env<span class="o">)</span> C:<span class="se">\U</span>sers<span class="se">\Q\T</span>GDB<span class="se">\d</span>jango_project&gt;
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Don&#39;t worry! at this point, we are not expecting to you understand migrations completely. We will learn about them in detail in lesson <a href="../migrations-in-django/index.html">Migrations in Django</a>. For now, just remember this - In Django, we use migrations to create/alter/delete tables in the database. We will examine the tables created by the <code>migrate</code> command in the next section.</p>
+
+<p>Run the development server again using the <code>runserver</code> command this time you won&#39;t see any warnings about unapplied migrations.</p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span>(env) C:\Users\Q\TGDB\django_project&gt;python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 23, 2017 - 13:28:22
+Django version 1.10.5, using settings &#39;django_project.settings&#39;
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+</pre></div>
+</td></tr></tbody></table></div>
+<p>It is not necessary to use all apps provided by Django. If you don&#39;t want to use any particular app just remove it from the list. Let&#39;s say for some reason you don&#39;t want to use <code>django.contrib.staticfiles</code> app, after removing <code>django.contrib.staticfiles</code>, <code>INSTALLED_APPS</code> should look like this:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>    
+<span class="p">]</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>But for now we need everything, so add <code>django.contrib.staticfiles</code> back to the <code>INSTALLED_APPS</code> list. Finally <code>INSTALLED_APPS</code> should look like this:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="viewing-the-database" class="anchor-target"></span><h2 class="heading">Viewing the Database <a class="header-link" href="#viewing-the-database">#</a></h2>
+
+<p>In this tutorial, we will use a Graphical Database Management program like Navicat Premium to view the current state of our SQLite database from time to time. Programs like Navicat Premium makes it really easy to view tables, create/alter records graphically without writing a single line of SQL.</p>
+
+<p>However, if you are SQL guru and know SQL commands by heart, you are free to open <code>db.sqlite3</code> file from the command prompt or terminal and proceed from there.</p>
+
+<p>Navicat Premium is not a freeware. However, they do offer 30 day trial period. There are many other freeware like Db Viewer, DBeaver etc which allows you to do more or less same things. Throughout this tutorial, I will be using Navicat Premium. The following are instructions to open an SQLite database using Navicat Premium, instructions for other programs are more or less same.</p>
+
+<p>Start Navicat Premium and select Connection &gt; SQLite.</p>
+
+<p><img src="../../media/uploads/open_database_step_1-1504620588153.png" loading="lazy" alt=""/></p>
+
+<p>A new window will open. Specify the connection name, select &#34;Existing Database File&#34; and browse the location where <code>db.sqlite3</code> file is located. An SQLite database doesn&#39;t require username and password, so skip User Name and Password fields. At last, click &#34;Test Connection&#34; button at the bottom left corner. If the connection succeeds, close the dialog box and save the connection by clicking the OK button. In case you encountered any error check the location of the SQLite database file and try again.</p>
+
+<p><img src="../../media/uploads/2017/11/30/open_database_step_2.png" loading="lazy" alt=""/></p>
+
+<p>To open the SQLite database double click on the name of the connection on the left pane, double click <code>main</code> again and you should see a window something like this:</p>
+
+<p><img src="../../media/uploads/open_database_step_3-1504620616419.png" loading="lazy" alt=""/></p>
+
+<p>As you can see, currently there are 11 tables in my SQLite database.</p>
+<span id="creating-django-application" class="anchor-target"></span><h2 class="heading">Creating Django application <a class="header-link" href="#creating-django-application">#</a></h2>
+
+<p>To create a new app, first, make sure your current working directory is same as where <code>manage.py</code> file is located. After that execute the following command.</p>
+<div class="codeblock language-powershell"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">Q</span><span class="p">\</span><span class="n">TGDB</span><span class="p">\</span><span class="n">django_project</span><span class="p">&gt;</span><span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="n">blog</span>
+<span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">Q</span><span class="p">\</span><span class="n">TGDB</span><span class="p">\</span><span class="n">django_project</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>This command will create a new directory named <code>blog</code> inside project root directory ( <code>TGDB/django_project</code> ). The contents of the directory should look like this:</p>
+
+<p><img src="../../media/uploads/contents_of_blog_directory-1504620640762.png" loading="lazy" alt=""/></p>
+
+<p>Here is a rundown of each file and folder:</p>
+
+<p><strong>blog/migrations/</strong></p>
+
+<ul>
+<li><code>blog/migrations/__init__.py</code> - The <code>__init__.py</code> file is just the Python way of saying, treat this ( <code>migrations</code> ) directory as a package.</li>
+<li><code>blog/migrations</code> - This directory will store all our migration files. In other words, it will store all the changes made by us on the database. Don&#39;t worry too much about it right now, we will get back to it later.</li>
+</ul>
+
+<p><strong>blog/</strong></p>
+
+<ul>
+<li><code>blog/__init__.py</code>  - The <code>__init__.py</code> file is just the Python way of saying treat this ( <code>blog</code> ) directory as a package.</li>
+<li><code>blog/admin.py</code> - This file contains all the configurations necessary to connect our blog app to the admin app supplied by Django. We will learn in detail how to do so in lesson <a href="../django-admin-app/index.html">Django Admin App</a>.</li>
+<li><code>blog/apps.py</code> - This file contains application specific configurations.</li>
+<li><code>blog/models.py</code> - This file contains our application models. In other words, this is the place where we will define tables and relationships between them.</li>
+<li><code>blog/test.py</code> - This file contains functions to unit test our app.</li>
+<li><code>blog/views.py</code> - This file contains view functions which handle requests and return responses.</li>
+</ul>
+
+<p>We have created a new app called blog, now we must inform our Django project about the existence of the blog app. To do this open <code>settings.py</code> located in <code>TGDB/django_project/django_project</code> and append <code>&#39;blog&#39;</code> at the end of the <code>INSTALLED_APPS</code> list as follows:</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;blog&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>To verify whether Django picked up our new blog application restart the server. If you can successfully start the server without any errors then it means you are ready for the next step.</p>
+
+<p><strong>Note:</strong> To checkout this version of the repository type <code>git checkout 3a</code>.</p>
+
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../installing-django/index.html" title="Installing Django">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            Installing Django
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../mvc-pattern-and-django/index.html" title="MVC Pattern and Django">
+                            MVC Pattern and Django
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>Django 1.10 Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-django/index.html">Intro to Django</a></li>
+            
+                <li><a href="../installing-django/index.html">Installing Django</a></li>
+            
+                <li><a href="index.html">Creating Django Project</a></li>
+            
+                <li><a href="../mvc-pattern-and-django/index.html">MVC Pattern and Django</a></li>
+            
+                <li><a href="../views-and-urlconfs-in-django/index.html">Views and URLconfs in Django</a></li>
+            
+                <li><a href="../basics-of-django-templates/index.html">Basics of Django Templates</a></li>
+            
+                <li><a href="../template-tags-in-django/index.html">Template tags in Django</a></li>
+            
+                <li><a href="../template-filters-in-django/index.html">Template filters in Django</a></li>
+            
+                <li><a href="../loading-templates-in-django/index.html">Loading Templates in Django</a></li>
+            
+                <li><a href="../template-inheritance-in-django/index.html">Template Inheritance in Django</a></li>
+            
+                <li><a href="../basics-of-models-in-django/index.html">Basics of Models in Django</a></li>
+            
+                <li><a href="../migrations-in-django/index.html">Migrations in Django</a></li>
+            
+                <li><a href="../django-orm-basics/index.html">Django ORM Basics</a></li>
+            
+                <li><a href="../accessing-related-data-using-django-orm/index.html">Accessing Related Data Using Django ORM</a></li>
+            
+                <li><a href="../building-blog-the-first-steps/index.html">Building Blog The First Steps</a></li>
+            
+                <li><a href="../django-admin-app/index.html">Django Admin App</a></li>
+            
+                <li><a href="../creating-urls-in-django/index.html">Creating URLs in Django</a></li>
+            
+                <li><a href="../showing-404-errors-in-django/index.html">Showing 404 errors In Django</a></li>
+            
+                <li><a href="../redirecting-urls-in-django/index.html">Redirecting URLs in Django</a></li>
+            
+                <li><a href="../django-form-basics/index.html">Django Form Basics</a></li>
+            
+                <li><a href="../displaying-forms-in-django/index.html">Displaying Forms in Django</a></li>
+            
+                <li><a href="../building-contact-us-page/index.html">Building Contact Us Page</a></li>
+            
+                <li><a href="../django-rendering-fields-manually/index.html">Django Rendering Fields Manually</a></li>
+            
+                <li><a href="../handling-static-content-in-django/index.html">Handling Static Content in Django</a></li>
+            
+                <li><a href="../handling-media-files-in-django/index.html">Handling Media Files in Django</a></li>
+            
+                <li><a href="../pagination-in-django/index.html">Pagination in Django</a></li>
+            
+                <li><a href="../cookies-in-django/index.html">Cookies in Django</a></li>
+            
+                <li><a href="../sessions-in-django/index.html">Sessions in Django</a></li>
+            
+                <li><a href="../django-authentication-framework-basics/index.html">Django Authentication Framework Basics</a></li>
+            
+                <li><a href="../django-logging-users-in-and-out/index.html">Django Logging Users In and Out</a></li>
+            
+                <li><a href="../django-password_change-view/index.html">Django password_change() View</a></li>
+            
+                <li><a href="../django-creating-users-using-usercreationform/index.html">Django Creating Users using UserCreationForm</a></li>
+            
+                <li><a href="../django-extending-user-model/index.html">Django Extending User model</a></li>
+            
+                <li><a href="../flatpages-in-django/index.html">Flatpages in Django</a></li>
+            
+                <li><a href="../creating-sitemaps-in-django/index.html">Creating Sitemaps in Django</a></li>
+            
+                <li><a href="../revisiting-cadmin-app/index.html">Revisiting cadmin App</a></li>
+            
+                <li><a href="../integrating-ckeditor-in-django/index.html">Integrating CKeditor in Django</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../c-programming-101/index.html">C Tutorial</a></li>
+                    <li><a href="../../python-101/index.html">Python Tutorial</a></li>
+                    <li><a href="../../django-1-11/index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/django-1-10/creating-django-project/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:02:25 GMT -->
+</html>

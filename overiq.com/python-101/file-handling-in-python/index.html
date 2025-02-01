@@ -1,0 +1,1357 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from overiq.com/python-101/file-handling-in-python/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:08:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"/>
+<script>var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};</script>
+<script>var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}</script>
+<script>if(typeof _setEzCookies!=='function'){function _setEzCookies(ezConsentData){var cookies=window.ezCookieQueue;for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}}
+window.ezCookieQueue=window.ezCookieQueue||[];if(typeof addEzCookies!=='function'){function addEzCookies(arr){window.ezCookieQueue=[...window.ezCookieQueue,...arr];}}
+addEzCookies([]);if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=__ez.queue||function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET/index.html","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,u,f){var m=new l(e,i,n,s,a,d,c,f);!0===u?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==u(e)&&0!=s&&e.process()}function u(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(f("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||u(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,u,f,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,u,f,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&u(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('../../detroitchicago/boise.js', '../../detroitchicago/boisebb26.js?gcb=195-3&amp;cb=5', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/abilene.js', '../../parsonsmaize/abilenec0f9.js?gcb=195-3&amp;cb=7f81d60744', true, [], true, false, true, false);__ez.queue.addFile('../../parsonsmaize/mulvane.js', '../../parsonsmaize/mulvane2d63.js?gcb=195-3&amp;cb=e75e48eec0', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('../../detroitchicago/birmingham.js', '../../detroitchicago/birminghame7ec.js?gcb=195-3&amp;cb=539c47377c', true, ['/parsonsmaize/abilene.js'], true, false, true, false);</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"domain_id":92771,"ezcache_level":1,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"response_size":71527,"response_size_orig":65759,"response_time_orig":586,"template_id":5,"url":"https://overiq.com/python-101/file-handling-in-python/","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');</script>
+<script type='text/javascript' data-ezscrex='false' data-cfasync='false'>
+window.ezAnalyticsStatic = true;
+
+function analyticsAddScript(script) {
+	var ezDynamic = document.createElement('script');
+	ezDynamic.type = 'text/javascript';
+	ezDynamic.innerHTML = script;
+	document.head.appendChild(ezDynamic);
+}
+function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+}
+function productAnalytics() {
+	var d = {"pr":[6],"omd5":"301d64210a7a6bf8787596e16e673633"};
+	d.u = _ezaq.url;
+	d.p = _ezaq.page_view_id;
+	d.v = _ezaq.visit_uuid;
+	d.ab = _ezaq.ab_test_id;
+	d.e = JSON.stringify(_ezaq);
+	d.ref = document.referrer;
+	d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+	if(typeof ez_utmParams !== 'undefined') {
+		d.utm = ez_utmParams;
+	}
+
+	var dataText = JSON.stringify(d);
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST/index.html','/ezais/analytics?cb=1', true);
+	xhr.onload = function () {
+		if (xhr.status!=200) {
+            return;
+		}
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+	};
+	xhr.setRequestHeader('Content-Type','text/plain');
+	xhr.send(dataText);
+}
+__ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+</script><base />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>File Handling in Python - Python Tutorial - OverIQ.com</title>
+
+    
+    
+
+
+
+    <meta name="description" content="So far in this course, we have been using variables to store data. The problem with this approach is that as soon as program ends our data is lost. O…"/>
+
+
+
+    <link rel="canonical" href="index.html"/>
+
+
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="File Handling in Python"/>
+
+    <meta property="og:description" content="So far in this course, we have been using variables to store data. The problem with this approach is that as soon as program ends our data is lost. O…"/>
+
+
+<meta property="og:url" content="https://overiq.com/python-101/file-handling-in-python/"/>
+<meta property="og:site_name" content="OverIQ.com"/>
+
+
+<meta property="article:publisher" content="https://www.facebook.com/OverIQ/"/>
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+
+    <meta name="twitter:description" content="So far in this course, we have been using variables to store data. The problem with this approach is that as soon as program ends our data is lost. O…"/>
+
+
+<meta name="twitter:title" content="File Handling in Python"/>
+<meta name="twitter:site" content="@infoOverIQ"/>
+
+<meta name="twitter:creator" content="@infoOverIQ"/>
+
+
+
+
+    
+    
+    
+
+
+    
+    
+    
+
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../../feed.xml/index.html"/>
+    
+    
+    <link href="../../../fonts.googleapis.com/cssd2d5.css?family=Open+Sans" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="icon" href="../../static/wiki/favicon.png" sizes="32x32"/>
+
+    <link rel="stylesheet" href="../../static/CACHE/css/output.db46da465a8b.css" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-125424793-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125424793-1');
+    </script>
+
+
+<script type='text/javascript'>
+var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+</script><script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 92771;
+var ezdomain = 'overiq.com';
+var ezoicSearchable = 1;
+</script></head>
+<body>
+
+<div class="overiq-header text-center">
+    <div class="site-branding">
+        <p class="main-title">
+            <a href="../../index.html" rel="home">
+                OverIQ.com
+            </a>
+        </p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+
+                <li>
+                    <a href="../../blog/index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../about/index.html">About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right visible-lg visible-md">
+                <li>
+                    <a href="../../feed.xml/index.html" title="RSS" target="_blank">
+                        <i class="fa fa-rss fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/overiq/" target="_blank" title="Github">
+                        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/OverIQ/" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/infoOverIQ" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                
+
+            </ul>
+
+            <form action="https://overiq.com/search/" class="navbar-form navbar-left" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query" value=""/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+
+
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container">
+
+    
+
+
+    <div class="se-pre-con"></div>
+
+    
+
+    <div class="row">
+
+        
+        <div class="main">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                
+
+    
+
+
+    
+        <ol class="breadcrumb">
+
+    <li><a href="../../index.html">Home</a></li>
+
+    
+        
+        <li><a href="../index.html">Python Tutorial</a></li>
+        
+
+        
+
+        
+    
+        
+
+        
+
+        
+            <li class="active">File Handling in Python</li>
+        
+    
+
+</ol>
+    
+
+
+<h1>File Handling in Python</h1>
+
+
+
+
+    <p><i class="fa fa-calendar" aria-hidden="true"></i>
+        Last updated on July 27, 2020
+    </p>
+
+
+<hr/>
+
+
+
+<p>So far in this course, we have been using variables to store data. The problem with this approach is that as soon as program ends our data is lost. One way to store the data permanently is to put it in a file. This chapter discusses how we can store data in the file as well as read data from the file.</p>
+
+<p>In Python, File Handling consists of following three steps:</p>
+
+<ol>
+<li>Open the file.</li>
+<li>Process file i.e perform read or write operation.</li>
+<li>Close the file.</li>
+</ol>
+<span id="types-of-file" class="anchor-target"></span><h2 class="heading">Types of File <a class="header-link" href="#types-of-file">#</a></h2>
+
+<p>There are two types of files:</p>
+
+<ol>
+<li>Text Files</li>
+<li>Binary Files</li>
+</ol>
+
+<p>A file whose contents can be viewed using a text editor is called a text file. A text file is simply a sequence of ASCII or Unicode characters. Python programs, HTML source code are some of the example of text files.</p>
+
+<p>A binary file stores the data in the same way as as stored in the memory. The mp3 files, image files, word documents are some of the examples of binary files. You can&#39;t read a binary file using a text editor.</p>
+
+<p>In this lesson we will discuss how to work with both types of files. </p>
+
+<p>Let&#39;s start.</p>
+<span id="opening-a-file" class="anchor-target"></span><h2 class="heading">Opening a File <a class="header-link" href="#opening-a-file">#</a></h2>
+
+<p>Before you perform any operation on a file, you must the open it. Python provides a function called <code>fopen()</code> to open a file. It&#39;s syntax is:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">fileobject</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span>  <span class="n">mode</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code>filename</code> is the name or path of the file.</p>
+
+<p>The <code>mode</code> is a string which specifies the type operation you want to perform on the file (i.e read, write, append, etc).The following table lists different modes available to you.</p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>&#34;r&#34;</code></td>
+<td>Opens the file for reading. If the file doesn&#39;t already exists you will get <code>FileNotFoundError</code> error.</td>
+</tr>
+<tr>
+<td><code>&#34;w&#34;</code></td>
+<td>Opens the file for writing. In this mode, if file specified doesn&#39;t exists, it will be created. If the file exists, then it&#39;s data is destroyed.</td>
+</tr>
+<tr>
+<td><code>&#34;a&#34;</code></td>
+<td>Opens the file in append mode. If the file doesn&#39;t exists this mode will create the file. If the file already exists then it appends new data to the end of the file rather than destroying data as <code>&#34;w&#34;</code> mode does.</td>
+</tr>
+</tbody>
+</table></div>
+<p>We can also specify the type of file (i.e text file or binary file.) we want to work with in <code>mode</code> string by appending <code>&#39;t&#39;</code> for text files and <code>&#39;b&#39;</code> for binary files. But since text mode is default mode, it is generally omitted while opening files in text mode.</p>
+
+<p>On success, <code>open()</code> returns a file object which is associated with the <code>filename</code> specified while calling it.</p>
+
+<p>Here are some examples of how to open a file:</p>
+
+<p><strong>Example 1:</strong></p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;employees.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;rt&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This statement opens the text file <code>employees.txt</code> for reading. Since text mode is default, the above statement can also be written as:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;employees.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Example 2:</strong></p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;teams.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This statement opens the text file in write mode.</p>
+
+<p><strong>Example 3:</strong></p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;teams.dat&#34;</span><span class="p">,</span> <span class="s2">&#34;wb&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This statement opens the binary file in write mode.</p>
+
+<p><strong>Example 4:</strong></p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;teams.dat&#34;</span><span class="p">,</span> <span class="s2">&#34;ab&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This statement opens the binary file in append mode.</p>
+
+<p>Instead of using relative file paths we can also use absolute file paths. For example:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;/home/tom/documents/README.md&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This statements opens the text file <code>README.md</code> that is in <code>/home/tom/documents/</code> directory in write mode.</p>
+
+<p>In Windows, remember to escape backslashes while using absolute path names, Otherwise, you will get an error. For example:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">tom</span><span class="se">\\</span><span class="s2">documents</span><span class="se">\\</span><span class="s2">README.md&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can also use something called &#34;raw string&#34; by specifying <code>r</code> character in front of the string as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;C:\Users\tom\documents\README.md&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code>r</code> character causes the Python to treat every character in string as literal characters.</p>
+<span id="closing-the-file" class="anchor-target"></span><h2 class="heading">Closing the File <a class="header-link" href="#closing-the-file">#</a></h2>
+
+<p>Once we are done working with the file or we want to open the file in some other mode, we should close the file using <code>close()</code> method of the file object as follows:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Closing a file releases valuable system resources. In case you forgot to close the file, Python will automatically close the file when program ends or file object is no longer referenced in the program. However, if your program is large and you are reading or writing multiple files that can take significant amount of resource on the system. If you keep opening new files carelessly, you could run out of resources. So be a good programmer and close the file as soon as you are done with it.</p>
+<span id="textiowrapper-class" class="anchor-target"></span><h2 class="heading">TextIOWrapper class <a class="header-link" href="#textiowrapper-class">#</a></h2>
+
+<p>The file object returned by <code>open()</code> function is an object of type <code>_io.TextIOWrapper</code>. The class <code>_io.TextIOWrapper</code> provides methods and attributes which helps us to read or write data to and from the file. The following table lists some commonly used methods of <code>_io.TextIOWrapper</code> class.</p>
+<div style="overflow-x:auto"><table class="table table-bordered table-hover table-condensed"><thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>read([num])</code></td>
+<td>Reads the specified number of characters from the file and returns them as string. If <code>num</code> is omitted then it reads the entire file.</td>
+</tr>
+<tr>
+<td><code>readline()</code></td>
+<td>Reads a single line and returns it as a string.</td>
+</tr>
+<tr>
+<td><code>readlines()</code></td>
+<td>Reads the content of a file line by line and returns them as a list of strings.</td>
+</tr>
+<tr>
+<td><code>write(str)</code></td>
+<td>Writes the string argument to the file and returns the number of characters written to the file.</td>
+</tr>
+<tr>
+<td><code>seek(offset, origin)</code></td>
+<td>Moves the file pointer to the given offset from the origin.</td>
+</tr>
+<tr>
+<td><code>tell()</code></td>
+<td>Returns the current position of the file pointer.</td>
+</tr>
+<tr>
+<td><code>close()</code></td>
+<td>Closes the file</td>
+</tr>
+</tbody>
+</table></div><span id="writing-data-to-the-text-file" class="anchor-target"></span><h2 class="heading">Writing Data to the Text File <a class="header-link" href="#writing-data-to-the-text-file">#</a></h2>
+
+<p>The following program demonstrates how to write data to the the file:</p>
+
+<p><strong>python101/Chapter-18/writing_to_file.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;First Line</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;Second Line</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;Third Line</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>In line 1, we are using <code>open()</code> method to open the text file in write mode. If the <code>readme.md</code> file doesn&#39;t exists, the <code>open()</code> method will create the file. If the file already exists, then it&#39;s data will be overwritten. Run the program and then open <code>readme.md</code> file. It should look like this:</p>
+
+<p><strong>python101/Chapter-18/readme.md</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>First Line
+Second Line
+Third Line
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Let&#39;s take a close look at how <code>write()</code> method writes data to the file. </p>
+
+<p>All read and write operations in a file begins at file pointer. What is file pointer ? A file pointer is simply a marker which keeps track of the number of bytes read or written in a file. This pointer automatically moves after every read or write operation.</p>
+
+<p>When a file is opened the file pointer points at the beginning of the file. The <code>write()</code> function begins writing at the current file position and then increments the file pointer. For example, the following figure shows the position of file pointer after each write operation.</p>
+
+<p><img src="../../media/uploads/2017/09/28/movement-of-file-pointer.png" loading="lazy" alt=""/></p>
+
+<p>Note that unlike <code>print()</code> function, <code>write()</code> method do not print newline character (<code>\n</code>) at the end of string automatically. We can also use <code>print()</code> function to write data to the file. Let&#39;s take a closer look at the signature of the <code>print()</code> using the <code>help()</code> function.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="k">print</span><span class="p">)</span>
+<span class="n">Help</span> <span class="n">on</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="k">print</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">builtins</span><span class="p">:</span>
+
+<span class="k">print</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+    <span class="n">Prints</span> <span class="n">the</span> <span class="n">values</span> <span class="n">to</span> <span class="n">a</span> <span class="n">stream</span><span class="p">,</span> <span class="ow">or</span> <span class="n">to</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="n">by</span> <span class="n">default</span><span class="o">.</span>
+    <span class="n">Optional</span> <span class="n">keyword</span> <span class="n">arguments</span><span class="p">:</span>
+    <span class="nb">file</span><span class="p">:</span>  <span class="n">a</span> <span class="nb">file</span><span class="o">-</span><span class="n">like</span> <span class="nb">object</span> <span class="p">(</span><span class="n">stream</span><span class="p">);</span> <span class="n">defaults</span> <span class="n">to</span> <span class="n">the</span> <span class="n">current</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span>
+    <span class="n">sep</span><span class="p">:</span>   <span class="n">string</span> <span class="n">inserted</span> <span class="n">between</span> <span class="n">values</span><span class="p">,</span> <span class="n">default</span> <span class="n">a</span> <span class="n">space</span><span class="o">.</span>
+    <span class="n">end</span><span class="p">:</span>   <span class="n">string</span> <span class="n">appended</span> <span class="n">after</span> <span class="n">the</span> <span class="n">last</span> <span class="n">value</span><span class="p">,</span> <span class="n">default</span> <span class="n">a</span> <span class="n">newline</span><span class="o">.</span>
+    <span class="n">flush</span><span class="p">:</span> <span class="n">whether</span> <span class="n">to</span> <span class="n">forcibly</span> <span class="n">flush</span> <span class="n">the</span> <span class="n">stream</span><span class="o">.</span>
+
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Notice the fourth parameter in the function signature i.e <code>file</code>. By default, <code>file</code> points to the standard output means it will print data to the screen. To output data to a file just specify the file object. The following program uses <code>print()</code> function instead of <code>write()</code> to write data to the file.</p>
+
+<p><strong>python101/Chapter-18/writing_data_using_print_function.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;First Line&#34;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Second Line&#34;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Third Line&#34;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>This program produces the same output as before, the only difference is that, in this case the newline character (<code>\n</code>) is automatically added by the <code>print()</code> function.</p>
+<span id="reading-data-from-a-text-file" class="anchor-target"></span><h2 class="heading">Reading Data from a Text file <a class="header-link" href="#reading-data-from-a-text-file">#</a></h2>
+
+<p>To read a file you must open it in <code>&#34;r&#34;</code> mode. In addition to that, you should also ensure that the file you want to read already exists because in <code>&#34;r&#34;</code> mode the <code>open()</code> function throws <code>FileNotFoundError</code> error if its unable to find a file.</p>
+
+<p>To test whether a file exists or not, we can use <code>isfile()</code> function from the <code>os.path</code> module. The syntax of <code>isfile()</code> is:</p>
+<div class="codeblock language-python"><div class="highlight"><pre><span></span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If file found at the given path <code>isfile()</code> returns <code>True</code>. Otherwise <code>False</code>. The following shell session demonstrates working of <code>isfile()</code> function.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&#34;/home/q/python101/Chapter-18/readme.md&#34;</span><span class="p">)</span>  <span class="c1"># file exists</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&#34;/home/q/python101/Chapter-18/index.html&#34;</span><span class="p">)</span>  <span class="c1"># file doesn&#39;t exists</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The following programs demonstrates how to read a file using <code>read()</code>, <code>readline()</code> and <code>readlines()</code> function.</p>
+
+<p><strong>Example 1:</strong> Reading data at once using the <code>read()</code> method.</p>
+
+<p><strong>python101/Chapter-18/read_method_demo.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>  <span class="c1"># read all content at once</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>First Line
+Second Line
+Third Line
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Example 2</strong>: Reading data in chunks using the <code>read()</code> method.</p>
+
+<p><strong>python101/Chapter-18/reading_in_chunks.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;First chunk:&#34;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;</span><span class="se">\n\n</span><span class="s2">&#34;</span><span class="p">)</span>    <span class="c1"># read the first 4 characters</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Second chunk:&#34;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;</span><span class="se">\n\n</span><span class="s2">&#34;</span><span class="p">)</span>  <span class="c1"># read the next 10 character</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Third chunk:&#34;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;</span><span class="se">\n\n</span><span class="s2">&#34;</span><span class="p">)</span>     <span class="c1"># read the remaining characters </span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span>First chunk: Firs
+
+Second chunk: t Line
+Sec
+
+Third chunk: ond Line
+Third Line
+</pre></div>
+</td></tr></tbody></table></div>
+<p>When the file is open in read mode the file pointer points at the beginning of the file.</p>
+
+<p><img src="../../media/uploads/2017/09/28/file_pointer_at_the_beginning_1.png" loading="lazy" alt=""/></p>
+
+<p>After reading first 4 characters, file pointer is at <code>t</code>.</p>
+
+<p><img src="../../media/uploads/2017/09/28/file_pointer_at_the_beginning_2.png" loading="lazy" alt=""/></p>
+
+<p>After reading the next 10 characters, file pointer is at character <code>o</code>.</p>
+
+<p><img src="../../media/uploads/2017/09/28/file_pointer_at_the_beginning_3.png" loading="lazy" alt=""/></p>
+
+<p>The third call to <code>read()</code> reads the remaining characters in the file and returns them as a string. At this point, the file position pointer points at the end of the file. Consequently, any subsequent calls to <code>read()</code> method returns an empty string.</p>
+
+<p><img src="../../media/uploads/2017/09/28/file_pointer_at_the_beginning_4.png" loading="lazy" alt=""/></p>
+
+<p><strong>Example 3</strong>: Using <code>readline()</code> to read data from a file.</p>
+
+<p><strong>python101/Chapter-18/readline_method_demo.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+
+<span class="c1"># read first line</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Ist line:&#34;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>  
+
+<span class="c1"># read the fist two characters in the second line</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;The first two characters in the 2nd line:&#34;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;</span><span class="se">\n\n</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="c1"># read the remaining characters int the second line</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Remaining characters in the 2nd line:&#34;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+<span class="c1"># read the next line</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;3rd line:&#34;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>  
+
+<span class="c1"># end of the file reached, so readline returns an empty string &#34;&#34;</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;After end of file :&#34;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>  
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Ist line: First Line
+
+The first two characters in the 2nd line: Se
+
+Remaining characters in the 2nd line: cond Line
+
+3rd line: Third Line
+
+After end of file :
+</pre></div>
+</td></tr></tbody></table></div>
+<p>As usual when file is opened, the file pointer points at the beginning of the file.</p>
+
+<p><img src="../../media/uploads/2017/09/28/file_pointer_at_the_beginning_1-JXMXFC.png" loading="lazy" alt=""/></p>
+
+<p>The first call to <code>readline()</code> method moves the file pointer to the start of next line.</p>
+
+<p><img src="../../media/uploads/2017/09/28/file-pointer-after-first-readline-call.png" loading="lazy" alt=""/></p>
+
+<p>The <code>read()</code> function then reads two characters from the file which moves the file pointer to the character <code>c</code>.</p>
+
+<p><img src="../../media/uploads/2017/09/28/file-pointer-after-reading-2-characters-using-read-method.png" loading="lazy" alt=""/></p>
+
+<p>In line 10, the <code>readline()</code> is called again but this time it starts reading from the character <code>c</code> to the end of the line (including the newline character).</p>
+
+<p><img src="../../media/uploads/2017/09/28/file-pointer-after-second-call-to-readline.png" loading="lazy" alt=""/></p>
+
+<p>In line 13, <code>readline()</code> is called again, to read the last line. At this point, file position pointer is at the end of the file. That&#39;s why <code>readline()</code> call in line 16 returns an empty string (<code>&#34;&#34;</code>).</p>
+
+<p><img src="../../media/uploads/2017/09/28/file_pointer_position_after_third_call_to_readline_method.png" loading="lazy" alt=""/></p>
+
+<p><strong>Example 4</strong>: Using <code>readlines()</code> to read data from a file.</p>
+
+<p><strong>python101/Chapter-18/readlines_method_demo.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+
+<span class="c1"># read all the line as return and them as a list of strings</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>   
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><div class="highlight"><pre><span></span>[&#39;First Line\n&#39;, &#39;Second Line\n&#39;, &#39;Third Line\n&#39;]
+</pre></div>
+</div><span id="reading-large-files" class="anchor-target"></span><h2 class="heading">Reading Large Files <a class="header-link" href="#reading-large-files">#</a></h2>
+
+<p>The <code>read()</code> and <code>readlines()</code> methods work great with small files. But what if your file has thousands or millions of lines in it? In such cases using <code>read()</code> or <code>readlines()</code> may result in memory hogs. A better approach would be to use loops and read file data in small chunks. For example:</p>
+
+<p><strong>python101/Chapter-18/reading_large_file_demo1.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+
+<span class="n">chunk</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># specify chunk size</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+
+<span class="c1"># keep looping until there is data in the file</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+
+    <span class="c1"># if end of file is reached, break out of the while loop</span>
+    <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="s2">&#34;&#34;</span><span class="p">:</span>
+        <span class="k">break</span>
+
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>First Line
+Second Line
+Third Line
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Here we are using an infinite loop to iterate over the contents of the file. As soon as the end of file is reached, the <code>read()</code> method returns an empty string (<code>&#34;&#34;</code>), if condition in line 12, evaluates to true and <code>break</code> statement causes the loop to terminate.</p>
+
+<p>Python also allows us to use for loop to loop through the file data using file object as follows:</p>
+
+<p><strong>python101/Chapter-18/reading_large_files_using_for_loop.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>First Line
+Second Line
+Third Line
+</pre></div>
+</td></tr></tbody></table></div><span id="appending-data-to-the-text-file" class="anchor-target"></span><h2 class="heading">Appending Data to the Text File <a class="header-link" href="#appending-data-to-the-text-file">#</a></h2>
+
+<p>We can use <code>&#34;a&#34;</code> mode to append data to end of the file. The following program demonstrates how to append data to the end of the file.</p>
+
+<p><strong>python101/Chapter-18/append_data.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;a&#34;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Appending data to the end of the file ...&#34;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;Fourth Line</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;Fifth Line</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Done!&#34;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1">## open the file again</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Opening the file again to read the data ...</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Appending data to the end of the file ...
+Done!
+
+Opening the file again to read the data ...
+
+First Line
+Second Line
+Third Line
+Fourth Line
+Fifth Line
+</pre></div>
+</td></tr></tbody></table></div><span id="working-with-files-using-the-with-statement" class="anchor-target"></span><h2 class="heading">Working with files using the with statement <a class="header-link" href="#working-with-files-using-the-with-statement">#</a></h2>
+
+<p>Python also provides a nice shortcut for file handling using the <code>with</code> statement. The following is the general form of the <code>with</code> statement when used with files.</p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
+    <span class="c1"># body of with statement</span>
+    <span class="c1"># perform the file operations here</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>The best thing about this shortcut is that it automatically closes the file without requiring any work on your part. The statements inside the body of the with statement must be equally indented otherwise you will get an error. The scope of <code>file_object</code> variable is only limited to the body of the <code>with</code> statement. If you try to call <code>read()</code> or <code>write()</code> method on it outside the block you will get an error.</p>
+
+<p>The following examples show how we can use the <code>with</code> statement to read and write data to and from the file.</p>
+
+<p><strong>Example 1</strong>: Reading data line by line using for loop.</p>
+
+<p><strong>python101/Chapter-18/with_statement.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>First Line
+Second Line
+Third Line
+Fourth Line
+Fifth Line
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Example 2</strong>: Reading all data at once using <code>read()</code> method.</p>
+
+<p><strong>python101/Chapter-18/with_statement2.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>First Line
+Second Line
+Third Line
+Fourth Line
+Fifth Line
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Example 3</strong>: Reading a large file in small chunks.</p>
+
+<p><strong>python101/Chapter-18/with_statement3.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;readme.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">chunk</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># specify chunk size</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+
+    <span class="c1"># keep looping until there is data in the file</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+
+        <span class="c1"># if end of file is reached, break out of the while loop</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="s2">&#34;&#34;</span><span class="p">:</span>
+            <span class="k">break</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span>First Line
+Second Line
+Third Line
+Fourth Line
+Fifth Line
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Example 4</strong>: Writing data to a file using the <code>write()</code> method</p>
+
+<p><strong>python101/Chapter-18/with_statement4.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;random.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;ONE D</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;TWO D</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;THREE D</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;FOUR D</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table></div><span id="reading-and-writing-binary-data" class="anchor-target"></span><h2 class="heading">Reading and Writing Binary Data <a class="header-link" href="#reading-and-writing-binary-data">#</a></h2>
+
+<p>The following program copies binary data from a source file (<code>source.jpg</code>) to a target file (<code>dest.jpg</code>).</p>
+
+<p><strong>python101/Chapter-18/reading_and_writing_binary_data.py</strong></p>
+<div class="codeblock language-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">f_source</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;source.jpg&#34;</span><span class="p">,</span> <span class="s2">&#34;rb&#34;</span><span class="p">)</span>
+<span class="n">f_dest</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;dest.jpg&#34;</span><span class="p">,</span> <span class="s2">&#34;wb&#34;</span><span class="p">)</span>
+
+<span class="n">char_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_source</span><span class="p">:</span>
+    <span class="n">char_count</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="n">f_dest</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">char_count</span><span class="p">,</span> <span class="s2">&#34;characters copied successfully&#34;</span><span class="p">)</span>
+
+<span class="n">f_source</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f_dest</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p><strong>Output:</strong></p>
+<div class="codeblock language-text"><div class="highlight"><pre><span></span>2115658 characters copied successfully
+</pre></div>
+</div>
+<p>Run the program and it should create <code>dest.jpg</code> file in the same directory as <code>source.jpg</code>.</p>
+
+
+
+    
+
+
+
+        <nav aria-label="pagination">
+            <ul class="pager">
+                
+                    <li class="previous">
+                        <a href="../operator-overloading-in-python/index.html" title="Operator Overloading in Python">
+                            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+                            Operator Overloading in Python
+                        </a>
+                    </li>
+                
+
+                
+                    <li class="next">
+                        <a href="../exception-handling-in-python/index.html" title="Exception Handling in Python">
+                            Exception Handling in Python
+                            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+    <hr/>
+    <div id="disqus_thread">
+    <p style="margin-bottom: 10px" class="text-center">
+        <a href="#" class=" btn btn-primary comments-holder" onclick="loadDisqus();return false;">
+            <i class="fa fa-comments" aria-hidden="true"></i> Load Comments
+        </a>
+    </p>
+    </div>
+    <hr/>
+    <script>
+        var is_disqus_loaded = false;
+        function loadDisqus() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '../../../overiqcom.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+        
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                
+
+    
+        
+    <div class="well">
+        <h4>Python Tutorial</h4>
+        <ul>
+            
+                <li><a href="../intro-to-python/index.html">Intro to Python</a></li>
+            
+                <li><a href="../installing-python/index.html">Installing Python</a></li>
+            
+                <li><a href="../idle-and-python-shell/index.html">IDLE and Python Shell</a></li>
+            
+                <li><a href="../data-types-and-variables-in-python/index.html">Data Types and Variables In Python</a></li>
+            
+                <li><a href="../numbers-in-python/index.html">Numbers in Python</a></li>
+            
+                <li><a href="../operators-in-python/index.html">Operators in Python</a></li>
+            
+                <li><a href="../strings-in-python/index.html">Strings in Python</a></li>
+            
+                <li><a href="../strings-methods-in-python/index.html">Strings Methods in Python</a></li>
+            
+                <li><a href="../if-else-statements-in-python/index.html">If-else statements in Python</a></li>
+            
+                <li><a href="../loops-in-python/index.html">Loops in Python</a></li>
+            
+                <li><a href="../break-and-continue-statement-in-python/index.html">break and continue statement in Python</a></li>
+            
+                <li><a href="../lists-in-python/index.html">Lists in Python</a></li>
+            
+                <li><a href="../functions-in-python/index.html">Functions in Python</a></li>
+            
+                <li><a href="../modules-in-python/index.html">Modules in Python</a></li>
+            
+                <li><a href="../objects-and-classes-in-python/index.html">Objects and Classes in Python</a></li>
+            
+                <li><a href="../inheritance-and-polymorphism-in-python/index.html">Inheritance and Polymorphism in Python</a></li>
+            
+                <li><a href="../operator-overloading-in-python/index.html">Operator Overloading in Python</a></li>
+            
+                <li><a href="index.html">File Handling in Python</a></li>
+            
+                <li><a href="../exception-handling-in-python/index.html">Exception Handling in Python</a></li>
+            
+                <li><a href="../tuples-in-python/index.html">Tuples in Python</a></li>
+            
+                <li><a href="../sets-in-python/index.html">Sets in Python</a></li>
+            
+                <li><a href="../dictionary-in-python/index.html">Dictionary in Python</a></li>
+            
+        </ul>
+    </div>
+
+    
+
+    
+        
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <ul>
+        
+            <li><a href="../../machine-learning-experts-you-should-be-following-online/index.html">Machine Learning Experts You Should Be Following Online</a></li>
+        
+            <li><a href="../../4-ways-to-prepare-for-the-ap-computer-science-a-exam/index.html">4 Ways to Prepare for the AP Computer Science A Exam</a></li>
+        
+            <li><a href="../../finance-assignment-online-help-for-the-busy-and-tired-students-get-help-from-experts/index.html">Finance Assignment Online Help for the Busy and Tired Students: Get Help from Experts</a></li>
+        
+            <li><a href="../../top-9-machine-learning-algorithms-for-data-scientists/index.html">Top 9 Machine Learning Algorithms for Data Scientists</a></li>
+        
+            <li><a href="../../data-science-learning-path-or-steps-to-become-a-data-scientist-final/index.html">Data Science Learning Path or Steps to become a data scientist Final</a></li>
+        
+            <li><a href="../../enable-edit-button-in-shutter-in-linux-mint-19-and-ubuntu-18-04/index.html">Enable Edit Button in Shutter In Linux Mint 19 and Ubuntu 18.04</a></li>
+        
+            <li><a href="../../python-3-time-module/index.html">Python 3 time module</a></li>
+        
+            <li><a href="../../pygments-tutorial/index.html">Pygments Tutorial</a></li>
+        
+            <li><a href="../../how-to-use-virtualenv/index.html">How to use Virtualenv?</a></li>
+        
+            <li><a href="../../installing-mysql-windows-linux-and-mac/index.html">Installing MySQL (Windows, Linux and Mac)</a></li>
+        
+            <li><a href="../../what-is-if-__name__-__main__-in-python/index.html">What is if __name__ == &#39;__main__&#39;  in Python ?</a></li>
+        
+            <li><a href="../../installing-goaccess-a-real-time-web-log-analyzer/index.html">Installing GoAccess (A Real-time web log analyzer)</a></li>
+        
+            <li><a href="../../installing-isso/index.html">Installing Isso</a></li>
+        
+    </ul>
+</div>
+
+<!-- Blog Search Well -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+</div>
+
+<!-- Footer -->
+<footer class="overiq-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../terms-of-use/index.html">Terms</a></li>
+                    <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+                    <li><a href="../../sitemap.xml/index.html">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../contact/index.html">Contact</a></li>
+                    <li><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com/OverIQ/">Facebook</a></li>
+                    <li><a href="https://twitter.com/infoOverIQ">Twitter</a></li>
+                    <li><a href="https://github.com/overiq">Github</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 overiq-footer-links">
+                <ul>
+                    <li><a href="../../c-programming-101/index.html">C Tutorial</a></li>
+                    <li><a href="../index.html">Python Tutorial</a></li>
+                    <li><a href="../../django-1-11/index.html">Django Tutorial</a></li>
+                    <li><a href="../../flask-101/index.html">Flask Tutorial</a></li>
+                    <li><a href="../../mysql-connector-python-101/index.html">MySQL Connector/Python Tutorial</a></li>
+                    <li><a href="../../sqlalchemy-101/index.html">SQLAlchemy Tutorial</a></li>
+                    <li><a href="../../c-examples/index.html">C Programming Examples</a></li>
+                </ul>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row text-center">
+            <p>© 2025 OverIQ.com</p>
+            <small><a href="#">Back to top</a></small>
+        </div>
+
+        <!-- /.row -->
+    </div>
+</footer>
+
+
+
+<script type="text/javascript" src="../../static/CACHE/js/output.2e0ff002c1a4.js"></script>
+
+
+
+
+<script async="" src="../../../cdn.jsdelivr.net/npm/cookieconsent%403/build/cookieconsent.min.js" data-cfasync="false"></script>
+
+<script>
+
+    
+    window.addEventListener('load', function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#5ca9e0",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#fff",
+                    "text": "#237afc"
+                }
+            },
+            "theme": "classic",
+            "position": "top",
+            "static": true,
+            "content": {
+                "href": "https://overiq.com/privacy-policy/"
+            }
+        });
+    });
+
+
+</script>
+
+<script src="../../../polyfill.io/v3/polyfill.min1162.js?features=es6"></script>
+<script id="MathJax-script" defer="" src="../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-chtml.js"></script>
+
+<script async="" type="text/javascript" src="../../../cdn.carbonads.com/carbonfbdb.js?serve=CE7DC53E&amp;placement=overiqcom" id="_carbonads_js"></script>
+
+
+
+
+
+<script data-cfasync="false">function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+(function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.overiq.com;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+_clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+gtag('consent','update',googConsentV2);}
+__tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+_handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;}
+if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+__tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.Add(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);</script></body>
+<!-- Mirrored from overiq.com/python-101/file-handling-in-python/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Feb 2025 11:09:00 GMT -->
+</html>
